@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sums of geometric series</title>
+	
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function ( ) {
+
+	document.querySelectorAll( '.math' )
+	.forEach( function ( element ) {
+		try {
+			var tex = element.textContent ;
+			var math = tex.substr(2, tex.length - 4) ;
+			var displayMode = tex.substr(0, 2) == '\\[' ;
+			try {
+				katex.render(math, element, {displayMode: displayMode});
+			}
+			catch ( e ) {
+				console.error( e ) ;
+				console.debug( element, tex , math , { displayMode: displayMode});
+			}
+		}
+		catch ( e ) {
+			console.error( e ) ;
+		}
+	});
+
+});
+</script>
+
+</head>
+<body>
+
+
+  <h1>Sums of geometric series</h1>
+  <h2>Sun, Jul 23, 2017</h2>
+  <p>Among the identities that are useful in the analysis of algorithms,
+this one shows how sums of geometric series converge when the ratio
+is smaller than one (in absolute value). It occurs in divide an conquer
+schemes. For example, it allows to show that hierarchical cuttings for <span  class="math">\(n\)</span>
+hyperplanes in <span  class="math">\(d\)</span> dimensions only need space proportional to <span  class="math">\(n^d\)</span>.</p>
+
+<p><span  class="math">\[
+\sum_{i=0}^{\infty} \binom{i+j}{j} x^i = \frac{1}{ {(1-x)}^{j+1} },
+\forall j \in \mathbb{N}, \forall x \in (-1,1).
+\]</span></p>
+
+<p>
+That's nice. There are many ways to prove it, a cool one is to first
+<a href="https://aureooms.github.io/converging-series">prove</a> that</p>
+
+<p><span  class="math">\[
+\sum_{i=0}^{\infty} x^i = \frac{1}{ {(1-x)} },
+\forall x \in (-1,1),
+\]</span></p>
+
+<p>and then to notice that</p>
+
+<p><span  class="math">\[
+\frac{1}{ {(1-x)}^{j+1} } = {\left(\sum_{i=0}^{\infty} x^i \right)}^{j+1}
+= \sum_{i=0}^{\infty} \binom{i+j}{j} x^i,
+\forall j \in \mathbb{N}, \forall x \in (-1,1).
+\]</span></p>
+
+<p>because <span  class="math">\(\binom{i+j}{j}\)</span> denotes the number of ways to partition the exponent
+of <span  class="math">\(x^i\)</span> into a permutation of <span  class="math">\(j+1\)</span> integers.</p>
+
+<p>More generally, one has</p>
+
+<p><span  class="math">\[
+\sum_{i=0}^{k} \binom{i+j}{j} x^i = \frac{1}{ {(1-x)}^{j+1} } -
+\sum_{i=0}^{j} \frac{\binom{k+i}{i} x^{k+1}}{ {(1-x)}^{j-i+1} },
+\forall j \in \mathbb{N}, \forall x \in \mathbb{R} \setminus \{\,1\,\}.
+\]</span></p>
+
+</body>
+</html>
+

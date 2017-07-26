@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VC-dimension</title>
+	
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function ( ) {
+
+	document.querySelectorAll( '.math' )
+	.forEach( function ( element ) {
+		try {
+			var tex = element.textContent ;
+			var math = tex.substr(2, tex.length - 4) ;
+			var displayMode = tex.substr(0, 2) == '\\[' ;
+			try {
+				katex.render(math, element, {displayMode: displayMode});
+			}
+			catch ( e ) {
+				console.error( e ) ;
+				console.debug( element, tex , math , { displayMode: displayMode});
+			}
+		}
+		catch ( e ) {
+			console.error( e ) ;
+		}
+	});
+
+});
+</script>
+
+</head>
+<body>
+
+
+  <h1>VC-dimension</h1>
+  <h2>Tue, Apr 12, 2016</h2>
+  <h2 id="definition-1-espilon-net">Definition 1 (Espilon net)</h2>
+
+<p>Let <span  class="math">\(X\)</span> be a set, let <span  class="math">\(\mu\)</span> be a probability measure on <span  class="math">\(X\)</span>, let
+<span  class="math">\(\mathcal{F}\)</span> be a system of <span  class="math">\(\mu\)</span>-measurable subsets of <span  class="math">\(X\)</span>, and let
+<span  class="math">\(\varepsilon \in [0,1]\)</span> be a real number. A subset <span  class="math">\(N\subseteq X\)</span> is
+called an <span  class="math">\(\varepsilon\)</span>-net for <span  class="math">\((X,\mathcal{F})\)</span> with respect to
+<span  class="math">\(\mu\)</span> if <span  class="math">\(N \cap S \neq \emptyset\)</span> for all <span  class="math">\(S \in \mathcal{F}\)</span> with
+<span  class="math">\(\mu(S) \ge \varepsilon\)</span>.</p>
+
+<p></p>
+
+<h2 id="definition-2-trace-of-mathcalf-on-y">Definition 2 (Trace of <span  class="math">\(\mathcal{F}\)</span> on <span  class="math">\(Y\)</span>)</h2>
+
+<p>Let <span  class="math">\(\mathcal{F}\)</span> be a set system on <span  class="math">\(X\)</span> and let <span  class="math">\(Y \subseteq X\)</span>. We define the
+restriction of <span  class="math">\(\mathcal{F}\)</span> on <span  class="math">\(Y\)</span> (also called the <em>trace</em> of
+<span  class="math">\(\mathcal{F}\)</span> on
+<span  class="math">\(Y\)</span>) as
+<span  class="math">\(
+\mathcal{F}|_Y = \{S \cap Y \colon\, S \in \mathcal{F}\}.
+\)</span></p>
+
+<h2 id="definition-3-vcdimension">Definition 3 (VC-dimension)</h2>
+
+<p>Let <span  class="math">\(\mathcal{F}\)</span> be a set system on a set <span  class="math">\(X\)</span>. Let us say that a subset <span  class="math">\(A
+\subseteq X\)</span> is shttered by <span  class="math">\(\mathcal{F}\)</span> if each of the subsets of <span  class="math">\(A\)</span> can
+be obtained as the intersection of some <span  class="math">\(S \in \mathcal{F}\)</span> with <span  class="math">\(A\)</span>, i.e.,
+if <span  class="math">\(\mathcal{F}|_A = 2^{A}\)</span>. We define the VC-dimension of
+<span  class="math">\(\mathcal{F}\)</span>, denoted
+by <span  class="math">\(dim(F)\)</span>, as the supremum of the sizes of all finite shattered
+subsets of <span  class="math">\(X\)</span>. If arbitrarily large subsets can be shattered, the
+VC-dimension is <span  class="math">\(\infty\)</span>.</p>
+
+<h2 id="theorem-1-epsilon-net-theorem">Theorem 1 (Epsilon net theorem)</h2>
+
+<p>If <span  class="math">\(X\)</span> is a set with a probability measure <span  class="math">\(\mu\)</span>, <span  class="math">\(\mathcal{F}\)</span> is a system of
+<span  class="math">\(\mu\)</span>-measurable subsets of <span  class="math">\(X\)</span> with <span  class="math">\(dim(\mathcal{F}) \le d\)</span>, <span  class="math">\(d\ge 2\)</span>, and
+<span  class="math">\(r \ge 2\)</span> is a parameter, then there exists a <span  class="math">\(\frac{1}{r}\)</span>-net for
+<span  class="math">\((X,\mathcal{F})\)</span> with respect to <span  class="math">\(\mu\)</span> of size at most <span  class="math">\(Cdr\ln r\)</span>, where <span  class="math">\(C\)</span>
+is an absolute constant.</p>
+
+<h2 id="definition-4-shatter-function">Definition 4 (Shatter function)</h2>
+
+<p>We define the shatter function of a set system <span  class="math">\(\mathcal{F}\)</span> by
+<span  class="math">\(
+\pi_\mathcal{F}(m) = \max_{Y\subseteq X, \lvert Y \rvert = m} \lvert \mathcal{F}|_Y
+\rvert.
+\)</span></p>
+
+<h2 id="lemma-1-shatter-function-lemma">Lemma 1 (Shatter function lemma)</h2>
+
+<p>For any set system <span  class="math">\(\mathcal{F}\)</span> of VC-dimension at most <span  class="math">\(d\)</span>, we have
+<span  class="math">\(\pi_\mathcal{F}(m)
+\le \Phi_d(m)\)</span> for all <span  class="math">\(m\)</span>, where <span  class="math">\(\Phi_d(m) = \binom{m}{0} +
+\binom{m}{1} + \cdots + \binom{m}{d}\)</span>.</p>
+
+<h2 id="proposition-1">Proposition 1</h2>
+
+<p>Let <span  class="math">\(\mathbb{R}[x_1,x_2,\ldots,x_d]_{\le D}\)</span> denote the set of all real
+polynomials in <span  class="math">\(d\)</span> variables of degree at most <span  class="math">\(D\)</span>, and let
+<span  class="math">\(
+\mathcal{P}_{d,D} = \{\{x\in \mathbb{R}^d \colon\, p(x) \ge 0\}\colon\, p \in
+\mathbb{R}[x_1,x-2,\ldots,x_d]_{\le D}\}.
+\)</span>
+Then <span  class="math">\(dim(\mathcal{P}_{d,D}) \le \binom{d+D}{d}\)</span>.</p>
+
+<h2 id="proposition-2">Proposition 2</h2>
+
+<p>Let <span  class="math">\(F(X_1,X_2,\ldots,X_k)\)</span> be a fixed set-theoretic expression (using
+the operations of union, intersection, and difference) with variables
+<span  class="math">\(X_1,X_2,\ldots,X_k\)</span> standing for sets.
+Let <span  class="math">\(\mathcal{S}\)</span> be a set system on a ground set <span  class="math">\(X\)</span> with
+<span  class="math">\(dim(\mathcal{S}) = d <
+\infty\)</span>. Let
+<span  class="math">\(
+\mathcal{T} = \{F(S_1,S_2,\ldots,S_k) \colon\, S_1,S_2,\ldots,S_k \in
+\mathcal{S}\}.
+\)</span>
+Then <span  class="math">\(dim(\mathcal{T}) = O(kd\ln k)\)</span>.</p>
+
+</body>
+</html>
+

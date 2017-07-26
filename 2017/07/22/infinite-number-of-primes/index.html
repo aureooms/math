@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Infinite Number of Primes</title>
+	
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function ( ) {
+
+	document.querySelectorAll( '.math' )
+	.forEach( function ( element ) {
+		try {
+			var tex = element.textContent ;
+			var math = tex.substr(2, tex.length - 4) ;
+			var displayMode = tex.substr(0, 2) == '\\[' ;
+			try {
+				katex.render(math, element, {displayMode: displayMode});
+			}
+			catch ( e ) {
+				console.error( e ) ;
+				console.debug( element, tex , math , { displayMode: displayMode});
+			}
+		}
+		catch ( e ) {
+			console.error( e ) ;
+		}
+	});
+
+});
+</script>
+
+</head>
+<body>
+
+
+  <h1>Infinite Number of Primes</h1>
+  <h2>Sat, Jul 22, 2017</h2>
+  <p>The erroneous proof I hear most often is: Suppose <span  class="math">\(P\)</span> is a
+finite set that contains all the primes, then <span  class="math">\(p^* = 1 + \prod_{p \in P} p\)</span> is
+prime. Indeed, the flaw is that <span  class="math">\(p^*\)</span> is not necessarily prime but rather
+must be a multiple of some prime not in <span  class="math">\(P\)</span>.</p>
+
+<p>
+The previous proof is so often misquoted that I prefer the following. It
+relies on the fact that a finite product of sums of infinite geometric series
+converges, whereas the sum of the reciprocals of the natural numbers (except
+zero) diverges (hint: <span  class="math">\(\int\)</span>).</p>
+
+<p><span  class="math">\[
+  \sum_{n = 1}^{\infty} \frac{1}{n}
+= \prod_{p~\text{is prime}} \sum_{j=0}^{\infty} p^{-j}
+= \prod_{p~\text{is prime}} \frac{p}{p-1}.
+\]</span></p>
+
+</body>
+</html>
+

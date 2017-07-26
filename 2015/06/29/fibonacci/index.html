@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fibonacci numbers</title>
+	
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function ( ) {
+
+	document.querySelectorAll( '.math' )
+	.forEach( function ( element ) {
+		try {
+			var tex = element.textContent ;
+			var math = tex.substr(2, tex.length - 4) ;
+			var displayMode = tex.substr(0, 2) == '\\[' ;
+			try {
+				katex.render(math, element, {displayMode: displayMode});
+			}
+			catch ( e ) {
+				console.error( e ) ;
+				console.debug( element, tex , math , { displayMode: displayMode});
+			}
+		}
+		catch ( e ) {
+			console.error( e ) ;
+		}
+	});
+
+});
+</script>
+
+</head>
+<body>
+
+
+  <h1>Fibonacci numbers</h1>
+  <h2>Mon, Jun 29, 2015</h2>
+  <p>The Fibonacci numbers are defined as <span  class="math">\(f_0 = 0,\ f_1 = 1\)</span> and, for <span  class="math">\(i \ge
+2,\ f_i = f_{i-1} + f_{i-2}\)</span>. Here is the beginning of the Fibonacci sequence:</p>
+
+<p><span  class="math">\[0, 1, 1, 2, 3, 5, 8, 13, 21, \ldots\]</span></p>
+
+<p>We generalize the definition above by changing the two initial values, for
+example with <span  class="math">\(f_0 = 4,\ f_1 = 6\)</span> we obtain</p>
+
+<p><span  class="math">\[4, 6, 10, 16, 26, 42, \ldots\]</span></p>
+
+<p>
+Multiplying such a sequence by a scalar or adding two such sequences gives
+again such a sequence. The sum of the two previous sequences is</p>
+
+<p><span  class="math">\[4, 7, 11, 18, 29, 47, \ldots\]</span></p>
+
+<p>The set <span  class="math">\(V\)</span> of sequences <span  class="math">\((x_i)\)</span> of real numbers satisfying
+<span  class="math">\(x_i = x_{i-1} + x_{i-2}\)</span> for <span  class="math">\(i \ge 2\)</span> form a real vector space. A
+basis of this vector space is formed by the two vectors</p>
+
+<p><span  class="math">\[\vec{e}_1: 0, 1 , 1, 2, 3, 5, \ldots\]</span></p>
+
+<p><span  class="math">\[\vec{e}_2: 1, 0 , 1, 1, 2, 3, \ldots\]</span></p>
+
+<p>Indeed, any sequence in <span  class="math">\(V\)</span>, say
+<span  class="math">\(s: x_0, x_1, (x_0 + x_1), (x_0 + 2 x_1), \ldots\)</span>
+can be written uniquely as a linear combination of the two sequences
+<span  class="math">\(\vec{e}_1\)</span> and <span  class="math">\(\vec{e}_2\)</span>, that is,</p>
+
+<p><span  class="math">\(x_0 \vec{e}_2 + x_1 \vec{e}_1\)</span>.</p>
+
+<p>We ask ourselves for which real(s) <span  class="math">\(r \neq 0 \)</span> the sequence <span  class="math">\(x_i\)</span>
+with <span  class="math">\(x_i = r^i\)</span> is in <span  class="math">\(V\)</span>. The answer is: if and only if
+<span  class="math">\(\forall i \ge 2,\ r^i = r^{i-1} + r^{i-2},\)</span>
+that is,
+<span  class="math">\(r^2 = r + 1 \iff r^2 - r - 1 = 0,\)</span>
+that is,</p>
+
+<p><span  class="math">\[r = \frac{1 \pm \sqrt{5}}{2}.\]</span></p>
+
+<p>Another basis is thus formed by the two sequences</p>
+
+<p><span  class="math">\[\left(\frac{1+\sqrt{5}}{2}\right)^i \text{ and } \left(\frac{1-\sqrt{5}}{2}\right)^i.\]</span></p>
+
+<p>We express the Fibonacci sequence in this basis. We must have for all <span  class="math">\(i \ge
+0\)</span></p>
+
+<p><span  class="math">\(f_i = \lambda \left(\frac{1+\sqrt{5}}{2}\right)^i + \mu \left(\frac{1-\sqrt{5}}{2}\right)^i\)</span>
+thus</p>
+
+<p><span  class="math">\[
+\begin{aligned}
+\text{for } i = 0 \text{:}\hskip 3em& 0 = \lambda + \mu\\
+\text{for } i = 1 \text{:}\hskip 3em& 1 = \lambda \left(\frac{1+\sqrt{5}}{2}\right) + \mu \left(\frac{1-\sqrt{5}}{2}\right)
+\end{aligned}
+\]</span></p>
+
+<p>from there</p>
+
+<p><span  class="math">\[
+\begin{cases}
+\lambda = \frac{\sqrt{5}}{5}\\
+\mu = -\frac{\sqrt{5}}{5}
+\end{cases}
+\]</span></p>
+
+<p>and finally</p>
+
+<p><span  class="math">\[f_i = \frac{\sqrt{5}}{5} \left(\frac{1+\sqrt{5}}{2}\right)^i - \frac{\sqrt{5}}{5} \left(\frac{1-\sqrt{5}}{2}\right)^i.\]</span></p>
+
+<p><em>Course notes translated from french.</em></p>
+
+</body>
+</html>
+

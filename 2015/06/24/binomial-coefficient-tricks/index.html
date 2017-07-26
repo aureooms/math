@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Binomial coefficient tricks</title>
+	
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function ( ) {
+
+	document.querySelectorAll( '.math' )
+	.forEach( function ( element ) {
+		try {
+			var tex = element.textContent ;
+			var math = tex.substr(2, tex.length - 4) ;
+			var displayMode = tex.substr(0, 2) == '\\[' ;
+			try {
+				katex.render(math, element, {displayMode: displayMode});
+			}
+			catch ( e ) {
+				console.error( e ) ;
+				console.debug( element, tex , math , { displayMode: displayMode});
+			}
+		}
+		catch ( e ) {
+			console.error( e ) ;
+		}
+	});
+
+});
+</script>
+
+</head>
+<body>
+
+
+  <h1>Binomial coefficient tricks</h1>
+  <h2>Wed, Jun 24, 2015</h2>
+  <p><span  class="math">\[
+\binom{n}{k} = \binom{n}{n-k}
+\]</span></p>
+
+<p>holds because keeping <span  class="math">\(k\)</span> elements from <span  class="math">\(n\)</span> elements is equivalent
+to discarding <span  class="math">\(n-k\)</span> elements from <span  class="math">\(n\)</span> elements.</p>
+
+<p>
+<span  class="math">\(
+\sum_{k=0}^{n} \binom{n}{k} \binom{n}{n-k} = \binom{2n}{n}
+\)</span></p>
+
+<p>holds because choosing <span  class="math">\(n\)</span> elements from <span  class="math">\(2n\)</span>
+elements is equivalent to first choosing <span  class="math">\(k\)</span> elements
+from a first set of <span  class="math">\(n\)</span> elements and then choosing <span  class="math">\(n-k\)</span>
+elements from a second set of <span  class="math">\(n\)</span> elements. Hence,</p>
+
+<p><span  class="math">\[
+\sum_{k=0}^{n} \binom{n}{k}^2 = \binom{2n}{n}.
+\]</span></p>
+
+</body>
+</html>
+

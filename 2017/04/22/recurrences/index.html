@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recurrences</title>
+	
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function ( ) {
+
+	document.querySelectorAll( '.math' )
+	.forEach( function ( element ) {
+		try {
+			var tex = element.textContent ;
+			var math = tex.substr(2, tex.length - 4) ;
+			var displayMode = tex.substr(0, 2) == '\\[' ;
+			try {
+				katex.render(math, element, {displayMode: displayMode});
+			}
+			catch ( e ) {
+				console.error( e ) ;
+				console.debug( element, tex , math , { displayMode: displayMode});
+			}
+		}
+		catch ( e ) {
+			console.error( e ) ;
+		}
+	});
+
+});
+</script>
+
+</head>
+<body>
+
+
+  <h1>Recurrences</h1>
+  <h2>Sat, Apr 22, 2017</h2>
+  <h2 id="theorem">Theorem</h2>
+
+<p>Let <span  class="math">\( a \in \mathbb{N} \)</span>, <span  class="math">\( t < a \in \mathbb{N} \)</span>, and <span  class="math">\( b \in
+\mathbb{R}\)</span>. Defining <span  class="math">\( A_t \)</span> to be some real number and</p>
+
+<p><span  class="math">\[
+A_N = (1 - \frac{a}{N}) A_{N-1} + b, N > t \in \mathbb{N},
+\]</span></p>
+
+<p>then</p>
+
+<p><span  class="math">\[
+A_N = \frac{b}{1+a} (N+1), N \ge a \in \mathbb{N}.
+\]</span></p>
+
+<p></p>
+
+<h2 id="proof">Proof</h2>
+
+<p>Since <span  class="math">\( t < a \)</span>, <span  class="math">\(A_N\)</span> with <span  class="math">\(N \ge a\)</span> does not depend on
+<span  class="math">\(A_t\)</span> because</p>
+
+<p><span  class="math">\[
+A_a = (1 - \frac{a}{a}) A_{a-1} + b = b.
+\]</span></p>
+
+<p>Now we can check that the theorem holds for <span  class="math">\(N = a\)</span>:</p>
+
+<p><span  class="math">\[
+A_a = \frac{b}{1+a} (a+1) = b.
+\]</span></p>
+
+<p>And by induction for <span  class="math">\(N > a\)</span>,</p>
+
+<p>$$
+\begin{aligned}
+A<em>N &amp;= (1 - \frac{a}{N}) A</em>{N-1} + b\</p>
+
+<pre><code> &amp;= (1 - \frac{a}{N}) \frac{b}{1+a} N + b\\
+ &amp;= \frac{b}{1+a} N - \frac{ab}{1+a} + b\\
+ &amp;= \frac{b}{1+a} N - \frac{ab}{1+a} + \frac{b+ab}{1+a}\\
+ &amp;= \frac{b}{1+a} N + \frac{b}{1+a}\\
+ &amp;= \frac{b}{1+a} (N+1).
+</code></pre>
+
+<p>\end{aligned}
+$$</p>
+
+</body>
+</html>
+

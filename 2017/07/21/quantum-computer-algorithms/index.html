@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quantum Computer Algorithms</title>
+	
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function ( ) {
+
+	document.querySelectorAll( '.math' )
+	.forEach( function ( element ) {
+		try {
+			var tex = element.textContent ;
+			var math = tex.substr(2, tex.length - 4) ;
+			var displayMode = tex.substr(0, 2) == '\\[' ;
+			try {
+				katex.render(math, element, {displayMode: displayMode});
+			}
+			catch ( e ) {
+				console.error( e ) ;
+				console.debug( element, tex , math , { displayMode: displayMode});
+			}
+		}
+		catch ( e ) {
+			console.error( e ) ;
+		}
+	});
+
+});
+</script>
+
+</head>
+<body>
+
+
+  <h1>Quantum Computer Algorithms</h1>
+  <h2>Fri, Jul 21, 2017</h2>
+  <p><a href="https://ipfs.io/ipfs/QmctoycyfhWTrDy4c4jZeyLcRmmutFii5H5RLGk7pMbDoS">Notes</a>
+from June 2015 containing the following:
+<a href="https://ipfs.io/ipfs/QmP44FjtNGGS5zvoyhxveNSJshvSobKrfQdEcxRLurqaon">Phase kick-back</a>,
+<a href="https://ipfs.io/ipfs/Qma3KPLTHexwfstuK9cWaR5f9EfJcw5z7Se4Pi3Qs8sHfF">Deutsch's algorithm</a>,
+<a href="https://ipfs.io/ipfs/QmQdQ4cit6t32D7AmFhZzF2wLtkmVv5qTBDVt1N5XXhSwc">Fourier sampling</a>,
+<a href="https://ipfs.io/ipfs/QmSQGPw7VKiyFMZiN5Abirg291wquS2oxVu7jbQc1BMbgu">Deutsch-Jozsa algorithm</a>,
+<a href="https://ipfs.io/ipfs/QmSRDLPx9bgswjP23VQSACwvBd4QgDo1DyL3dGu5Bjv1HD">Bernstein-Vazirani algorithm</a>,
+<a href="https://ipfs.io/ipfs/Qmcy9a2aLNS2dvfXRaTJ6LBxY9RfJiDAGP9UNtGshbCeAk">Preimage of a function</a>,
+<a href="https://ipfs.io/ipfs/Qma7ysFrm5SxVwELzy9eNcLKGh1DogY1sLotpXmdu87GeS">Simon's algorithm</a>,
+<a href="https://ipfs.io/ipfs/QmeyDeUgwYZJEC4dHYz3rEVDJHwSoA84HoaQpFjRTzjS8v">Gover's algorithm</a>,
+<a href="https://ipfs.io/ipfs/QmR3fConAUYAnqFqfv9meKW9NkrmJsBsDwjEJMazGrr1U5">Amplitude amplification</a>,
+<a href="https://ipfs.io/ipfs/QmRcrn1hjpex3H6vSAhpAuTNyuXVkpz4gKV6heHgdNCenh">Quantum Fourier Transform</a>,
+and
+<a href="https://ipfs.io/ipfs/QmdK1mNmR3ASVShWM2jSxhDzm1aRD4mVofvvmK8f3HH1Em">Shor's algorithm</a>.</p>
+
+<p></p>
+
+</body>
+</html>
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log Log Log</title>
+	
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function ( ) {
+
+	document.querySelectorAll( '.math' )
+	.forEach( function ( element ) {
+		try {
+			var tex = element.textContent ;
+			var math = tex.substr(2, tex.length - 4) ;
+			var displayMode = tex.substr(0, 2) == '\\[' ;
+			try {
+				katex.render(math, element, {displayMode: displayMode});
+			}
+			catch ( e ) {
+				console.error( e ) ;
+				console.debug( element, tex , math , { displayMode: displayMode});
+			}
+		}
+		catch ( e ) {
+			console.error( e ) ;
+		}
+	});
+
+});
+</script>
+
+</head>
+<body>
+
+
+  <h1>Log Log Log</h1>
+  <h2>Thu, Apr 14, 2016</h2>
+  <h2 id="theorem">Theorem</h2>
+
+<p><span  class="math">\[
+\frac{\log n}{\log \log n}! = \Theta(n)
+\]</span></p>
+
+<p></p>
+
+<h2 id="proof">Proof</h2>
+
+<p><span  class="math">\[
+\begin{aligned}
+K^2! &= \sqrt{\frac{\log n}{\log \log n}}^2!\\
+&= \frac{\log n}{\log \log n}!\\
+\lim_{K^2 \to \infty} K^2! &= \sqrt{2\pi \frac{\log n}{\log \log n}}
+\left( \frac{\frac{\log n}{\log \log n}}{e}\right)^\frac{\log n}{\log \log
+n}\\
+\lim_{n \to \infty} K^2! &= \sqrt{2\pi \frac{\log n}{\log \log n}}
+\left( \frac{\frac{\log n}{\log \log n}}{e}\right)^\frac{\log n}{\log \log
+n}\\
+&= \sqrt{2\pi \frac{\log n}{\log \log n}}
+\left( \frac{\log n}{e \log \log n}\right)^\frac{\log n}{\log \log n}\\
+&= \sqrt{2\pi \frac{\log n}{\log \log n}}
+\frac{2^{\log \log n\frac{\log n}{\log \log n}}}{2^{\log \log \log n\frac{\log n}{\log \log n}}
+2^{\log e\frac{\log n}{\log \log n}}
+}\\
+&= \sqrt{2\pi \frac{\log n}{\log \log n}}
+\frac{n}{n^{\frac{\log \log \log n}{\log \log n}}
+n^{\frac{\log e}{\log \log n}}
+}\\
+&= \sqrt{2\pi \frac{2^{\log \log n}}{2^{\log \log \log n}}}
+\frac{n}{n^{\frac{\log \log \log n}{\log \log n}}
+n^{\frac{\log e}{\log \log n}}
+}\\
+&= \sqrt{2\pi \frac{n^{\frac{\log \log n}{\log n}}}{n^{\frac{\log \log \log
+n}{\log n}}}}
+\frac{n}{n^{\frac{\log \log \log n}{\log \log n}}
+n^{\frac{\log e}{\log \log n}}
+}\\
+&= \sqrt{2\pi} \frac{n^{\frac{\log \log n}{2\log n}}}{n^{\frac{\log \log \log
+n}{2\log n}}}
+\frac{n}{n^{\frac{\log \log \log n}{\log \log n}}
+n^{\frac{\log e}{\log \log n}}
+}\\
+&= \sqrt{2\pi} \frac{n^{\frac{\log \log n}{2\log n}}}{n^{\frac{\log \log \log
+n}{2\log n}}}
+\frac{n}{n^{\frac{\log \log \log n + \log e}{\log \log n}}
+}\\
+&= \sqrt{2\pi} \frac{n^{\frac{(\log \log n)^2}{2\log n\log\log
+n}}}{n^{\frac{\log \log n \log
+\log \log n}{2\log n \log \log n}}}
+\frac{n}{n^{\frac{2 \log n \log \log \log n + 2 \log n \log e}{2\log n \log \log n}}
+}\\
+&= \sqrt{2\pi}
+\frac{n}{n^{\frac{2 \log e \log n + 2 \log n \log \log \log n + \log \log n
+\log \log \log n - (\log \log n)^2}{2\log n \log \log n}}
+}\\
+&= \sqrt{2\pi}
+\frac{n}{n^{\frac{2 \log n \log \log \log n}{2\log n \log \log n}}
+}\\
+&= \sqrt{2\pi}
+\frac{n}{n^{\frac{\log \log \log n}{\log \log n}}
+}\\
+&= \sqrt{2\pi} n^{1 - \frac{\log \log \log n}{\log \log n}}\\
+\end{aligned}
+\]</span></p>
+
+</body>
+</html>
+

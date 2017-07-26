@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="generator" content="Hugo 0.20-DEV" />
+	<title></title>
+	
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function ( ) {
+
+	document.querySelectorAll( '.math' )
+	.forEach( function ( element ) {
+		try {
+			var tex = element.textContent ;
+			var math = tex.substr(2, tex.length - 4) ;
+			var displayMode = tex.substr(0, 2) == '\\[' ;
+			try {
+				katex.render(math, element, {displayMode: displayMode});
+			}
+			catch ( e ) {
+				console.error( e ) ;
+				console.debug( element, tex , math , { displayMode: displayMode});
+			}
+		}
+		catch ( e ) {
+			console.error( e ) ;
+		}
+	});
+
+});
+</script>
+
+</head>
+<body>
+
+
+  
+    <h2><a href="https://aureooms.github.io/math/2017/07/23/sums-of-geometric-series/">Sums of geometric series</a></h2>
+    <p>Among the identities that are useful in the analysis of algorithms,
+this one shows how sums of geometric series converge when the ratio
+is smaller than one (in absolute value). It occurs in divide an conquer
+schemes. For example, it allows to show that hierarchical cuttings for <span  class="math">\(n\)</span>
+hyperplanes in <span  class="math">\(d\)</span> dimensions only need space proportional to <span  class="math">\(n^d\)</span>.</p>
+
+<p><span  class="math">\[
+\sum_{i=0}^{\infty} \binom{i+j}{j} x^i = \frac{1}{ {(1-x)}^{j+1} },
+\forall j \in \mathbb{N}, \forall x \in (-1,1).
+\]</span></p>
+  
+    <h2><a href="https://aureooms.github.io/math/2017/07/22/infinite-number-of-primes/">Infinite Number of Primes</a></h2>
+    <p>The erroneous proof I hear most often is: Suppose <span  class="math">\(P\)</span> is a
+finite set that contains all the primes, then <span  class="math">\(p^* = 1 + \prod_{p \in P} p\)</span> is
+prime. Indeed, the flaw is that <span  class="math">\(p^*\)</span> is not necessarily prime but rather
+must be a multiple of some prime not in <span  class="math">\(P\)</span>.</p>
+  
+    <h2><a href="https://aureooms.github.io/math/2017/07/21/quantum-computer-algorithms/">Quantum Computer Algorithms</a></h2>
+    <p><a href="https://ipfs.io/ipfs/QmctoycyfhWTrDy4c4jZeyLcRmmutFii5H5RLGk7pMbDoS">Notes</a>
+from June 2015 containing the following:
+<a href="https://ipfs.io/ipfs/QmP44FjtNGGS5zvoyhxveNSJshvSobKrfQdEcxRLurqaon">Phase kick-back</a>,
+<a href="https://ipfs.io/ipfs/Qma3KPLTHexwfstuK9cWaR5f9EfJcw5z7Se4Pi3Qs8sHfF">Deutsch's algorithm</a>,
+<a href="https://ipfs.io/ipfs/QmQdQ4cit6t32D7AmFhZzF2wLtkmVv5qTBDVt1N5XXhSwc">Fourier sampling</a>,
+<a href="https://ipfs.io/ipfs/QmSQGPw7VKiyFMZiN5Abirg291wquS2oxVu7jbQc1BMbgu">Deutsch-Jozsa algorithm</a>,
+<a href="https://ipfs.io/ipfs/QmSRDLPx9bgswjP23VQSACwvBd4QgDo1DyL3dGu5Bjv1HD">Bernstein-Vazirani algorithm</a>,
+<a href="https://ipfs.io/ipfs/Qmcy9a2aLNS2dvfXRaTJ6LBxY9RfJiDAGP9UNtGshbCeAk">Preimage of a function</a>,
+<a href="https://ipfs.io/ipfs/Qma7ysFrm5SxVwELzy9eNcLKGh1DogY1sLotpXmdu87GeS">Simon's algorithm</a>,
+<a href="https://ipfs.io/ipfs/QmeyDeUgwYZJEC4dHYz3rEVDJHwSoA84HoaQpFjRTzjS8v">Gover's algorithm</a>,
+<a href="https://ipfs.io/ipfs/QmR3fConAUYAnqFqfv9meKW9NkrmJsBsDwjEJMazGrr1U5">Amplitude amplification</a>,
+<a href="https://ipfs.io/ipfs/QmRcrn1hjpex3H6vSAhpAuTNyuXVkpz4gKV6heHgdNCenh">Quantum Fourier Transform</a>,
+and
+<a href="https://ipfs.io/ipfs/QmdK1mNmR3ASVShWM2jSxhDzm1aRD4mVofvvmK8f3HH1Em">Shor's algorithm</a>.</p>
+
+<p></p>
+  
+    <h2><a href="https://aureooms.github.io/math/2017/04/22/recurrences/">Recurrences</a></h2>
+    <h2 id="theorem">Theorem</h2>
+
+<p>Let <span  class="math">\( a \in \mathbb{N} \)</span>, <span  class="math">\( t < a \in \mathbb{N} \)</span>, and <span  class="math">\( b \in
+\mathbb{R}\)</span>. Defining <span  class="math">\( A_t \)</span> to be some real number and</p>
+
+<p><span  class="math">\[
+A_N = (1 - \frac{a}{N}) A_{N-1} + b, N > t \in \mathbb{N},
+\]</span></p>
+
+<p>then</p>
+
+<p><span  class="math">\[
+A_N = \frac{b}{1+a} (N+1), N \ge a \in \mathbb{N}.
+\]</span></p>
+
+<p></p>
+  
+    <h2><a href="https://aureooms.github.io/math/2017/04/21/converging-series/">Converging series</a></h2>
+    <h2 id="theorem">Theorem</h2>
+
+<p>Let <span  class="math">\(-1 < x < 1\)</span>,</p>
+
+<p><span  class="math">\[
+1 + x + x^2 + x^3 + x^4 + \cdots = \frac{1}{1-x}.
+\]</span></p>
+
+<p></p>
+  
+    <h2><a href="https://aureooms.github.io/math/2016/05/04/polynomial-time-approximation-schemes/">Polynomial-time approximation schemes</a></h2>
+    <h2 id="ptas">PTAS</h2>
+
+<p><span  class="math">\((1\pm\varepsilon)\)</span>-approximation with complexity <span  class="math">\(O(n^{f(\varepsilon)})\)</span>.</p>
+
+<p></p>
+  
+    <h2><a href="https://aureooms.github.io/math/2016/04/27/equivalence-of-3sum-problems/">Equivalence of 3SUM problems</a></h2>
+    <h2 id="reducing-3sumx1-to-3sumx3">Reducing 3SUMx1 to 3SUMx3</h2>
+
+<p>???</p>
+
+<h2 id="reducing-3sumx3-to-3sumx1">Reducing 3SUMx3 to 3SUMx1</h2>
+
+<p><span  class="math">\[ (a, 3), (b, 4), (c, -7) \]</span></p>
+
+<p></p>
+  
+    <h2><a href="https://aureooms.github.io/math/2016/04/14/log-log-log/">Log Log Log</a></h2>
+    <h2 id="theorem">Theorem</h2>
+
+<p><span  class="math">\[
+\frac{\log n}{\log \log n}! = \Theta(n)
+\]</span></p>
+
+<p></p>
+  
+    <h2><a href="https://aureooms.github.io/math/2016/04/12/vc-dimension/">VC-dimension</a></h2>
+    <h2 id="definition-1-espilon-net">Definition 1 (Espilon net)</h2>
+
+<p>Let <span  class="math">\(X\)</span> be a set, let <span  class="math">\(\mu\)</span> be a probability measure on <span  class="math">\(X\)</span>, let
+<span  class="math">\(\mathcal{F}\)</span> be a system of <span  class="math">\(\mu\)</span>-measurable subsets of <span  class="math">\(X\)</span>, and let
+<span  class="math">\(\varepsilon \in [0,1]\)</span> be a real number. A subset <span  class="math">\(N\subseteq X\)</span> is
+called an <span  class="math">\(\varepsilon\)</span>-net for <span  class="math">\((X,\mathcal{F})\)</span> with respect to
+<span  class="math">\(\mu\)</span> if <span  class="math">\(N \cap S \neq \emptyset\)</span> for all <span  class="math">\(S \in \mathcal{F}\)</span> with
+<span  class="math">\(\mu(S) \ge \varepsilon\)</span>.</p>
+
+<p></p>
+  
+    <h2><a href="https://aureooms.github.io/math/2016/01/17/d-hyperplanes-intersection-bounds/"><span class="math">\(d\)</span> hyperplanes intersection bounds</a></h2>
+    <p>We bound the position of the <span  class="math">\(0\)</span>-cells of an arrangement of hyperplanes in
+<span  class="math">\(\mathbb{R}^d\)</span>. This allows, for example, to build an hypercube that
+intersects all cells of the arrangement. Such an hypercube must contain at
+least one point of each cell of the arrangement. When <span  class="math">\(q > 0\)</span>, in order to
+fix which point of a <span  class="math">\(q\)</span>-cell we want to include in the hypercube, it
+suffices to add the <span  class="math">\(n\)</span> hyperplanes of equation <span  class="math">\(x_i = 0\)</span> to the
+arrangement. With those additional hyperplanes, the arrangement is such that
+each <span  class="math">\(q\)</span>-cell of the arrangement with <span  class="math">\(q > 0\)</span> contains a
+<span  class="math">\(0\)</span>-cell of the arrangement, hence, we only need the hypercube to
+intersect, for each <span  class="math">\(0\)</span>-cell <span  class="math">\(\nu\)</span> of the arrangement, an hypersphere
+of center <span  class="math">\(\nu\)</span> and arbitrarily small radius. The inequalities of the
+polyhedral set defining our hypercube will thus only depend on the position of
+the <span  class="math">\(0\)</span>-cells of our arrangement.</p>
+  
+
+  
+    
+    <ul class="pagination">
+        
+        <li>
+            <a href="/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+        </li>
+        
+        <li
+        class="disabled">
+        <a href="" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+        </li>
+        
+        <li
+        class="active"><a href="/">1</a></li>
+        
+        <li
+        ><a href="/page/2/">2</a></li>
+        
+        <li
+        >
+        <a href="/page/2/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+        </li>
+        
+        <li>
+            <a href="/page/2/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        </li>
+        
+    </ul>
+    
+
+</body>
+</html>
+
