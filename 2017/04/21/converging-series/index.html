@@ -2,34 +2,21 @@
 <html>
 <head>
 	<title>Converging series</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 	
 
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function ( ) {
-
-	document.querySelectorAll( '.math' )
-	.forEach( function ( element ) {
-		try {
-			var tex = element.textContent ;
-			var math = tex.substr(2, tex.length - 4) ;
-			var displayMode = tex.substr(0, 2) == '\\[' ;
-			try {
-				katex.render(math, element, {displayMode: displayMode});
-			}
-			catch ( e ) {
-				console.error( e ) ;
-				console.debug( element, tex , math , { displayMode: displayMode});
-			}
-		}
-		catch ( e ) {
-			console.error( e ) ;
-		}
-	});
-
+document.addEventListener("DOMContentLoaded", ( ) => {
+	document
+	.querySelectorAll( '.math' )
+	.forEach( element => renderMathInElement(element) ) ;
 });
 </script>
 
@@ -37,9 +24,18 @@ document.addEventListener("DOMContentLoaded", function ( ) {
 <body>
 
 
-  <h1>Converging series</h1>
-  <h2>Fri, Apr 21, 2017</h2>
-  <h2 id="theorem">Theorem</h2>
+  <nav class="breadcrumb">
+    <a class="breadcrumb-item" href="https://aureooms.github.io/math/">Aurélien&#39;s math blog</a>
+    <a class="breadcrumb-item active" href="/2017/04/21/converging-series/">Post 785addd03bd5f1b8d82e2613f8ca3cc3</a>
+  </nav>
+
+  <div class="container mt-5">
+  <div class="row">
+  <div class="col-md-12">
+  <article>
+    <h1>Converging series</h1>
+    <h4>Fri, Apr 21, 2017</h4>
+    <p><h2 id="theorem">Theorem</h2>
 
 <p>Let <span  class="math">\(-1 < x < 1\)</span>,</p>
 
@@ -57,7 +53,11 @@ document.addEventListener("DOMContentLoaded", function ( ) {
 \lim_{k \to \infty} (1 - x)(1 + x + x^2 + x^3 + x^4 + \cdots + x^k) &= \lim_{k \to \infty} 1 - x^{k+1}, \\
 (1 - x)(1 + x + x^2 + x^3 + x^4 + \cdots) &= 1.
 \end{aligned}
-\]</span></p>
+\]</span></p></p>
+  </article>
+  </div>
+  </div>
+  </div>
 
 </body>
 </html>

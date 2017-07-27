@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
-    <link>https://aureooms.github.io/math/index.xml</link>
-    <description>Recent content on </description>
+    <title>Aurélien&#39;s math blog</title>
+    <link>https://aureooms.github.io/math/</link>
+    <description>Recent content on Aurélien&#39;s math blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 23 Jul 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://aureooms.github.io/math/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://aureooms.github.io/math/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Sums of geometric series</title>
@@ -23,34 +25,6 @@ hyperplanes in &lt;span  class=&#34;math&#34;&gt;\(d\)&lt;/span&gt; dimensions o
 &lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
 \sum_{i=0}^{\infty} \binom{i+j}{j} x^i = \frac{1}{ {(1-x)}^{j+1} },
 \forall j \in \mathbb{N}, \forall x \in (-1,1).
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;
-That&#39;s nice. There are many ways to prove it, a cool one is to first
-&lt;a href=&#34;https://aureooms.github.io/converging-series&#34;&gt;prove&lt;/a&gt; that&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\sum_{i=0}^{\infty} x^i = \frac{1}{ {(1-x)} },
-\forall x \in (-1,1),
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;and then to notice that&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\frac{1}{ {(1-x)}^{j+1} } = {\left(\sum_{i=0}^{\infty} x^i \right)}^{j+1}
-= \sum_{i=0}^{\infty} \binom{i+j}{j} x^i,
-\forall j \in \mathbb{N}, \forall x \in (-1,1).
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;because &lt;span  class=&#34;math&#34;&gt;\(\binom{i+j}{j}\)&lt;/span&gt; denotes the number of ways to partition the exponent
-of &lt;span  class=&#34;math&#34;&gt;\(x^i\)&lt;/span&gt; into a permutation of &lt;span  class=&#34;math&#34;&gt;\(j+1\)&lt;/span&gt; integers.&lt;/p&gt;
-
-&lt;p&gt;More generally, one has&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\sum_{i=0}^{k} \binom{i+j}{j} x^i = \frac{1}{ {(1-x)}^{j+1} } -
-\sum_{i=0}^{j} \frac{\binom{k+i}{i} x^{k+1}}{ {(1-x)}^{j-i+1} },
-\forall j \in \mathbb{N}, \forall x \in \mathbb{R} \setminus \{\,1\,\}.
 \]&lt;/span&gt;&lt;/p&gt;</description>
     </item>
     
@@ -63,19 +37,7 @@ of &lt;span  class=&#34;math&#34;&gt;\(x^i\)&lt;/span&gt; into a permutation of 
       <description>&lt;p&gt;The erroneous proof I hear most often is: Suppose &lt;span  class=&#34;math&#34;&gt;\(P\)&lt;/span&gt; is a
 finite set that contains all the primes, then &lt;span  class=&#34;math&#34;&gt;\(p^* = 1 + \prod_{p \in P} p\)&lt;/span&gt; is
 prime. Indeed, the flaw is that &lt;span  class=&#34;math&#34;&gt;\(p^*\)&lt;/span&gt; is not necessarily prime but rather
-must be a multiple of some prime not in &lt;span  class=&#34;math&#34;&gt;\(P\)&lt;/span&gt;.&lt;/p&gt;
-
-&lt;p&gt;
-The previous proof is so often misquoted that I prefer the following. It
-relies on the fact that a finite product of sums of infinite geometric series
-converges, whereas the sum of the reciprocals of the natural numbers (except
-zero) diverges (hint: &lt;span  class=&#34;math&#34;&gt;\(\int\)&lt;/span&gt;).&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-  \sum_{n = 1}^{\infty} \frac{1}{n}
-= \prod_{p~\text{is prime}} \sum_{j=0}^{\infty} p^{-j}
-= \prod_{p~\text{is prime}} \frac{p}{p-1}.
-\]&lt;/span&gt;&lt;/p&gt;</description>
+must be a multiple of some prime not in &lt;span  class=&#34;math&#34;&gt;\(P\)&lt;/span&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -123,38 +85,7 @@ A_N = (1 - \frac{a}{N}) A_{N-1} + b, N &gt; t \in \mathbb{N},
 A_N = \frac{b}{1+a} (N+1), N \ge a \in \mathbb{N}.
 \]&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;proof&#34;&gt;Proof&lt;/h2&gt;
-
-&lt;p&gt;Since &lt;span  class=&#34;math&#34;&gt;\( t &lt; a \)&lt;/span&gt;, &lt;span  class=&#34;math&#34;&gt;\(A_N\)&lt;/span&gt; with &lt;span  class=&#34;math&#34;&gt;\(N \ge a\)&lt;/span&gt; does not depend on
-&lt;span  class=&#34;math&#34;&gt;\(A_t\)&lt;/span&gt; because&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-A_a = (1 - \frac{a}{a}) A_{a-1} + b = b.
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Now we can check that the theorem holds for &lt;span  class=&#34;math&#34;&gt;\(N = a\)&lt;/span&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-A_a = \frac{b}{1+a} (a+1) = b.
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;And by induction for &lt;span  class=&#34;math&#34;&gt;\(N &gt; a\)&lt;/span&gt;,&lt;/p&gt;
-
-&lt;p&gt;$$
-\begin{aligned}
-A&lt;em&gt;N &amp;amp;= (1 - \frac{a}{N}) A&lt;/em&gt;{N-1} + b\&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; &amp;amp;= (1 - \frac{a}{N}) \frac{b}{1+a} N + b\\
- &amp;amp;= \frac{b}{1+a} N - \frac{ab}{1+a} + b\\
- &amp;amp;= \frac{b}{1+a} N - \frac{ab}{1+a} + \frac{b+ab}{1+a}\\
- &amp;amp;= \frac{b}{1+a} N + \frac{b}{1+a}\\
- &amp;amp;= \frac{b}{1+a} (N+1).
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;\end{aligned}
-$$&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -171,17 +102,7 @@ $$&lt;/p&gt;</description>
 1 + x + x^2 + x^3 + x^4 + \cdots = \frac{1}{1-x}.
 \]&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;proof&#34;&gt;Proof&lt;/h2&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{aligned}
-(1 - x)(1 + x + x^2 + x^3 + x^4 + \cdots + x^k) &amp;= 1 - x^{k+1}, \\
-\lim_{k \to \infty} (1 - x)(1 + x + x^2 + x^3 + x^4 + \cdots + x^k) &amp;= \lim_{k \to \infty} 1 - x^{k+1}, \\
-(1 - x)(1 + x + x^2 + x^3 + x^4 + \cdots) &amp;= 1.
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -194,19 +115,7 @@ $$&lt;/p&gt;</description>
 
 &lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\((1\pm\varepsilon)\)&lt;/span&gt;-approximation with complexity &lt;span  class=&#34;math&#34;&gt;\(O(n^{f(\varepsilon)})\)&lt;/span&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;eptas&#34;&gt;EPTAS&lt;/h2&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\((1\pm\varepsilon)\)&lt;/span&gt;-approximation with complexity &lt;span  class=&#34;math&#34;&gt;\(O(f(\varepsilon) n^c)\)&lt;/span&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;fptas&#34;&gt;FPTAS&lt;/h2&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\((1\pm\varepsilon)\)&lt;/span&gt;-approximation with complexity &lt;span  class=&#34;math&#34;&gt;\(O(poly(\frac{1}{\varepsilon}) n^c)\)&lt;/span&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\text{FPTAS} \subseteq \text{FPT}
-\]&lt;/span&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -238,66 +147,7 @@ $$&lt;/p&gt;</description>
 \frac{\log n}{\log \log n}! = \Theta(n)
 \]&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;proof&#34;&gt;Proof&lt;/h2&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{aligned}
-K^2! &amp;= \sqrt{\frac{\log n}{\log \log n}}^2!\\
-&amp;= \frac{\log n}{\log \log n}!\\
-\lim_{K^2 \to \infty} K^2! &amp;= \sqrt{2\pi \frac{\log n}{\log \log n}}
-\left( \frac{\frac{\log n}{\log \log n}}{e}\right)^\frac{\log n}{\log \log
-n}\\
-\lim_{n \to \infty} K^2! &amp;= \sqrt{2\pi \frac{\log n}{\log \log n}}
-\left( \frac{\frac{\log n}{\log \log n}}{e}\right)^\frac{\log n}{\log \log
-n}\\
-&amp;= \sqrt{2\pi \frac{\log n}{\log \log n}}
-\left( \frac{\log n}{e \log \log n}\right)^\frac{\log n}{\log \log n}\\
-&amp;= \sqrt{2\pi \frac{\log n}{\log \log n}}
-\frac{2^{\log \log n\frac{\log n}{\log \log n}}}{2^{\log \log \log n\frac{\log n}{\log \log n}}
-2^{\log e\frac{\log n}{\log \log n}}
-}\\
-&amp;= \sqrt{2\pi \frac{\log n}{\log \log n}}
-\frac{n}{n^{\frac{\log \log \log n}{\log \log n}}
-n^{\frac{\log e}{\log \log n}}
-}\\
-&amp;= \sqrt{2\pi \frac{2^{\log \log n}}{2^{\log \log \log n}}}
-\frac{n}{n^{\frac{\log \log \log n}{\log \log n}}
-n^{\frac{\log e}{\log \log n}}
-}\\
-&amp;= \sqrt{2\pi \frac{n^{\frac{\log \log n}{\log n}}}{n^{\frac{\log \log \log
-n}{\log n}}}}
-\frac{n}{n^{\frac{\log \log \log n}{\log \log n}}
-n^{\frac{\log e}{\log \log n}}
-}\\
-&amp;= \sqrt{2\pi} \frac{n^{\frac{\log \log n}{2\log n}}}{n^{\frac{\log \log \log
-n}{2\log n}}}
-\frac{n}{n^{\frac{\log \log \log n}{\log \log n}}
-n^{\frac{\log e}{\log \log n}}
-}\\
-&amp;= \sqrt{2\pi} \frac{n^{\frac{\log \log n}{2\log n}}}{n^{\frac{\log \log \log
-n}{2\log n}}}
-\frac{n}{n^{\frac{\log \log \log n + \log e}{\log \log n}}
-}\\
-&amp;= \sqrt{2\pi} \frac{n^{\frac{(\log \log n)^2}{2\log n\log\log
-n}}}{n^{\frac{\log \log n \log
-\log \log n}{2\log n \log \log n}}}
-\frac{n}{n^{\frac{2 \log n \log \log \log n + 2 \log n \log e}{2\log n \log \log n}}
-}\\
-&amp;= \sqrt{2\pi}
-\frac{n}{n^{\frac{2 \log e \log n + 2 \log n \log \log \log n + \log \log n
-\log \log \log n - (\log \log n)^2}{2\log n \log \log n}}
-}\\
-&amp;= \sqrt{2\pi}
-\frac{n}{n^{\frac{2 \log n \log \log \log n}{2\log n \log \log n}}
-}\\
-&amp;= \sqrt{2\pi}
-\frac{n}{n^{\frac{\log \log \log n}{\log \log n}}
-}\\
-&amp;= \sqrt{2\pi} n^{1 - \frac{\log \log \log n}{\log \log n}}\\
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -315,75 +165,7 @@ called an &lt;span  class=&#34;math&#34;&gt;\(\varepsilon\)&lt;/span&gt;-net for
 &lt;span  class=&#34;math&#34;&gt;\(\mu\)&lt;/span&gt; if &lt;span  class=&#34;math&#34;&gt;\(N \cap S \neq \emptyset\)&lt;/span&gt; for all &lt;span  class=&#34;math&#34;&gt;\(S \in \mathcal{F}\)&lt;/span&gt; with
 &lt;span  class=&#34;math&#34;&gt;\(\mu(S) \ge \varepsilon\)&lt;/span&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;definition-2-trace-of-mathcalf-on-y&#34;&gt;Definition 2 (Trace of &lt;span  class=&#34;math&#34;&gt;\(\mathcal{F}\)&lt;/span&gt; on &lt;span  class=&#34;math&#34;&gt;\(Y\)&lt;/span&gt;)&lt;/h2&gt;
-
-&lt;p&gt;Let &lt;span  class=&#34;math&#34;&gt;\(\mathcal{F}\)&lt;/span&gt; be a set system on &lt;span  class=&#34;math&#34;&gt;\(X\)&lt;/span&gt; and let &lt;span  class=&#34;math&#34;&gt;\(Y \subseteq X\)&lt;/span&gt;. We define the
-restriction of &lt;span  class=&#34;math&#34;&gt;\(\mathcal{F}\)&lt;/span&gt; on &lt;span  class=&#34;math&#34;&gt;\(Y\)&lt;/span&gt; (also called the &lt;em&gt;trace&lt;/em&gt; of
-&lt;span  class=&#34;math&#34;&gt;\(\mathcal{F}\)&lt;/span&gt; on
-&lt;span  class=&#34;math&#34;&gt;\(Y\)&lt;/span&gt;) as
-&lt;span  class=&#34;math&#34;&gt;\(
-\mathcal{F}|_Y = \{S \cap Y \colon\, S \in \mathcal{F}\}.
-\)&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;definition-3-vcdimension&#34;&gt;Definition 3 (VC-dimension)&lt;/h2&gt;
-
-&lt;p&gt;Let &lt;span  class=&#34;math&#34;&gt;\(\mathcal{F}\)&lt;/span&gt; be a set system on a set &lt;span  class=&#34;math&#34;&gt;\(X\)&lt;/span&gt;. Let us say that a subset &lt;span  class=&#34;math&#34;&gt;\(A
-\subseteq X\)&lt;/span&gt; is shttered by &lt;span  class=&#34;math&#34;&gt;\(\mathcal{F}\)&lt;/span&gt; if each of the subsets of &lt;span  class=&#34;math&#34;&gt;\(A\)&lt;/span&gt; can
-be obtained as the intersection of some &lt;span  class=&#34;math&#34;&gt;\(S \in \mathcal{F}\)&lt;/span&gt; with &lt;span  class=&#34;math&#34;&gt;\(A\)&lt;/span&gt;, i.e.,
-if &lt;span  class=&#34;math&#34;&gt;\(\mathcal{F}|_A = 2^{A}\)&lt;/span&gt;. We define the VC-dimension of
-&lt;span  class=&#34;math&#34;&gt;\(\mathcal{F}\)&lt;/span&gt;, denoted
-by &lt;span  class=&#34;math&#34;&gt;\(dim(F)\)&lt;/span&gt;, as the supremum of the sizes of all finite shattered
-subsets of &lt;span  class=&#34;math&#34;&gt;\(X\)&lt;/span&gt;. If arbitrarily large subsets can be shattered, the
-VC-dimension is &lt;span  class=&#34;math&#34;&gt;\(\infty\)&lt;/span&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;theorem-1-epsilon-net-theorem&#34;&gt;Theorem 1 (Epsilon net theorem)&lt;/h2&gt;
-
-&lt;p&gt;If &lt;span  class=&#34;math&#34;&gt;\(X\)&lt;/span&gt; is a set with a probability measure &lt;span  class=&#34;math&#34;&gt;\(\mu\)&lt;/span&gt;, &lt;span  class=&#34;math&#34;&gt;\(\mathcal{F}\)&lt;/span&gt; is a system of
-&lt;span  class=&#34;math&#34;&gt;\(\mu\)&lt;/span&gt;-measurable subsets of &lt;span  class=&#34;math&#34;&gt;\(X\)&lt;/span&gt; with &lt;span  class=&#34;math&#34;&gt;\(dim(\mathcal{F}) \le d\)&lt;/span&gt;, &lt;span  class=&#34;math&#34;&gt;\(d\ge 2\)&lt;/span&gt;, and
-&lt;span  class=&#34;math&#34;&gt;\(r \ge 2\)&lt;/span&gt; is a parameter, then there exists a &lt;span  class=&#34;math&#34;&gt;\(\frac{1}{r}\)&lt;/span&gt;-net for
-&lt;span  class=&#34;math&#34;&gt;\((X,\mathcal{F})\)&lt;/span&gt; with respect to &lt;span  class=&#34;math&#34;&gt;\(\mu\)&lt;/span&gt; of size at most &lt;span  class=&#34;math&#34;&gt;\(Cdr\ln r\)&lt;/span&gt;, where &lt;span  class=&#34;math&#34;&gt;\(C\)&lt;/span&gt;
-is an absolute constant.&lt;/p&gt;
-
-&lt;h2 id=&#34;definition-4-shatter-function&#34;&gt;Definition 4 (Shatter function)&lt;/h2&gt;
-
-&lt;p&gt;We define the shatter function of a set system &lt;span  class=&#34;math&#34;&gt;\(\mathcal{F}\)&lt;/span&gt; by
-&lt;span  class=&#34;math&#34;&gt;\(
-\pi_\mathcal{F}(m) = \max_{Y\subseteq X, \lvert Y \rvert = m} \lvert \mathcal{F}|_Y
-\rvert.
-\)&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;lemma-1-shatter-function-lemma&#34;&gt;Lemma 1 (Shatter function lemma)&lt;/h2&gt;
-
-&lt;p&gt;For any set system &lt;span  class=&#34;math&#34;&gt;\(\mathcal{F}\)&lt;/span&gt; of VC-dimension at most &lt;span  class=&#34;math&#34;&gt;\(d\)&lt;/span&gt;, we have
-&lt;span  class=&#34;math&#34;&gt;\(\pi_\mathcal{F}(m)
-\le \Phi_d(m)\)&lt;/span&gt; for all &lt;span  class=&#34;math&#34;&gt;\(m\)&lt;/span&gt;, where &lt;span  class=&#34;math&#34;&gt;\(\Phi_d(m) = \binom{m}{0} +
-\binom{m}{1} + \cdots + \binom{m}{d}\)&lt;/span&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;proposition-1&#34;&gt;Proposition 1&lt;/h2&gt;
-
-&lt;p&gt;Let &lt;span  class=&#34;math&#34;&gt;\(\mathbb{R}[x_1,x_2,\ldots,x_d]_{\le D}\)&lt;/span&gt; denote the set of all real
-polynomials in &lt;span  class=&#34;math&#34;&gt;\(d\)&lt;/span&gt; variables of degree at most &lt;span  class=&#34;math&#34;&gt;\(D\)&lt;/span&gt;, and let
-&lt;span  class=&#34;math&#34;&gt;\(
-\mathcal{P}_{d,D} = \{\{x\in \mathbb{R}^d \colon\, p(x) \ge 0\}\colon\, p \in
-\mathbb{R}[x_1,x-2,\ldots,x_d]_{\le D}\}.
-\)&lt;/span&gt;
-Then &lt;span  class=&#34;math&#34;&gt;\(dim(\mathcal{P}_{d,D}) \le \binom{d+D}{d}\)&lt;/span&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;proposition-2&#34;&gt;Proposition 2&lt;/h2&gt;
-
-&lt;p&gt;Let &lt;span  class=&#34;math&#34;&gt;\(F(X_1,X_2,\ldots,X_k)\)&lt;/span&gt; be a fixed set-theoretic expression (using
-the operations of union, intersection, and difference) with variables
-&lt;span  class=&#34;math&#34;&gt;\(X_1,X_2,\ldots,X_k\)&lt;/span&gt; standing for sets.
-Let &lt;span  class=&#34;math&#34;&gt;\(\mathcal{S}\)&lt;/span&gt; be a set system on a ground set &lt;span  class=&#34;math&#34;&gt;\(X\)&lt;/span&gt; with
-&lt;span  class=&#34;math&#34;&gt;\(dim(\mathcal{S}) = d &lt;
-\infty\)&lt;/span&gt;. Let
-&lt;span  class=&#34;math&#34;&gt;\(
-\mathcal{T} = \{F(S_1,S_2,\ldots,S_k) \colon\, S_1,S_2,\ldots,S_k \in
-\mathcal{S}\}.
-\)&lt;/span&gt;
-Then &lt;span  class=&#34;math&#34;&gt;\(dim(\mathcal{T}) = O(kd\ln k)\)&lt;/span&gt;.&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -404,640 +186,7 @@ each &lt;span  class=&#34;math&#34;&gt;\(q\)&lt;/span&gt;-cell of the arrangemen
 intersect, for each &lt;span  class=&#34;math&#34;&gt;\(0\)&lt;/span&gt;-cell &lt;span  class=&#34;math&#34;&gt;\(\nu\)&lt;/span&gt; of the arrangement, an hypersphere
 of center &lt;span  class=&#34;math&#34;&gt;\(\nu\)&lt;/span&gt; and arbitrarily small radius. The inequalities of the
 polyhedral set defining our hypercube will thus only depend on the position of
-the &lt;span  class=&#34;math&#34;&gt;\(0\)&lt;/span&gt;-cells of our arrangement.&lt;/p&gt;
-
-&lt;p&gt;
-We thus bound the components of those vertices. Since the &lt;span  class=&#34;math&#34;&gt;\(0\)&lt;/span&gt;-cells of our
-arrangement are intersections of &lt;span  class=&#34;math&#34;&gt;\(n\)&lt;/span&gt; intersecting and linearly independent
-hyperplanes, we focus on the solutions of systems of &lt;span  class=&#34;math&#34;&gt;\(n\)&lt;/span&gt; linear equations
-in &lt;span  class=&#34;math&#34;&gt;\(\mathbb{R}^n\)&lt;/span&gt;.
-Let us begin with a few examples to build some intuition.&lt;/p&gt;
-
-&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
-
-&lt;h3 id=&#34;first-example-a-x--b--0&#34;&gt;First example: &lt;span  class=&#34;math&#34;&gt;\(a x + b = 0\)&lt;/span&gt;&lt;/h3&gt;
-
-&lt;p&gt;If &lt;span  class=&#34;math&#34;&gt;\(a \neq 0\)&lt;/span&gt; then&lt;/p&gt;
-
-&lt;p&gt;$$&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;a x + b = 0 \iff x = -\frac{b}{a}.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;$$&lt;/p&gt;
-
-&lt;h3 id=&#34;second-example-a-x--b-y--c--0&#34;&gt;Second example: &lt;span  class=&#34;math&#34;&gt;\(a x + b y + c = 0\)&lt;/span&gt;&lt;/h3&gt;
-
-&lt;p&gt;If &lt;span  class=&#34;math&#34;&gt;\(
-\begin{vmatrix}
-a &amp; b \\
-d &amp; e
-\end{vmatrix} \neq 0 \)&lt;/span&gt;
-then to solve&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\left\lbrace\begin{aligned}
-a x + b y + c &amp;= 0\\
-d x + e y + f &amp;= 0
-\end{aligned}\right.,
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;we can use the following (implied) equations which are true for all
-&lt;span  class=&#34;math&#34;&gt;\(\lambda,\mu \in \mathbb{R}\)&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;$$
-\begin{aligned}&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(a+\lambda d) x + (b + \lambda e ) y + ( c + \lambda f ) &amp;amp;= 0\\
-(\mu a+ d) x + (\mu b +  e ) y + ( \mu c + f ) &amp;amp;= 0.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;\end{aligned}
-$$&lt;/p&gt;
-
-&lt;p&gt;We can find &lt;span  class=&#34;math&#34;&gt;\(x\)&lt;/span&gt; by making &lt;span  class=&#34;math&#34;&gt;\(y\)&lt;/span&gt; disappear. Since &lt;span  class=&#34;math&#34;&gt;\(
-\begin{vmatrix}
-a &amp; b \\
-d &amp; e
-\end{vmatrix} \neq 0 \)&lt;/span&gt; we cannot have &lt;span  class=&#34;math&#34;&gt;\(b\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\(e\)&lt;/span&gt; equal to zero
-simultaneously so either &lt;span  class=&#34;math&#34;&gt;\(e \neq 0\)&lt;/span&gt; and&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{aligned}
-\lambda = -\frac{b}{e} \implies
-(a - \frac{b}{e} d) x +
-(b - \frac{b}{e} e) y +
-(c - \frac{b}{e} f) &amp; = 0\\
-(ae - bd) x +
-(be - be) y +
-(ce - bf) &amp; = 0,
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;or &lt;span  class=&#34;math&#34;&gt;\(b \neq 0\)&lt;/span&gt; and&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{aligned}
-\mu = -\frac{e}{b} \implies
-(-\frac{e}{b}a + d) x +
-(-\frac{e}{b}b + e) y +
-(-\frac{e}{b}c + f) &amp; = 0\\
-(ae - bd) x +
-(be - be) y +
-(ce - bf) &amp; = 0,
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;hence, in either case&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-x = -\frac{ce - bf}{ae-bd}
-= +\frac{
-\begin{vmatrix}
-b &amp; c \\
-e &amp; f
-\end{vmatrix}
-}{
-\begin{vmatrix}
-a &amp; b \\
-d &amp; e
-\end{vmatrix}
-}.
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Similarily, we can find &lt;span  class=&#34;math&#34;&gt;\(y\)&lt;/span&gt; by making &lt;span  class=&#34;math&#34;&gt;\(x\)&lt;/span&gt; disappear. Since &lt;span  class=&#34;math&#34;&gt;\(
-\begin{vmatrix}
-a &amp; b \\
-d &amp; e
-\end{vmatrix} \neq 0 \)&lt;/span&gt; we cannot have &lt;span  class=&#34;math&#34;&gt;\(a\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\(d\)&lt;/span&gt; equal to zero
-simultaneously so either &lt;span  class=&#34;math&#34;&gt;\(d \neq 0\)&lt;/span&gt; and&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{aligned}
-\lambda = -\frac{a}{d} \implies
-(a - \frac{a}{d} d) x +
-(b - \frac{a}{d} e) y +
-(c - \frac{a}{d} f) &amp; = 0\\
-(ad - ad) x +
-(bd - ae) y +
-(cd - af) &amp; = 0,
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;or &lt;span  class=&#34;math&#34;&gt;\(a \neq 0\)&lt;/span&gt; and&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{aligned}
-\mu = -\frac{d}{a} \implies
-(-\frac{d}{a}a + d) x +
-(-\frac{d}{a}b + e) y +
-(-\frac{d}{a}c + f) &amp; = 0\\
-(ad - ad) x +
-(bd - ae) y +
-(cd - af) &amp; = 0,
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;hence, in either case&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-y = -\frac{cd - af}{bd-ae}
-= -\frac{
-\begin{vmatrix}
-a &amp; c \\
-d &amp; f
-\end{vmatrix}
-}{
-\begin{vmatrix}
-a &amp; b \\
-d &amp; e
-\end{vmatrix}
-}.
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;same-examples-using-a-better-notation&#34;&gt;Same examples, using a better notation&lt;/h2&gt;
-
-&lt;p&gt;Let us do it again with a better notation.&lt;/p&gt;
-
-&lt;h3 id=&#34;first-example-alpha10--alpha11-x1--0&#34;&gt;First example: &lt;span  class=&#34;math&#34;&gt;\(\alpha_{1,0} + \alpha_{1,1} x_1 = 0\)&lt;/span&gt;&lt;/h3&gt;
-
-&lt;p&gt;If &lt;span  class=&#34;math&#34;&gt;\(\alpha_{1,1} \neq 0\)&lt;/span&gt; then&lt;/p&gt;
-
-&lt;p&gt;$$&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;\alpha_{1,0} + \alpha_{1,1} x_1 = 0 \iff x_1 = -\frac{\alpha_{1,0}}{\alpha_{1,1}}.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;$$&lt;/p&gt;
-
-&lt;h3 id=&#34;second-example-alpha10--alpha11-x1--alpha12-x2--0&#34;&gt;Second example: &lt;span  class=&#34;math&#34;&gt;\(\alpha_{1,0} + \alpha_{1,1} x_1 + \alpha_{1,2} x_2 = 0\)&lt;/span&gt;&lt;/h3&gt;
-
-&lt;p&gt;If &lt;span  class=&#34;math&#34;&gt;\(
-\begin{vmatrix}
-\alpha_{1,1} &amp; \alpha_{1,2} \\
-\alpha_{2,1} &amp; \alpha_{2,2}
-\end{vmatrix} \neq 0 \)&lt;/span&gt;
-then to solve&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\left\lbrace\begin{aligned}
-\alpha_{1,0} + \alpha_{1,1} x_1 + \alpha_{1,2} x_2 &amp;= 0\\
-\alpha_{2,0} + \alpha_{2,1} x_1 + \alpha_{2,2} x_2 &amp;= 0
-\end{aligned}\right.,
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;we can use the following (implied) equations which are true for all
-&lt;span  class=&#34;math&#34;&gt;\(y_1,y_2 \in \mathbb{R}\)&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;$$
-\begin{aligned}&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(\alpha_{1,0}+ \alpha_{2,0}y_2 ) +
-(\alpha_{1,1}+ \alpha_{2,1}y_2 ) x_1 +
-(\alpha_{1,2}+ \alpha_{2,2}y_2 ) x_2 = 0\\
-(\alpha_{1,0}y_1+ \alpha_{2,0} ) +
-(\alpha_{1,1}y_1+ \alpha_{2,1} ) x_1 +
-(\alpha_{1,2}y_1+ \alpha_{2,2} ) x_2 = 0.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;\end{aligned}
-$$&lt;/p&gt;
-
-&lt;p&gt;We can find &lt;span  class=&#34;math&#34;&gt;\(x_1\)&lt;/span&gt; by making &lt;span  class=&#34;math&#34;&gt;\(x_2\)&lt;/span&gt; disappear. Since &lt;span  class=&#34;math&#34;&gt;\(
-\begin{vmatrix}
-\alpha_{1,1} &amp; \alpha_{1,2} \\
-\alpha_{2,1} &amp; \alpha_{2,2}
-\end{vmatrix} \neq 0 \)&lt;/span&gt; we cannot have &lt;span  class=&#34;math&#34;&gt;\(\alpha_{1,2}\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\(\alpha_{2,2}\)&lt;/span&gt; equal to zero
-simultaneously so either &lt;span  class=&#34;math&#34;&gt;\(\alpha_{2,2} \neq 0\)&lt;/span&gt; and&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{aligned}
-y_2 = -\frac{\alpha_{1,2}}{\alpha_{2,2}} \implies
-(\alpha_{1,0} - \frac{\alpha_{1,2}}{\alpha_{2,2}} \alpha_{2,0}) +
-(\alpha_{1,1} - \frac{\alpha_{1,2}}{\alpha_{2,2}} \alpha_{2,1}) x_1 +
-(\alpha_{1,2} - \frac{\alpha_{1,2}}{\alpha_{2,2}} \alpha_{2,2}) x_2
-&amp; = 0\\
-(\alpha_{1,0}\alpha_{2,2} - \alpha_{1,2}\alpha_{2,0}) +
-(\alpha_{1,1}\alpha_{2,2} - \alpha_{1,2}\alpha_{2,1}) x_1 +
-(\alpha_{1,2}\alpha_{2,2} - \alpha_{1,2}\alpha_{2,2}) x_2 &amp; = 0
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;or &lt;span  class=&#34;math&#34;&gt;\(\alpha_{1,2} \neq 0\)&lt;/span&gt; and&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{aligned}
-y_1 = -\frac{\alpha_{2,2}}{\alpha_{1,2}} \implies
-(-\frac{\alpha_{2,2}}{\alpha_{1,2}}\alpha_{1,0} + \alpha_{2,0}) +
-(-\frac{\alpha_{2,2}}{\alpha_{1,2}}\alpha_{1,1} + \alpha_{2,1}) x_1 +
-(-\frac{\alpha_{2,2}}{\alpha_{1,2}}\alpha_{1,2} + \alpha_{2,2}) x_2
-&amp; = 0\\
-(\alpha_{1,0}\alpha_{2,2} - \alpha_{1,2}\alpha_{2,0}) +
-(\alpha_{1,1}\alpha_{2,2} - \alpha_{1,2}\alpha_{2,1}) x_1 +
-(\alpha_{1,2}\alpha_{2,2} - \alpha_{1,2}\alpha_{2,2}) x_2 &amp; = 0
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;hence, in either case&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-x_1 = -\frac{\alpha_{1,0}\alpha_{2,2} - \alpha_{1,2}\alpha_{2,0}}
-{\alpha_{1,1}\alpha_{2,2} - \alpha_{1,2}\alpha_{2,1}}
-= -\frac{
-\begin{vmatrix}
-\alpha_{1,0} &amp; \alpha_{1,2} \\
-\alpha_{2,0} &amp; \alpha_{2,2}
-\end{vmatrix}
-}{
-\begin{vmatrix}
-\alpha_{1,1} &amp; \alpha_{1,2} \\
-\alpha_{2,1} &amp; \alpha_{2,2}
-\end{vmatrix}
-}.
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Similarily, we can find &lt;span  class=&#34;math&#34;&gt;\(x_2\)&lt;/span&gt; by making &lt;span  class=&#34;math&#34;&gt;\(x_1\)&lt;/span&gt; disappear. Since &lt;span  class=&#34;math&#34;&gt;\(
-\begin{vmatrix}
-\alpha_{1,1} &amp; \alpha_{1,2} \\
-\alpha_{2,1} &amp; \alpha_{2,2}
-\end{vmatrix} \neq 0 \)&lt;/span&gt; we cannot have &lt;span  class=&#34;math&#34;&gt;\(\alpha_{1,1}\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\(\alpha_{2,1}\)&lt;/span&gt; equal to zero
-simultaneously so either &lt;span  class=&#34;math&#34;&gt;\(\alpha_{2,1} \neq 0\)&lt;/span&gt; and&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{aligned}
-y_2 = -\frac{\alpha_{1,1}}{\alpha_{2,1}} \implies
-(\alpha_{1,0} - \frac{\alpha_{1,1}}{\alpha_{2,1}} \alpha_{2,0}) +
-(\alpha_{1,1} - \frac{\alpha_{1,1}}{\alpha_{2,1}} \alpha_{2,1}) x_1 +
-(\alpha_{1,2} - \frac{\alpha_{1,1}}{\alpha_{2,1}} \alpha_{2,2}) x_2
-&amp; = 0\\
-(\alpha_{1,0}\alpha_{2,1} - \alpha_{1,1}\alpha_{2,0}) +
-(\alpha_{1,1}\alpha_{2,1} - \alpha_{1,1}\alpha_{2,1}) x_1 +
-(\alpha_{1,2}\alpha_{2,1} - \alpha_{1,1}\alpha_{2,2}) x_2 &amp; = 0
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;or &lt;span  class=&#34;math&#34;&gt;\(\alpha_{1,1} \neq 0\)&lt;/span&gt; and&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{aligned}
-y_1 = -\frac{\alpha_{2,1}}{\alpha_{1,1}} \implies
-(-\frac{\alpha_{2,1}}{\alpha_{1,1}}\alpha_{1,0} + \alpha_{2,0}) +
-(-\frac{\alpha_{2,1}}{\alpha_{1,1}}\alpha_{1,1} + \alpha_{2,1}) x_1 +
-(-\frac{\alpha_{2,1}}{\alpha_{1,1}}\alpha_{1,2} + \alpha_{2,2}) x_2
-&amp; = 0\\
-(\alpha_{1,0}\alpha_{2,1} - \alpha_{1,1}\alpha_{2,0}) +
-(\alpha_{1,1}\alpha_{2,1} - \alpha_{1,1}\alpha_{2,1}) x_1 +
-(\alpha_{1,2}\alpha_{2,1} - \alpha_{1,1}\alpha_{2,2}) x_2 &amp; = 0
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;hence, in either case&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-x_2 = -\frac{\alpha_{1,0}\alpha_{2,1} - \alpha_{1,1}\alpha_{2,0}}
-{\alpha_{1,2}\alpha_{2,1} - \alpha_{1,1}\alpha_{2,2}}
-= +\frac{
-\begin{vmatrix}
-\alpha_{1,0} &amp; \alpha_{1,1} \\
-\alpha_{2,0} &amp; \alpha_{2,1}
-\end{vmatrix}
-}{
-\begin{vmatrix}
-\alpha_{1,1} &amp; \alpha_{1,2} \\
-\alpha_{2,1} &amp; \alpha_{2,2}
-\end{vmatrix}
-}.
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;the-general-case&#34;&gt;The general case&lt;/h2&gt;
-
-&lt;h3 id=&#34;theorem&#34;&gt;Theorem&lt;/h3&gt;
-
-&lt;p&gt;For all &lt;span  class=&#34;math&#34;&gt;\(n &gt; 0 \in \mathbb{N}\)&lt;/span&gt;, if&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{vmatrix}
-\alpha_{1,1} &amp; \alpha_{1,2} &amp; \cdots &amp; \alpha_{1,n}\\
-\alpha_{2,1} &amp; \alpha_{2,2} &amp; \cdots &amp; \alpha_{2,n}\\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
-\alpha_{n,1} &amp; \alpha_{n,2} &amp; \cdots &amp; \alpha_{n,n}
-\end{vmatrix} \neq 0,
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;where &lt;span  class=&#34;math&#34;&gt;\(\alpha_{i,j} \in \mathbb{R}\)&lt;/span&gt; for all &lt;span  class=&#34;math&#34;&gt;\((i,j) \in [n] \times
-\{\,0,1,\ldots,n\,\}\)&lt;/span&gt;,
-then the system of linear equations&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\left\lbrace\begin{array}{cccccccccccc}
-\alpha_{1,0} &amp;+&amp; \alpha_{1,1} x_1 &amp;+&amp; \alpha_{1,2} x_2 &amp;+&amp; \cdots &amp;+&amp; \alpha_{1,n} x_n &amp;=&amp; 0\\
-\alpha_{2,0} &amp;+&amp; \alpha_{2,1} x_1 &amp;+&amp; \alpha_{2,2} x_2 &amp;+&amp; \cdots &amp;+&amp; \alpha_{2,n} x_n &amp;=&amp; 0\\
-\vdots &amp;+&amp; \vdots &amp;+&amp; \vdots &amp;+&amp; \ddots &amp;+&amp; \vdots &amp;=&amp; \vdots\\
-\alpha_{n,0} &amp;+&amp; \alpha_{n,1} x_1 &amp;+&amp; \alpha_{n,2} x_2 &amp;+&amp; \cdots &amp;+&amp; \alpha_{n,n} x_n &amp;=&amp; 0
-\end{array}\right.
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;has a unique solution &lt;span  class=&#34;math&#34;&gt;\(x=(x_1,x_2,\ldots,x_n)\)&lt;/span&gt; such that for all &lt;span  class=&#34;math&#34;&gt;\(i \in [n]\)&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-x_i = (-1)^i
-\frac{
-\begin{vmatrix}
-\alpha_{1,0} &amp; \alpha_{1,1} &amp; \alpha_{1,2} &amp; \cdots &amp; \alpha_{1,i-1} &amp; \alpha_{1,i+1} &amp; \cdots &amp; \alpha_{1,n}\\
-\alpha_{2,0} &amp; \alpha_{2,1} &amp; \alpha_{2,2} &amp; \cdots &amp; \alpha_{2,i-1} &amp; \alpha_{2,i+1} &amp; \cdots &amp; \alpha_{2,n}\\
-\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
-\alpha_{n,0} &amp; \alpha_{n,1} &amp; \alpha_{n,2} &amp; \cdots &amp; \alpha_{n,i-1} &amp; \alpha_{n,i+1} &amp; \cdots &amp; \alpha_{n,n}
-\end{vmatrix}
-}
-{
-\begin{vmatrix}
-\alpha_{1,1} &amp; \alpha_{1,2} &amp; \cdots &amp; \alpha_{1,n}\\
-\alpha_{2,1} &amp; \alpha_{2,2} &amp; \cdots &amp; \alpha_{2,n}\\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
-\alpha_{n,1} &amp; \alpha_{n,2} &amp; \cdots &amp; \alpha_{n,n}
-\end{vmatrix}
-}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;proof&#34;&gt;Proof&lt;/h3&gt;
-
-&lt;p&gt;By induction on &lt;span  class=&#34;math&#34;&gt;\(n\)&lt;/span&gt;. We reduce the problem of finding &lt;span  class=&#34;math&#34;&gt;\(x_i\)&lt;/span&gt; to the
-problem of finding a solution to a system of &lt;span  class=&#34;math&#34;&gt;\(n-1\)&lt;/span&gt; linear equations with
-&lt;span  class=&#34;math&#34;&gt;\(n-1\)&lt;/span&gt; unknowns.&lt;/p&gt;
-
-&lt;h4 id=&#34;base-case&#34;&gt;Base case&lt;/h4&gt;
-
-&lt;p&gt;We already showed that it holds for &lt;span  class=&#34;math&#34;&gt;\(n=1\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\(n=2\)&lt;/span&gt; in the examples
-given previously.&lt;/p&gt;
-
-&lt;h4 id=&#34;induction&#34;&gt;Induction&lt;/h4&gt;
-
-&lt;p&gt;Suppose that the theorem holds up to &lt;span  class=&#34;math&#34;&gt;\(n-1\)&lt;/span&gt; (this is the induction
-hypothesis), we show that it must also hold for &lt;span  class=&#34;math&#34;&gt;\(n\)&lt;/span&gt;.&lt;/p&gt;
-
-&lt;p&gt;Fix &lt;span  class=&#34;math&#34;&gt;\(i \in [n]\)&lt;/span&gt;, the system of equations&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\left\lbrace\begin{array}{cccccccccccc}
-\alpha_{1,0} &amp;+&amp; \alpha_{1,1} x_1 &amp;+&amp; \alpha_{1,2} x_2 &amp;+&amp; \cdots &amp;+&amp; \alpha_{1,n} x_n &amp;=&amp; 0\\
-\alpha_{2,0} &amp;+&amp; \alpha_{2,1} x_1 &amp;+&amp; \alpha_{2,2} x_2 &amp;+&amp; \cdots &amp;+&amp; \alpha_{2,n} x_n &amp;=&amp; 0\\
-\vdots &amp;+&amp; \vdots &amp;+&amp; \vdots &amp;+&amp; \ddots &amp;+&amp; \vdots &amp;=&amp; \vdots\\
-\alpha_{n,0} &amp;+&amp; \alpha_{n,1} x_1 &amp;+&amp; \alpha_{n,2} x_2 &amp;+&amp; \cdots &amp;+&amp; \alpha_{n,n} x_n &amp;=&amp; 0
-\end{array}\right.
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;implies for all &lt;span  class=&#34;math&#34;&gt;\(y_1,y_2,\ldots,y_n \in \mathbb{R}\)&lt;/span&gt; that&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{array}{crccccccccccclccc}
- &amp;(&amp;\alpha_{1,0} y_1 &amp;+&amp; \alpha_{2,0} y_2 &amp;+&amp; \alpha_{3,0} y_3 &amp;+&amp; \cdots &amp;+&amp; \alpha_{n,0} y_n &amp;)&amp;&amp;&amp;\\
-+&amp;(&amp;\alpha_{1,1} y_1 &amp;+&amp; \alpha_{2,1} y_2 &amp;+&amp; \alpha_{3,1} y_3 &amp;+&amp; \cdots &amp;+&amp; \alpha_{n,1} y_n &amp;)&amp;x_1&amp;&amp;\\
-+&amp;(&amp;\alpha_{1,2} y_1 &amp;+&amp; \alpha_{2,2} y_2 &amp;+&amp; \alpha_{3,2} y_3 &amp;+&amp; \cdots &amp;+&amp; \alpha_{n,2} y_n &amp;)&amp;x_2&amp;&amp;\\
-+&amp;(&amp;\vdots             &amp;+&amp; \vdots             &amp;+&amp; \vdots             &amp;+&amp; \ddots &amp;+&amp; \vdots             &amp;)&amp;\vdots&amp;&amp;\\
-+&amp;(&amp;\alpha_{1,n} y_1 &amp;+&amp; \alpha_{2,n} y_2 &amp;+&amp; \alpha_{3,n} y_3 &amp;+&amp; \cdots &amp;+&amp; \alpha_{n,n} y_n &amp;)&amp;x_n&amp;=&amp; 0.
-\end{array}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Note that we can fix one of the &lt;span  class=&#34;math&#34;&gt;\(y_j\)&lt;/span&gt; to some arbitrary constant while the
-equation remains valid.&lt;/p&gt;
-
-&lt;p&gt;In order to determine &lt;span  class=&#34;math&#34;&gt;\(x_i\)&lt;/span&gt; it suffices to make
-the &lt;span  class=&#34;math&#34;&gt;\(x_k \neq x_i\)&lt;/span&gt; disappear. Let us choose &lt;span  class=&#34;math&#34;&gt;\(\ell \in [n]\)&lt;/span&gt; such that&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{vmatrix}
-\alpha_{1,1}   &amp; \alpha_{2,1}   &amp; \cdots &amp; \alpha_{\ell-1,1} &amp; \alpha_{\ell+1,1}   &amp; \cdots &amp; \alpha_{n,1}\\
-\alpha_{1,2}   &amp; \alpha_{2,2}   &amp; \cdots &amp; \alpha_{\ell-1,2} &amp; \alpha_{\ell+1,2}   &amp; \cdots &amp; \alpha_{n,2}\\
-\vdots          &amp; \vdots          &amp; \ddots &amp; \vdots          &amp; \vdots            &amp; \ddots &amp; \vdots\\
-\alpha_{1,i-1} &amp; \alpha_{2,i-1} &amp; \cdots &amp; \alpha_{\ell-1,i-1} &amp; \alpha_{\ell+1,i-1} &amp; \cdots &amp; \alpha_{n,i-1}\\
-\alpha_{1,i+1} &amp; \alpha_{2,i+1} &amp; \cdots &amp; \alpha_{\ell-1,i+1} &amp; \alpha_{\ell+1,i+1} &amp; \cdots &amp; \alpha_{n,i+1}\\
-\vdots          &amp; \vdots          &amp; \ddots &amp; \vdots          &amp; \vdots            &amp; \ddots &amp; \vdots\\
-\alpha_{1,n}   &amp; \alpha_{2,n}   &amp; \cdots &amp; \alpha_{\ell-1,n} &amp; \alpha_{\ell+1,n}   &amp; \cdots &amp; \alpha_{n,n}
-\end{vmatrix} \neq 0.
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Such a &lt;span  class=&#34;math&#34;&gt;\(\ell\)&lt;/span&gt; always exists as otherwise&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{vmatrix}
-\alpha_{1,1} &amp; \alpha_{1,2} &amp; \cdots &amp; \alpha_{1,n}\\
-\alpha_{2,1} &amp; \alpha_{2,2} &amp; \cdots &amp; \alpha_{2,n}\\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
-\alpha_{n,1} &amp; \alpha_{n,2} &amp; \cdots &amp; \alpha_{n,n}
-\end{vmatrix} = 0.
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Without loss of generality we could assume that &lt;span  class=&#34;math&#34;&gt;\(\ell=1\)&lt;/span&gt;. However, for the sake
-of explanation, we will introduce a new notation to handle all cases directly.&lt;/p&gt;
-
-&lt;p&gt;We let &lt;span  class=&#34;math&#34;&gt;\(\beta_{a,b} = \alpha_{a,b}\)&lt;/span&gt; for all &lt;span  class=&#34;math&#34;&gt;\(a \in \{\,2,\ldots,\ell-1,\ell+1,\ldots,n\,\}\)&lt;/span&gt; and all
-&lt;span  class=&#34;math&#34;&gt;\(b \in \{\,0,1,\ldots,n\,\}\)&lt;/span&gt;. We let &lt;span  class=&#34;math&#34;&gt;\(\beta_{1,b} =
-\alpha_{\ell,b}\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\(\beta_{\ell,b} = \alpha_{1,b}\)&lt;/span&gt; for all &lt;span  class=&#34;math&#34;&gt;\(b \in \{\,0,1,\ldots,n\,\}\)&lt;/span&gt;.
-For all
-&lt;span  class=&#34;math&#34;&gt;\(a \in \{\,0,2,\ldots,\ell-1,\ell+1,\ldots,n\,\}\)&lt;/span&gt; we let &lt;span  class=&#34;math&#34;&gt;\(z_a =
-y_a\)&lt;/span&gt;. We let &lt;span  class=&#34;math&#34;&gt;\(z_1 = y_\ell\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\(z_\ell = y_1\)&lt;/span&gt;.&lt;/p&gt;
-
-&lt;p&gt;If we fix &lt;span  class=&#34;math&#34;&gt;\(z_1 = 1\)&lt;/span&gt;, our equation remains valid and we obtain the
-following system of &lt;span  class=&#34;math&#34;&gt;\(n-1\)&lt;/span&gt; linear equations in &lt;span  class=&#34;math&#34;&gt;\(n-1\)&lt;/span&gt; unknowns&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\left\lbrace\begin{array}{cccccccccccc}
-\beta_{1,1} &amp;+&amp; \beta_{2,1} z_2 &amp;+&amp; \beta_{3,1} z_3 &amp;+&amp; \cdots &amp;+&amp; \beta_{n,1} z_n &amp;=&amp; 0\\
-\beta_{1,2} &amp;+&amp; \beta_{2,2} z_2 &amp;+&amp; \beta_{3,2} z_3 &amp;+&amp; \cdots &amp;+&amp; \beta_{n,2} z_n &amp;=&amp; 0\\
-\vdots &amp;+&amp; \vdots &amp;+&amp; \vdots &amp;+&amp; \ddots &amp;+&amp; \vdots &amp;=&amp; \vdots\\
-\beta_{1,i-1} &amp;+&amp; \beta_{2,i-1} z_2 &amp;+&amp; \beta_{3,i-1} z_3 &amp;+&amp; \cdots &amp;+&amp; \beta_{n,i-1} z_n &amp;=&amp; 0\\
-\beta_{1,i+1} &amp;+&amp; \beta_{2,i+1} z_2 &amp;+&amp; \beta_{3,i+1} z_3 &amp;+&amp; \cdots &amp;+&amp; \beta_{n,i+1} z_n &amp;=&amp; 0\\
-\vdots &amp;+&amp; \vdots &amp;+&amp; \vdots &amp;+&amp; \ddots &amp;+&amp; \vdots &amp;=&amp; \vdots\\
-\beta_{1,n} &amp;+&amp; \beta_{2,n} z_2 &amp;+&amp; \beta_{3,n} z_3 &amp;+&amp; \cdots &amp;+&amp; \beta_{n,n} z_n &amp;=&amp; 0
-\end{array}\right..
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;By our choice of &lt;span  class=&#34;math&#34;&gt;\(\ell\)&lt;/span&gt; we have that&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{vmatrix}
-\beta_{\ell,1}   &amp; \beta_{2,1}   &amp; \cdots &amp; \beta_{\ell-1,1}   &amp; \beta_{\ell+1,1}   &amp; \cdots &amp; \beta_{n,1}\\
-\beta_{\ell,2}   &amp; \beta_{2,2}   &amp; \cdots &amp; \beta_{\ell-1,2}   &amp; \beta_{\ell+1,2}   &amp; \cdots &amp; \beta_{n,2}\\
-\vdots             &amp; \vdots         &amp; \ddots &amp; \vdots               &amp; \vdots               &amp; \ddots &amp; \vdots\\
-\beta_{\ell,i-1} &amp; \beta_{2,i-1} &amp; \cdots &amp; \beta_{\ell-1,i-1} &amp; \beta_{\ell+1,i-1} &amp; \cdots &amp; \beta_{n,i-1}\\
-\beta_{\ell,i+1} &amp; \beta_{2,i+1} &amp; \cdots &amp; \beta_{\ell-1,i+1} &amp; \beta_{\ell+1,i+1} &amp; \cdots &amp; \beta_{n,i+1}\\
-\vdots             &amp; \vdots         &amp; \ddots &amp; \vdots               &amp; \vdots               &amp; \ddots &amp; \vdots\\
-\beta_{\ell,n}   &amp; \beta_{2,n}   &amp; \cdots &amp; \beta_{\ell-1,n}   &amp; \beta_{\ell+1,n}   &amp; \cdots &amp; \beta_{n,n}
-\end{vmatrix} \neq 0,
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;hence, by moving the first column to the right place,&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{vmatrix}
-\beta_{2,1}   &amp; \beta_{3,1}   &amp; \cdots &amp; \beta_{n,1}\\
-\beta_{2,2}   &amp; \beta_{3,2}   &amp; \cdots &amp; \beta_{n,2}\\
-\vdots          &amp; \vdots          &amp; \ddots &amp; \vdots\\
-\beta_{2,i-1} &amp; \beta_{3,i-1} &amp; \cdots &amp; \beta_{n,i-1}\\
-\beta_{2,i+1} &amp; \beta_{3,i+1} &amp; \cdots &amp; \beta_{n,i+1}\\
-\vdots          &amp; \vdots          &amp; \ddots &amp; \vdots\\
-\beta_{2,n}   &amp; \beta_{3,n}   &amp; \cdots &amp; \beta_{n,n}
-\end{vmatrix} \neq 0.
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Thus, by the induction hypothesis, our last system of equations
-has a unique solution &lt;span  class=&#34;math&#34;&gt;\(z=(z_2,z_3,\ldots,z_n)\)&lt;/span&gt; such that for all &lt;span  class=&#34;math&#34;&gt;\(j
-\in [2,n]\)&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-z_j = (-1)^{j+1}
-\frac{
-\begin{vmatrix}
-\beta_{1,1}   &amp; \beta_{2,1}   &amp; \beta_{3,1}   &amp; \cdots &amp; \beta_{j-1,1} &amp; \beta_{j+1,1}  &amp; \cdots &amp; \beta_{n,1}\\
-\beta_{1,2}   &amp; \beta_{2,2}   &amp; \beta_{3,2}   &amp; \cdots &amp; \beta_{j-1,2} &amp; \beta_{j+1,2}  &amp; \cdots &amp; \beta_{n,2}\\
-\vdots          &amp; \vdots          &amp; \vdots          &amp; \ddots &amp; \vdots &amp; \vdots  &amp; \ddots &amp; \vdots\\
-\beta_{1,i-1} &amp; \beta_{2,i-1} &amp; \beta_{3,i-1} &amp; \cdots &amp; \beta_{j-1,i-1} &amp; \beta_{j+1,i-1}  &amp; \cdots &amp; \beta_{n,i-1}\\
-\beta_{1,i+1} &amp; \beta_{2,i+1} &amp; \beta_{3,i+1} &amp; \cdots &amp; \beta_{j-1,i+1} &amp; \beta_{j+1,i+1}  &amp; \cdots &amp; \beta_{n,i+1}\\
-\vdots          &amp; \vdots          &amp; \vdots          &amp; \ddots &amp; \vdots &amp; \vdots  &amp; \ddots &amp; \vdots\\
-\beta_{1,n}   &amp; \beta_{2,n}   &amp; \beta_{3,n}   &amp; \cdots &amp; \beta_{j-1,n} &amp; \beta_{j+1,n}  &amp; \cdots &amp; \beta_{n,n}
-\end{vmatrix}
-}
-{
-\begin{vmatrix}
-\beta_{2,1}   &amp; \beta_{3,1}   &amp; \cdots &amp; \beta_{n,1}\\
-\beta_{2,2}   &amp; \beta_{3,2}   &amp; \cdots &amp; \beta_{n,2}\\
-\vdots          &amp; \vdots          &amp; \ddots &amp; \vdots\\
-\beta_{2,i-1} &amp; \beta_{3,i-1} &amp; \cdots &amp; \beta_{n,i-1}\\
-\beta_{2,i+1} &amp; \beta_{3,i+1} &amp; \cdots &amp; \beta_{n,i+1}\\
-\vdots          &amp; \vdots          &amp; \ddots &amp; \vdots\\
-\beta_{2,n}   &amp; \beta_{3,n}   &amp; \cdots &amp; \beta_{n,n}
-\end{vmatrix}
-}.
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Now that the &lt;span  class=&#34;math&#34;&gt;\(x_k \neq x_i\)&lt;/span&gt; disappeared, we have&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{array}{crccccccccccclccc}
-&amp;(&amp;\beta_{1,0} &amp;+&amp; \beta_{2,0} z_2 &amp;+&amp; \beta_{3,0} z_3 &amp;+&amp; \cdots &amp;+&amp; \beta_{n,0} z_n &amp;)&amp;&amp;&amp;\\
-+&amp;(&amp;\beta_{1,i} &amp;+&amp; \beta_{2,i} z_2 &amp;+&amp; \beta_{3,i} z_3 &amp;+&amp; \cdots &amp;+&amp; \beta_{n,i} z_n &amp;)&amp;x_i&amp;=&amp; 0,
-\end{array}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;hence,&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-x_i = -\frac{
-\beta_{1,0} + \beta_{2,0} z_2 + \beta_{3,0} z_3 + \cdots + \beta_{n,0} z_n
-}
-{
-\beta_{1,i} + \beta_{2,i} z_2 + \beta_{3,i} z_3 + \cdots + \beta_{n,i} z_n
-},
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;that is, by replacing the &lt;span  class=&#34;math&#34;&gt;\(z_j\)&lt;/span&gt; by their respective values,&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-x_i = -\frac{
-\begin{vmatrix}
-\beta_{1,0}   &amp; \beta_{2,0}   &amp; \beta_{3,0}   &amp; \cdots &amp; \beta_{n,0}\\
-\beta_{1,1}   &amp; \beta_{2,1}   &amp; \beta_{3,1}   &amp; \cdots &amp; \beta_{n,1}\\
-\beta_{1,2}   &amp; \beta_{2,2}   &amp; \beta_{3,2}   &amp; \cdots &amp; \beta_{n,2}\\
-\vdots         &amp; \vdots         &amp; \vdots         &amp; \ddots &amp; \vdots\\
-\beta_{1,i-1} &amp; \beta_{2,i-1} &amp; \beta_{3,i-1} &amp; \cdots &amp; \beta_{n,i-1}\\
-\beta_{1,i+1} &amp; \beta_{2,i+1} &amp; \beta_{3,i+1} &amp; \cdots &amp; \beta_{n,i+1}\\
-\vdots         &amp; \vdots         &amp; \vdots         &amp; \ddots &amp; \vdots\\
-\beta_{1,n}   &amp; \beta_{2,n}   &amp; \beta_{3,n}   &amp; \cdots &amp; \beta_{n,n}
-\end{vmatrix}
-}
-{
-\begin{vmatrix}
-\beta_{1,i}   &amp; \beta_{2,i}   &amp; \beta_{3,i}   &amp; \cdots &amp; \beta_{n,i}\\
-\beta_{1,2}   &amp; \beta_{2,2}   &amp; \beta_{3,2}   &amp; \cdots &amp; \beta_{n,2}\\
-\vdots         &amp; \vdots         &amp; \vdots         &amp; \ddots &amp; \vdots\\
-\beta_{1,i-1} &amp; \beta_{2,i-1} &amp; \beta_{3,i-1} &amp; \cdots &amp; \beta_{n,i-1}\\
-\beta_{1,i+1} &amp; \beta_{2,i+1} &amp; \beta_{3,i+1} &amp; \cdots &amp; \beta_{n,i+1}\\
-\vdots         &amp; \vdots         &amp; \vdots         &amp; \ddots &amp; \vdots\\
-\beta_{1,n}   &amp; \beta_{2,n}   &amp; \beta_{3,n}   &amp; \cdots &amp; \beta_{n,n}
-\end{vmatrix}
-},
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;which we can rearrange by swapping rows of the second determinant to get&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-x_i = -\frac{
-\begin{vmatrix}
-\beta_{1,0}   &amp; \beta_{2,0}   &amp; \beta_{3,0}   &amp; \cdots &amp; \beta_{n,0}\\
-\beta_{1,1}   &amp; \beta_{2,1}   &amp; \beta_{3,1}   &amp; \cdots &amp; \beta_{n,1}\\
-\beta_{1,2}   &amp; \beta_{2,2}   &amp; \beta_{3,2}   &amp; \cdots &amp; \beta_{n,2}\\
-\vdots         &amp; \vdots         &amp; \vdots         &amp; \ddots &amp; \vdots\\
-\beta_{1,i-1} &amp; \beta_{2,i-1} &amp; \beta_{3,i-1} &amp; \cdots &amp; \beta_{n,i-1}\\
-\beta_{1,i+1} &amp; \beta_{2,i+1} &amp; \beta_{3,i+1} &amp; \cdots &amp; \beta_{n,i+1}\\
-\vdots         &amp; \vdots         &amp; \vdots         &amp; \ddots &amp; \vdots\\
-\beta_{1,n}   &amp; \beta_{2,n}   &amp; \beta_{3,n}   &amp; \cdots &amp; \beta_{n,n}
-\end{vmatrix}
-}
-{
-(-1)^{i-1}
-\begin{vmatrix}
-\beta_{1,2}   &amp; \beta_{2,2}   &amp; \beta_{3,2}   &amp; \cdots &amp; \beta_{n,2}\\
-\vdots         &amp; \vdots         &amp; \vdots         &amp; \ddots &amp; \vdots\\
-\beta_{1,i-1} &amp; \beta_{2,i-1} &amp; \beta_{3,i-1} &amp; \cdots &amp; \beta_{n,i-1}\\
-\beta_{1,i}   &amp; \beta_{2,i}   &amp; \beta_{3,i}   &amp; \cdots &amp; \beta_{n,i}\\
-\beta_{1,i+1} &amp; \beta_{2,i+1} &amp; \beta_{3,i+1} &amp; \cdots &amp; \beta_{n,i+1}\\
-\vdots         &amp; \vdots         &amp; \vdots         &amp; \ddots &amp; \vdots\\
-\beta_{1,n}   &amp; \beta_{2,n}   &amp; \beta_{3,n}   &amp; \cdots &amp; \beta_{n,n}
-\end{vmatrix}
-},
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;that is, by the fact that &lt;span  class=&#34;math&#34;&gt;\(\mathop{det}(M) = \mathop{det}(M^T)\)&lt;/span&gt;,&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-x_i = (-1)^i
-\frac{
-\begin{vmatrix}
-\beta_{1,0} &amp; \beta_{1,1} &amp; \beta_{1,2} &amp; \cdots &amp; \beta_{1,i-1} &amp; \beta_{1,i+1} &amp; \cdots &amp; \beta_{1,n}\\
-\beta_{2,0} &amp; \beta_{2,1} &amp; \beta_{2,2} &amp; \cdots &amp; \beta_{2,i-1} &amp; \beta_{2,i+1} &amp; \cdots &amp; \beta_{2,n}\\
-\vdots       &amp; \vdots       &amp; \vdots       &amp; \ddots &amp; \vdots         &amp; \vdots         &amp; \ddots &amp; \vdots\\
-\beta_{n,0} &amp; \beta_{n,1} &amp; \beta_{n,2} &amp; \cdots &amp; \beta_{n,i-1} &amp; \beta_{n,i+1} &amp; \cdots &amp; \beta_{n,n}
-\end{vmatrix}
-}
-{
-\begin{vmatrix}
-\beta_{1,1} &amp; \beta_{1,2} &amp; \cdots &amp; \beta_{1,i-1} &amp; \beta_{1,i} &amp; \beta_{1,i+1} &amp; \cdots &amp; \beta_{1,n}\\
-\beta_{2,1} &amp; \beta_{2,2} &amp; \cdots &amp; \beta_{2,i-1} &amp; \beta_{2,i} &amp; \beta_{2,i+1} &amp; \cdots &amp; \beta_{2,n}\\
-\vdots       &amp; \vdots       &amp; \ddots &amp; \vdots         &amp; \vdots       &amp; \vdots         &amp; \ddots &amp; \vdots\\
-\beta_{n,1} &amp; \beta_{n,2} &amp; \cdots &amp; \beta_{n,i-1} &amp; \beta_{n,i} &amp; \beta_{n,i+1} &amp; \cdots &amp; \beta_{n,n}
-\end{vmatrix}
-}.
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;It remains to trade &lt;span  class=&#34;math&#34;&gt;\(\beta\)&lt;/span&gt; for &lt;span  class=&#34;math&#34;&gt;\(\alpha\)&lt;/span&gt; according to the bijection
-we defined earlier, then swap the first column with the &lt;span  class=&#34;math&#34;&gt;\(\ell^{\text{th}}\)&lt;/span&gt;
-one if necessary.&lt;/p&gt;
-
-&lt;p&gt;If &lt;span  class=&#34;math&#34;&gt;\(\ell = 1\)&lt;/span&gt;, we have nothing to do. Otherwise swaping the columns
-multiplies both determinants by &lt;span  class=&#34;math&#34;&gt;\(-1\)&lt;/span&gt;, hence the sign of
-the ratio remains unchanged. We get&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-x_i = (-1)^i
-\frac{
-\begin{vmatrix}
-\alpha_{1,0} &amp; \alpha_{1,1} &amp; \alpha_{1,2} &amp; \cdots &amp; \alpha_{1,i-1} &amp; \alpha_{1,i+1} &amp; \cdots &amp; \alpha_{1,n}\\
-\alpha_{2,0} &amp; \alpha_{2,1} &amp; \alpha_{2,2} &amp; \cdots &amp; \alpha_{2,i-1} &amp; \alpha_{2,i+1} &amp; \cdots &amp; \alpha_{2,n}\\
-\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
-\alpha_{n,0} &amp; \alpha_{n,1} &amp; \alpha_{n,2} &amp; \cdots &amp; \alpha_{n,i-1} &amp; \alpha_{n,i+1} &amp; \cdots &amp; \alpha_{n,n}
-\end{vmatrix}
-}
-{
-\begin{vmatrix}
-\alpha_{1,1} &amp; \alpha_{1,2} &amp; \cdots &amp; \alpha_{1,n}\\
-\alpha_{2,1} &amp; \alpha_{2,2} &amp; \cdots &amp; \alpha_{2,n}\\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
-\alpha_{n,1} &amp; \alpha_{n,2} &amp; \cdots &amp; \alpha_{n,n}
-\end{vmatrix}
-}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;as claimed, QED.&lt;/p&gt;</description>
+the &lt;span  class=&#34;math&#34;&gt;\(0\)&lt;/span&gt;-cells of our arrangement.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1046,43 +195,10 @@ x_i = (-1)^i
       <pubDate>Fri, 15 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://aureooms.github.io/math/2016/01/15/polyhedral-sets/</guid>
-      <description>&lt;p&gt;A &lt;em&gt;polyhedral set&lt;/em&gt; set in &lt;span  class=&#34;math&#34;&gt;\(\mathbb{R}^d\)&lt;/span&gt; is the intersection of a finite
+      <description>&lt;p&gt;A &lt;em&gt;polyhedral set&lt;/em&gt; in &lt;span  class=&#34;math&#34;&gt;\(\mathbb{R}^d\)&lt;/span&gt; is the intersection of a finite
 number of closed halfspaces, and a &lt;em&gt;(convex) polytope&lt;/em&gt; is a bounded polyhedral
 set. This definition of a polytope is called a &lt;em&gt;halfspace representation&lt;/em&gt;
-(&lt;em&gt;H-representation&lt;/em&gt; or &lt;em&gt;H-description&lt;/em&gt;).&lt;/p&gt;
-
-&lt;p&gt;
-A &lt;em&gt;defining halfspace&lt;/em&gt; of a polyhedral set &lt;span  class=&#34;math&#34;&gt;\(P\)&lt;/span&gt; is a facet-defining
-halfspace for &lt;span  class=&#34;math&#34;&gt;\(P\)&lt;/span&gt;.&lt;/p&gt;
-
-&lt;p&gt;A &lt;em&gt;&lt;span  class=&#34;math&#34;&gt;\(k\)&lt;/span&gt;-face&lt;/em&gt; of a polyhedral set &lt;span  class=&#34;math&#34;&gt;\(P\)&lt;/span&gt; is the intersection of &lt;span  class=&#34;math&#34;&gt;\(P\)&lt;/span&gt;
-with &lt;span  class=&#34;math&#34;&gt;\(d-k\)&lt;/span&gt; (non-redundant) hyperplanes defining &lt;span  class=&#34;math&#34;&gt;\(P\)&lt;/span&gt;. &lt;em&gt;Vertices&lt;/em&gt;, &lt;em&gt;edges&lt;/em&gt;,
-and &lt;em&gt;facets&lt;/em&gt; are &lt;span  class=&#34;math&#34;&gt;\(0\)&lt;/span&gt;-, &lt;span  class=&#34;math&#34;&gt;\(1\)&lt;/span&gt;-, and &lt;span  class=&#34;math&#34;&gt;\((d-1)\)&lt;/span&gt;-faces.&lt;/p&gt;
-
-&lt;p&gt;There exist infinitely many
-H-descriptions of a convex polytope. However, for a full-dimensional convex
-polytope, the minimal H-description is in fact unique and is given by the set
-of the facet-defining halfspaces.&lt;/p&gt;
-
-&lt;p&gt;The set of &lt;em&gt;extreme points&lt;/em&gt; (vertices) of a polyhedral set &lt;span  class=&#34;math&#34;&gt;\(P\)&lt;/span&gt; will be
-denoted &lt;span  class=&#34;math&#34;&gt;\(\mathop{ext} P\)&lt;/span&gt;.&lt;/p&gt;
-
-&lt;p&gt;The set of &lt;em&gt;extreme rays&lt;/em&gt; of &lt;span  class=&#34;math&#34;&gt;\(P\)&lt;/span&gt;, &lt;span  class=&#34;math&#34;&gt;\(\mathop{extr} P\)&lt;/span&gt;, is the set of
-rays &lt;span  class=&#34;math&#34;&gt;\(e\)&lt;/span&gt; emanating from the origin &lt;span  class=&#34;math&#34;&gt;\(0\)&lt;/span&gt; such that there is some point
-&lt;span  class=&#34;math&#34;&gt;\(q \in P\)&lt;/span&gt; for which &lt;span  class=&#34;math&#34;&gt;\((q+e)\)&lt;/span&gt; is an edge of &lt;span  class=&#34;math&#34;&gt;\(P\)&lt;/span&gt; (here &#39;+&#39; between
-pointsets means pointwise sum).&lt;/p&gt;
-
-&lt;p&gt;A &lt;em&gt;&lt;span  class=&#34;math&#34;&gt;\(k\)&lt;/span&gt;-simplex&lt;/em&gt; &lt;span  class=&#34;math&#34;&gt;\(S\)&lt;/span&gt; is a &lt;span  class=&#34;math&#34;&gt;\(k\)&lt;/span&gt;-dimensional polytope with
-&lt;span  class=&#34;math&#34;&gt;\(|\mathop{ext} S| = k+1\)&lt;/span&gt;.&lt;/p&gt;
-
-&lt;p&gt;A nonzero element &lt;span  class=&#34;math&#34;&gt;\(x\)&lt;/span&gt; of a polyhedral cone &lt;span  class=&#34;math&#34;&gt;\(C \subseteq \mathbb{R}^n\)&lt;/span&gt;
-is called an extreme ray if there are &lt;span  class=&#34;math&#34;&gt;\(n − 1\)&lt;/span&gt; linearly independent
-constraints binding at &lt;span  class=&#34;math&#34;&gt;\(x\)&lt;/span&gt;.&lt;/p&gt;
-
-&lt;p&gt;An extreme ray of the recession cone associated with a polyhedral set &lt;span  class=&#34;math&#34;&gt;\(P\)&lt;/span&gt; is
-also called an extreme ray of &lt;span  class=&#34;math&#34;&gt;\(P\)&lt;/span&gt;.&lt;/p&gt;
-
-&lt;p&gt;TO BE CONTINUED ...&lt;/p&gt;</description>
+(&lt;em&gt;H-representation&lt;/em&gt; or &lt;em&gt;H-description&lt;/em&gt;).&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1093,20 +209,7 @@ also called an extreme ray of &lt;span  class=&#34;math&#34;&gt;\(P\)&lt;/span&g
       <guid>https://aureooms.github.io/math/2015/11/08/symbols/</guid>
       <description>&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
 \mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;
-&lt;span  class=&#34;math&#34;&gt;\(\mathbb{N}\)&lt;/span&gt; is the set of natural numbers.&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\(\mathbb{Z}\)&lt;/span&gt; is the set of integers. &lt;span  class=&#34;math&#34;&gt;\(\mathbb{Z}\)&lt;/span&gt; stands for &lt;em&gt;Zahlen&lt;/em&gt;,
-&lt;a href=&#34;https://en.wiktionary.org/wiki/Zahl#German&#34;&gt;the plural of the german word &lt;em&gt;Zahl&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\(\mathbb{Q}\)&lt;/span&gt; is the set of rational numbers. &lt;span  class=&#34;math&#34;&gt;\(\mathbb{Q}\)&lt;/span&gt; stands for &lt;em&gt;quoziente&lt;/em&gt;,
-&lt;a href=&#34;https://en.wiktionary.org/wiki/quoziente&#34;&gt;the italian word for &lt;em&gt;quotient&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\(\mathbb{R}\)&lt;/span&gt; is the set of real numbers.&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\(\mathbb{C}\)&lt;/span&gt; is the set of complex numbers.&lt;/p&gt;</description>
+\]&lt;/span&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1133,69 +236,7 @@ also called an extreme ray of &lt;span  class=&#34;math&#34;&gt;\(P\)&lt;/span&g
 &lt;p&gt;We generalize the definition above by changing the two initial values, for
 example with &lt;span  class=&#34;math&#34;&gt;\(f_0 = 4,\ f_1 = 6\)&lt;/span&gt; we obtain&lt;/p&gt;
 
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[4, 6, 10, 16, 26, 42, \ldots\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;
-Multiplying such a sequence by a scalar or adding two such sequences gives
-again such a sequence. The sum of the two previous sequences is&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[4, 7, 11, 18, 29, 47, \ldots\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;The set &lt;span  class=&#34;math&#34;&gt;\(V\)&lt;/span&gt; of sequences &lt;span  class=&#34;math&#34;&gt;\((x_i)\)&lt;/span&gt; of real numbers satisfying
-&lt;span  class=&#34;math&#34;&gt;\(x_i = x_{i-1} + x_{i-2}\)&lt;/span&gt; for &lt;span  class=&#34;math&#34;&gt;\(i \ge 2\)&lt;/span&gt; form a real vector space. A
-basis of this vector space is formed by the two vectors&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\vec{e}_1: 0, 1 , 1, 2, 3, 5, \ldots\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\vec{e}_2: 1, 0 , 1, 1, 2, 3, \ldots\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Indeed, any sequence in &lt;span  class=&#34;math&#34;&gt;\(V\)&lt;/span&gt;, say
-&lt;span  class=&#34;math&#34;&gt;\(s: x_0, x_1, (x_0 + x_1), (x_0 + 2 x_1), \ldots\)&lt;/span&gt;
-can be written uniquely as a linear combination of the two sequences
-&lt;span  class=&#34;math&#34;&gt;\(\vec{e}_1\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\(\vec{e}_2\)&lt;/span&gt;, that is,&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\(x_0 \vec{e}_2 + x_1 \vec{e}_1\)&lt;/span&gt;.&lt;/p&gt;
-
-&lt;p&gt;We ask ourselves for which real(s) &lt;span  class=&#34;math&#34;&gt;\(r \neq 0 \)&lt;/span&gt; the sequence &lt;span  class=&#34;math&#34;&gt;\(x_i\)&lt;/span&gt;
-with &lt;span  class=&#34;math&#34;&gt;\(x_i = r^i\)&lt;/span&gt; is in &lt;span  class=&#34;math&#34;&gt;\(V\)&lt;/span&gt;. The answer is: if and only if
-&lt;span  class=&#34;math&#34;&gt;\(\forall i \ge 2,\ r^i = r^{i-1} + r^{i-2},\)&lt;/span&gt;
-that is,
-&lt;span  class=&#34;math&#34;&gt;\(r^2 = r + 1 \iff r^2 - r - 1 = 0,\)&lt;/span&gt;
-that is,&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[r = \frac{1 \pm \sqrt{5}}{2}.\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Another basis is thus formed by the two sequences&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\left(\frac{1+\sqrt{5}}{2}\right)^i \text{ and } \left(\frac{1-\sqrt{5}}{2}\right)^i.\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;We express the Fibonacci sequence in this basis. We must have for all &lt;span  class=&#34;math&#34;&gt;\(i \ge
-0\)&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\(f_i = \lambda \left(\frac{1+\sqrt{5}}{2}\right)^i + \mu \left(\frac{1-\sqrt{5}}{2}\right)^i\)&lt;/span&gt;
-thus&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{aligned}
-\text{for } i = 0 \text{:}\hskip 3em&amp; 0 = \lambda + \mu\\
-\text{for } i = 1 \text{:}\hskip 3em&amp; 1 = \lambda \left(\frac{1+\sqrt{5}}{2}\right) + \mu \left(\frac{1-\sqrt{5}}{2}\right)
-\end{aligned}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;from there&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\begin{cases}
-\lambda = \frac{\sqrt{5}}{5}\\
-\mu = -\frac{\sqrt{5}}{5}
-\end{cases}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;and finally&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[f_i = \frac{\sqrt{5}}{5} \left(\frac{1+\sqrt{5}}{2}\right)^i - \frac{\sqrt{5}}{5} \left(\frac{1-\sqrt{5}}{2}\right)^i.\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Course notes translated from french.&lt;/em&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[4, 6, 10, 16, 26, 42, \ldots\]&lt;/span&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1217,43 +258,43 @@ a_1 &lt; a_2 &lt; \cdots &lt; a_n.
 \frac{1}{a_2} +
 \cdots +
 \frac{1}{a_n} = k.
+\]&lt;/span&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Binomial coefficient tricks</title>
+      <link>https://aureooms.github.io/math/2015/06/24/binomial-coefficient-tricks/</link>
+      <pubDate>Wed, 24 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://aureooms.github.io/math/2015/06/24/binomial-coefficient-tricks/</guid>
+      <description>&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+\binom{n}{k} = \binom{n}{n-k}
 \]&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;
-Note that we have&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-\frac{1}{a_1} &gt;
-\frac{1}{a_2} &gt;
-\cdots &gt;
-\frac{1}{a_n}
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;and thus&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-n \cdot \frac{1}{a_1} &gt;
-\frac{1}{a_1} +
-\frac{1}{a_2} +
-\cdots +
-\frac{1}{a_n} = k.
-\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Hence,&lt;/p&gt;
-
-&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[a_1 &lt; \frac{n}{k}\]&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;and we only have a finite number of candidate solutions to test.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://cocalc.com/projects/00bf44da-33dd-49ad-a9d5-54c2182f171e/files/inverse-sum.sagews&#34;&gt;Brute-force search implementation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Inspired from an exercise in&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;BÓNA, Miklós. A walk through combinatorics: an introduction to enumeration and graph theory. World scientific, 2011.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;p&gt;holds because keeping &lt;span  class=&#34;math&#34;&gt;\(k\)&lt;/span&gt; elements from &lt;span  class=&#34;math&#34;&gt;\(n\)&lt;/span&gt; elements is equivalent
+to discarding &lt;span  class=&#34;math&#34;&gt;\(n-k\)&lt;/span&gt; elements from &lt;span  class=&#34;math&#34;&gt;\(n\)&lt;/span&gt; elements.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Complex numbers division</title>
+      <link>https://aureooms.github.io/math/2015/06/23/complex-division/</link>
+      <pubDate>Tue, 23 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://aureooms.github.io/math/2015/06/23/complex-division/</guid>
+      <description>&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\(
+\frac{a+bi}{c+di} = \frac{a+bi}{c+di} \frac{c-di}{c-di} = \frac{ac+bd}{c^2+d^2}+\frac{bc-ad}{c^2+d^2}i
+\)&lt;/span&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Gaussian elimination</title>
+      <link>https://aureooms.github.io/math/2015/06/19/gaussian-elimination/</link>
+      <pubDate>Fri, 19 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://aureooms.github.io/math/2015/06/19/gaussian-elimination/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://cocalc.com/projects/1b2a688b-0ee8-41b1-be25-2f6a95c36c76/files/Gaussian%20elimination.sagews&#34;&gt;Python implementation&lt;/a&gt;.
+&lt;/p&gt;</description>
     </item>
     
   </channel>

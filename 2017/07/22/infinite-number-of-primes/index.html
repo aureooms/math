@@ -2,34 +2,21 @@
 <html>
 <head>
 	<title>Infinite Number of Primes</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 	
 
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function ( ) {
-
-	document.querySelectorAll( '.math' )
-	.forEach( function ( element ) {
-		try {
-			var tex = element.textContent ;
-			var math = tex.substr(2, tex.length - 4) ;
-			var displayMode = tex.substr(0, 2) == '\\[' ;
-			try {
-				katex.render(math, element, {displayMode: displayMode});
-			}
-			catch ( e ) {
-				console.error( e ) ;
-				console.debug( element, tex , math , { displayMode: displayMode});
-			}
-		}
-		catch ( e ) {
-			console.error( e ) ;
-		}
-	});
-
+document.addEventListener("DOMContentLoaded", ( ) => {
+	document
+	.querySelectorAll( '.math' )
+	.forEach( element => renderMathInElement(element) ) ;
 });
 </script>
 
@@ -37,9 +24,18 @@ document.addEventListener("DOMContentLoaded", function ( ) {
 <body>
 
 
-  <h1>Infinite Number of Primes</h1>
-  <h2>Sat, Jul 22, 2017</h2>
-  <p>The erroneous proof I hear most often is: Suppose <span  class="math">\(P\)</span> is a
+  <nav class="breadcrumb">
+    <a class="breadcrumb-item" href="https://aureooms.github.io/math/">Aurélien&#39;s math blog</a>
+    <a class="breadcrumb-item active" href="/2017/07/22/infinite-number-of-primes/">Post f9ce5286015bc430badfd8c00ce7d115</a>
+  </nav>
+
+  <div class="container mt-5">
+  <div class="row">
+  <div class="col-md-12">
+  <article>
+    <h1>Infinite Number of Primes</h1>
+    <h4>Sat, Jul 22, 2017</h4>
+    <p><p>The erroneous proof I hear most often is: Suppose <span  class="math">\(P\)</span> is a
 finite set that contains all the primes, then <span  class="math">\(p^* = 1 + \prod_{p \in P} p\)</span> is
 prime. Indeed, the flaw is that <span  class="math">\(p^*\)</span> is not necessarily prime but rather
 must be a multiple of some prime not in <span  class="math">\(P\)</span>.</p>
@@ -54,7 +50,11 @@ zero) diverges (hint: <span  class="math">\(\int\)</span>).</p>
   \sum_{n = 1}^{\infty} \frac{1}{n}
 = \prod_{p~\text{is prime}} \sum_{j=0}^{\infty} p^{-j}
 = \prod_{p~\text{is prime}} \frac{p}{p-1}.
-\]</span></p>
+\]</span></p></p>
+  </article>
+  </div>
+  </div>
+  </div>
 
 </body>
 </html>

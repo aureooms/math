@@ -1,36 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="generator" content="Hugo 0.20-DEV" />
-	<title></title>
+	<meta name="generator" content="Hugo 0.25-DEV" />
+	<title>Aurélien&#39;s math blog</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 	
 
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function ( ) {
-
-	document.querySelectorAll( '.math' )
-	.forEach( function ( element ) {
-		try {
-			var tex = element.textContent ;
-			var math = tex.substr(2, tex.length - 4) ;
-			var displayMode = tex.substr(0, 2) == '\\[' ;
-			try {
-				katex.render(math, element, {displayMode: displayMode});
-			}
-			catch ( e ) {
-				console.error( e ) ;
-				console.debug( element, tex , math , { displayMode: displayMode});
-			}
-		}
-		catch ( e ) {
-			console.error( e ) ;
-		}
-	});
-
+document.addEventListener("DOMContentLoaded", ( ) => {
+	document
+	.querySelectorAll( '.math' )
+	.forEach( element => renderMathInElement(element) ) ;
 });
 </script>
 
@@ -38,9 +25,21 @@ document.addEventListener("DOMContentLoaded", function ( ) {
 <body>
 
 
+  <nav class="breadcrumb">
+    <a class="breadcrumb-item active " href="https://aureooms.github.io/math/">Aurélien&#39;s math blog</a>
+    
+  </nav>
+
+  <div class="container">
   
-    <h2><a href="https://aureooms.github.io/math/2017/07/23/sums-of-geometric-series/">Sums of geometric series</a></h2>
-    <p>Among the identities that are useful in the analysis of algorithms,
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Sun, Jul 23, 2017</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Sums of geometric series</h1>
+        <p class="card-text"><p>Among the identities that are useful in the analysis of algorithms,
 this one shows how sums of geometric series converge when the ratio
 is smaller than one (in absolute value). It occurs in divide an conquer
 schemes. For example, it allows to show that hierarchical cuttings for <span  class="math">\(n\)</span>
@@ -49,16 +48,44 @@ hyperplanes in <span  class="math">\(d\)</span> dimensions only need space propo
 <p><span  class="math">\[
 \sum_{i=0}^{\infty} \binom{i+j}{j} x^i = \frac{1}{ {(1-x)}^{j+1} },
 \forall j \in \mathbb{N}, \forall x \in (-1,1).
-\]</span></p>
+\]</span></p></p>
+        <a href="/math/2017/07/23/sums-of-geometric-series/" class="btn btn-primary">Read more about Sums of geometric series</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2017/07/22/infinite-number-of-primes/">Infinite Number of Primes</a></h2>
-    <p>The erroneous proof I hear most often is: Suppose <span  class="math">\(P\)</span> is a
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Sat, Jul 22, 2017</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Infinite Number of Primes</h1>
+        <p class="card-text"><p>The erroneous proof I hear most often is: Suppose <span  class="math">\(P\)</span> is a
 finite set that contains all the primes, then <span  class="math">\(p^* = 1 + \prod_{p \in P} p\)</span> is
 prime. Indeed, the flaw is that <span  class="math">\(p^*\)</span> is not necessarily prime but rather
-must be a multiple of some prime not in <span  class="math">\(P\)</span>.</p>
+must be a multiple of some prime not in <span  class="math">\(P\)</span>.</p></p>
+        <a href="/math/2017/07/22/infinite-number-of-primes/" class="btn btn-primary">Read more about Infinite Number of Primes</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2017/07/21/quantum-computer-algorithms/">Quantum Computer Algorithms</a></h2>
-    <p><a href="https://ipfs.io/ipfs/QmctoycyfhWTrDy4c4jZeyLcRmmutFii5H5RLGk7pMbDoS">Notes</a>
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Fri, Jul 21, 2017</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Quantum Computer Algorithms</h1>
+        <p class="card-text"><p><a href="https://ipfs.io/ipfs/QmctoycyfhWTrDy4c4jZeyLcRmmutFii5H5RLGk7pMbDoS">Notes</a>
 from June 2015 containing the following:
 <a href="https://ipfs.io/ipfs/QmP44FjtNGGS5zvoyhxveNSJshvSobKrfQdEcxRLurqaon">Phase kick-back</a>,
 <a href="https://ipfs.io/ipfs/Qma3KPLTHexwfstuK9cWaR5f9EfJcw5z7Se4Pi3Qs8sHfF">Deutsch's algorithm</a>,
@@ -73,10 +100,24 @@ from June 2015 containing the following:
 and
 <a href="https://ipfs.io/ipfs/QmdK1mNmR3ASVShWM2jSxhDzm1aRD4mVofvvmK8f3HH1Em">Shor's algorithm</a>.</p>
 
-<p></p>
+<p></p></p>
+        <a href="/math/2017/07/21/quantum-computer-algorithms/" class="btn btn-primary">Read more about Quantum Computer Algorithms</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2017/04/22/recurrences/">Recurrences</a></h2>
-    <h2 id="theorem">Theorem</h2>
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Sat, Apr 22, 2017</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Recurrences</h1>
+        <p class="card-text"><h2 id="theorem">Theorem</h2>
 
 <p>Let <span  class="math">\( a \in \mathbb{N} \)</span>, <span  class="math">\( t < a \in \mathbb{N} \)</span>, and <span  class="math">\( b \in
 \mathbb{R}\)</span>. Defining <span  class="math">\( A_t \)</span> to be some real number and</p>
@@ -91,10 +132,24 @@ A_N = (1 - \frac{a}{N}) A_{N-1} + b, N > t \in \mathbb{N},
 A_N = \frac{b}{1+a} (N+1), N \ge a \in \mathbb{N}.
 \]</span></p>
 
-<p></p>
+<p></p></p>
+        <a href="/math/2017/04/22/recurrences/" class="btn btn-primary">Read more about Recurrences</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2017/04/21/converging-series/">Converging series</a></h2>
-    <h2 id="theorem">Theorem</h2>
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Fri, Apr 21, 2017</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Converging series</h1>
+        <p class="card-text"><h2 id="theorem">Theorem</h2>
 
 <p>Let <span  class="math">\(-1 < x < 1\)</span>,</p>
 
@@ -102,17 +157,45 @@ A_N = \frac{b}{1+a} (N+1), N \ge a \in \mathbb{N}.
 1 + x + x^2 + x^3 + x^4 + \cdots = \frac{1}{1-x}.
 \]</span></p>
 
-<p></p>
+<p></p></p>
+        <a href="/math/2017/04/21/converging-series/" class="btn btn-primary">Read more about Converging series</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2016/05/04/polynomial-time-approximation-schemes/">Polynomial-time approximation schemes</a></h2>
-    <h2 id="ptas">PTAS</h2>
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Wed, May 4, 2016</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Polynomial-time approximation schemes</h1>
+        <p class="card-text"><h2 id="ptas">PTAS</h2>
 
 <p><span  class="math">\((1\pm\varepsilon)\)</span>-approximation with complexity <span  class="math">\(O(n^{f(\varepsilon)})\)</span>.</p>
 
-<p></p>
+<p></p></p>
+        <a href="/math/2016/05/04/polynomial-time-approximation-schemes/" class="btn btn-primary">Read more about Polynomial-time approximation schemes</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2016/04/27/equivalence-of-3sum-problems/">Equivalence of 3SUM problems</a></h2>
-    <h2 id="reducing-3sumx1-to-3sumx3">Reducing 3SUMx1 to 3SUMx3</h2>
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Wed, Apr 27, 2016</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Equivalence of 3SUM problems</h1>
+        <p class="card-text"><h2 id="reducing-3sumx1-to-3sumx3">Reducing 3SUMx1 to 3SUMx3</h2>
 
 <p>???</p>
 
@@ -120,19 +203,47 @@ A_N = \frac{b}{1+a} (N+1), N \ge a \in \mathbb{N}.
 
 <p><span  class="math">\[ (a, 3), (b, 4), (c, -7) \]</span></p>
 
-<p></p>
+<p></p></p>
+        <a href="/math/2016/04/27/equivalence-of-3sum-problems/" class="btn btn-primary">Read more about Equivalence of 3SUM problems</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2016/04/14/log-log-log/">Log Log Log</a></h2>
-    <h2 id="theorem">Theorem</h2>
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Thu, Apr 14, 2016</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Log Log Log</h1>
+        <p class="card-text"><h2 id="theorem">Theorem</h2>
 
 <p><span  class="math">\[
 \frac{\log n}{\log \log n}! = \Theta(n)
 \]</span></p>
 
-<p></p>
+<p></p></p>
+        <a href="/math/2016/04/14/log-log-log/" class="btn btn-primary">Read more about Log Log Log</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2016/04/12/vc-dimension/">VC-dimension</a></h2>
-    <h2 id="definition-1-espilon-net">Definition 1 (Espilon net)</h2>
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Tue, Apr 12, 2016</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">VC-dimension</h1>
+        <p class="card-text"><h2 id="definition-1-espilon-net">Definition 1 (Espilon net)</h2>
 
 <p>Let <span  class="math">\(X\)</span> be a set, let <span  class="math">\(\mu\)</span> be a probability measure on <span  class="math">\(X\)</span>, let
 <span  class="math">\(\mathcal{F}\)</span> be a system of <span  class="math">\(\mu\)</span>-measurable subsets of <span  class="math">\(X\)</span>, and let
@@ -141,10 +252,24 @@ called an <span  class="math">\(\varepsilon\)</span>-net for <span  class="math"
 <span  class="math">\(\mu\)</span> if <span  class="math">\(N \cap S \neq \emptyset\)</span> for all <span  class="math">\(S \in \mathcal{F}\)</span> with
 <span  class="math">\(\mu(S) \ge \varepsilon\)</span>.</p>
 
-<p></p>
+<p></p></p>
+        <a href="/math/2016/04/12/vc-dimension/" class="btn btn-primary">Read more about VC-dimension</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2016/01/17/d-hyperplanes-intersection-bounds/"><span class="math">\(d\)</span> hyperplanes intersection bounds</a></h2>
-    <p>We bound the position of the <span  class="math">\(0\)</span>-cells of an arrangement of hyperplanes in
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Sun, Jan 17, 2016</div>
+      
+      <div class="card-block">
+        <h1 class="card-title"><span class="math">\(d\)</span> hyperplanes intersection bounds</h1>
+        <p class="card-text"><p>We bound the position of the <span  class="math">\(0\)</span>-cells of an arrangement of hyperplanes in
 <span  class="math">\(\mathbb{R}^d\)</span>. This allows, for example, to build an hypercube that
 intersects all cells of the arrangement. Such an hypercube must contain at
 least one point of each cell of the arrangement. When <span  class="math">\(q > 0\)</span>, in order to
@@ -156,39 +281,49 @@ each <span  class="math">\(q\)</span>-cell of the arrangement with <span  class=
 intersect, for each <span  class="math">\(0\)</span>-cell <span  class="math">\(\nu\)</span> of the arrangement, an hypersphere
 of center <span  class="math">\(\nu\)</span> and arbitrarily small radius. The inequalities of the
 polyhedral set defining our hypercube will thus only depend on the position of
-the <span  class="math">\(0\)</span>-cells of our arrangement.</p>
+the <span  class="math">\(0\)</span>-cells of our arrangement.</p></p>
+        <a href="/math/2016/01/17/d-hyperplanes-intersection-bounds/" class="btn btn-primary">Read more about <span class="math">\(d\)</span> hyperplanes intersection bounds</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
+  </div>
 
   
-    
-    <ul class="pagination">
-        
-        <li>
-            <a href="/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-        </li>
-        
-        <li
-        class="disabled">
-        <a href="" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-        </li>
-        
-        <li
-        class="active"><a href="/">1</a></li>
-        
-        <li
-        ><a href="/page/2/">2</a></li>
-        
-        <li
-        >
-        <a href="/page/2/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-        </li>
-        
-        <li>
-            <a href="/page/2/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-        </li>
-        
-    </ul>
-    
+
+<nav aria-label="Page navigation">
+<ul class="pagination justify-content-center">
+
+<li class="page-item">
+<a class="page-link" href="/math/" aria-label="First"><span aria-hidden="true">First</span></a>
+</li>
+
+<li class="page-item disabled">
+<a class="page-link" href="" aria-label="Previous"><span aria-hidden="true">Previous</span></a>
+</li>
+
+<li class="page-item active">
+<a class="page-link" href="/math/">1</a></li>
+
+<li class="page-item">
+<a class="page-link" href="/math/page/2/">2</a></li>
+
+<li class="page-item">
+<a class="page-link" href="/math/page/2/" aria-label="Next"><span aria-hidden="true">Next</span></a>
+</li>
+
+<li class="page-item">
+<a class="page-link" href="/math/page/2/" aria-label="Last"><span aria-hidden="true">Last</span></a>
+</li>
+
+</ul>
+</nav>
+
+
 
 </body>
 </html>

@@ -2,34 +2,21 @@
 <html>
 <head>
 	<title>Sums of geometric series</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 	
 
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function ( ) {
-
-	document.querySelectorAll( '.math' )
-	.forEach( function ( element ) {
-		try {
-			var tex = element.textContent ;
-			var math = tex.substr(2, tex.length - 4) ;
-			var displayMode = tex.substr(0, 2) == '\\[' ;
-			try {
-				katex.render(math, element, {displayMode: displayMode});
-			}
-			catch ( e ) {
-				console.error( e ) ;
-				console.debug( element, tex , math , { displayMode: displayMode});
-			}
-		}
-		catch ( e ) {
-			console.error( e ) ;
-		}
-	});
-
+document.addEventListener("DOMContentLoaded", ( ) => {
+	document
+	.querySelectorAll( '.math' )
+	.forEach( element => renderMathInElement(element) ) ;
 });
 </script>
 
@@ -37,9 +24,18 @@ document.addEventListener("DOMContentLoaded", function ( ) {
 <body>
 
 
-  <h1>Sums of geometric series</h1>
-  <h2>Sun, Jul 23, 2017</h2>
-  <p>Among the identities that are useful in the analysis of algorithms,
+  <nav class="breadcrumb">
+    <a class="breadcrumb-item" href="https://aureooms.github.io/math/">Aurélien&#39;s math blog</a>
+    <a class="breadcrumb-item active" href="/2017/07/23/sums-of-geometric-series/">Post 73e8f5952909f5080b12576524caea8d</a>
+  </nav>
+
+  <div class="container mt-5">
+  <div class="row">
+  <div class="col-md-12">
+  <article>
+    <h1>Sums of geometric series</h1>
+    <h4>Sun, Jul 23, 2017</h4>
+    <p><p>Among the identities that are useful in the analysis of algorithms,
 this one shows how sums of geometric series converge when the ratio
 is smaller than one (in absolute value). It occurs in divide an conquer
 schemes. For example, it allows to show that hierarchical cuttings for <span  class="math">\(n\)</span>
@@ -52,7 +48,7 @@ hyperplanes in <span  class="math">\(d\)</span> dimensions only need space propo
 
 <p>
 That's nice. There are many ways to prove it, a cool one is to first
-<a href="https://aureooms.github.io/converging-series">prove</a> that</p>
+<a href="/math/2017/04/21/converging-series">prove</a> that</p>
 
 <p><span  class="math">\[
 \sum_{i=0}^{\infty} x^i = \frac{1}{ {(1-x)} },
@@ -76,7 +72,11 @@ of <span  class="math">\(x^i\)</span> into a permutation of <span  class="math">
 \sum_{i=0}^{k} \binom{i+j}{j} x^i = \frac{1}{ {(1-x)}^{j+1} } -
 \sum_{i=0}^{j} \frac{\binom{k+i}{i} x^{k+1}}{ {(1-x)}^{j-i+1} },
 \forall j \in \mathbb{N}, \forall x \in \mathbb{R} \setminus \{\,1\,\}.
-\]</span></p>
+\]</span></p></p>
+  </article>
+  </div>
+  </div>
+  </div>
 
 </body>
 </html>

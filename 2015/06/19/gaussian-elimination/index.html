@@ -2,34 +2,21 @@
 <html>
 <head>
 	<title>Gaussian elimination</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 	
 
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function ( ) {
-
-	document.querySelectorAll( '.math' )
-	.forEach( function ( element ) {
-		try {
-			var tex = element.textContent ;
-			var math = tex.substr(2, tex.length - 4) ;
-			var displayMode = tex.substr(0, 2) == '\\[' ;
-			try {
-				katex.render(math, element, {displayMode: displayMode});
-			}
-			catch ( e ) {
-				console.error( e ) ;
-				console.debug( element, tex , math , { displayMode: displayMode});
-			}
-		}
-		catch ( e ) {
-			console.error( e ) ;
-		}
-	});
-
+document.addEventListener("DOMContentLoaded", ( ) => {
+	document
+	.querySelectorAll( '.math' )
+	.forEach( element => renderMathInElement(element) ) ;
 });
 </script>
 
@@ -37,10 +24,23 @@ document.addEventListener("DOMContentLoaded", function ( ) {
 <body>
 
 
-  <h1>Gaussian elimination</h1>
-  <h2>Fri, Jun 19, 2015</h2>
-  <p><a href="https://cocalc.com/projects/1b2a688b-0ee8-41b1-be25-2f6a95c36c76/files/Gaussian%20elimination.sagews">Python implementation</a>.
-</p>
+  <nav class="breadcrumb">
+    <a class="breadcrumb-item" href="https://aureooms.github.io/math/">Aurélien&#39;s math blog</a>
+    <a class="breadcrumb-item active" href="/2015/06/19/gaussian-elimination/">Post 0182798feba88cbf55c82f1f9d9038e2</a>
+  </nav>
+
+  <div class="container mt-5">
+  <div class="row">
+  <div class="col-md-12">
+  <article>
+    <h1>Gaussian elimination</h1>
+    <h4>Fri, Jun 19, 2015</h4>
+    <p><p><a href="https://cocalc.com/projects/1b2a688b-0ee8-41b1-be25-2f6a95c36c76/files/Gaussian%20elimination.sagews">Python implementation</a>.
+</p></p>
+  </article>
+  </div>
+  </div>
+  </div>
 
 </body>
 </html>

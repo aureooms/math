@@ -2,34 +2,21 @@
 <html>
 <head>
 	<title>Polyhedral sets</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 	
 
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function ( ) {
-
-	document.querySelectorAll( '.math' )
-	.forEach( function ( element ) {
-		try {
-			var tex = element.textContent ;
-			var math = tex.substr(2, tex.length - 4) ;
-			var displayMode = tex.substr(0, 2) == '\\[' ;
-			try {
-				katex.render(math, element, {displayMode: displayMode});
-			}
-			catch ( e ) {
-				console.error( e ) ;
-				console.debug( element, tex , math , { displayMode: displayMode});
-			}
-		}
-		catch ( e ) {
-			console.error( e ) ;
-		}
-	});
-
+document.addEventListener("DOMContentLoaded", ( ) => {
+	document
+	.querySelectorAll( '.math' )
+	.forEach( element => renderMathInElement(element) ) ;
 });
 </script>
 
@@ -37,9 +24,18 @@ document.addEventListener("DOMContentLoaded", function ( ) {
 <body>
 
 
-  <h1>Polyhedral sets</h1>
-  <h2>Fri, Jan 15, 2016</h2>
-  <p>A <em>polyhedral set</em> set in <span  class="math">\(\mathbb{R}^d\)</span> is the intersection of a finite
+  <nav class="breadcrumb">
+    <a class="breadcrumb-item" href="https://aureooms.github.io/math/">Aurélien&#39;s math blog</a>
+    <a class="breadcrumb-item active" href="/2016/01/15/polyhedral-sets/">Post 92a50347e03f6e77d637048ae8352a4e</a>
+  </nav>
+
+  <div class="container mt-5">
+  <div class="row">
+  <div class="col-md-12">
+  <article>
+    <h1>Polyhedral sets</h1>
+    <h4>Fri, Jan 15, 2016</h4>
+    <p><p>A <em>polyhedral set</em> in <span  class="math">\(\mathbb{R}^d\)</span> is the intersection of a finite
 number of closed halfspaces, and a <em>(convex) polytope</em> is a bounded polyhedral
 set. This definition of a polytope is called a <em>halfspace representation</em>
 (<em>H-representation</em> or <em>H-description</em>).</p>
@@ -75,7 +71,11 @@ constraints binding at <span  class="math">\(x\)</span>.</p>
 <p>An extreme ray of the recession cone associated with a polyhedral set <span  class="math">\(P\)</span> is
 also called an extreme ray of <span  class="math">\(P\)</span>.</p>
 
-<p>TO BE CONTINUED ...</p>
+<p>TO BE CONTINUED ...</p></p>
+  </article>
+  </div>
+  </div>
+  </div>
 
 </body>
 </html>

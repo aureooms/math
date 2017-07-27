@@ -1,36 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="generator" content="Hugo 0.20-DEV" />
-	<title></title>
+	<meta name="generator" content="Hugo 0.25-DEV" />
+	<title>Aurélien&#39;s math blog</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 	
 
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function ( ) {
-
-	document.querySelectorAll( '.math' )
-	.forEach( function ( element ) {
-		try {
-			var tex = element.textContent ;
-			var math = tex.substr(2, tex.length - 4) ;
-			var displayMode = tex.substr(0, 2) == '\\[' ;
-			try {
-				katex.render(math, element, {displayMode: displayMode});
-			}
-			catch ( e ) {
-				console.error( e ) ;
-				console.debug( element, tex , math , { displayMode: displayMode});
-			}
-		}
-		catch ( e ) {
-			console.error( e ) ;
-		}
-	});
-
+document.addEventListener("DOMContentLoaded", ( ) => {
+	document
+	.querySelectorAll( '.math' )
+	.forEach( element => renderMathInElement(element) ) ;
 });
 </script>
 
@@ -38,24 +25,80 @@ document.addEventListener("DOMContentLoaded", function ( ) {
 <body>
 
 
+  <nav class="breadcrumb">
+    <a class="breadcrumb-item" href="https://aureooms.github.io/math/">Aurélien&#39;s math blog</a>
+    
+    <a class="breadcrumb-item active" href="/math/page/2/">Page 2</a>
+    
+  </nav>
+
+  <div class="container">
   
-    <h2><a href="https://aureooms.github.io/math/2016/01/15/polyhedral-sets/">Polyhedral sets</a></h2>
-    <p>A <em>polyhedral set</em> set in <span  class="math">\(\mathbb{R}^d\)</span> is the intersection of a finite
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Fri, Jan 15, 2016</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Polyhedral sets</h1>
+        <p class="card-text"><p>A <em>polyhedral set</em> in <span  class="math">\(\mathbb{R}^d\)</span> is the intersection of a finite
 number of closed halfspaces, and a <em>(convex) polytope</em> is a bounded polyhedral
 set. This definition of a polytope is called a <em>halfspace representation</em>
-(<em>H-representation</em> or <em>H-description</em>).</p>
+(<em>H-representation</em> or <em>H-description</em>).</p></p>
+        <a href="/math/2016/01/15/polyhedral-sets/" class="btn btn-primary">Read more about Polyhedral sets</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2015/11/08/symbols/">Symbols</a></h2>
-    <p><span  class="math">\[
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Sun, Nov 8, 2015</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Symbols</h1>
+        <p class="card-text"><p><span  class="math">\[
 \mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}
-\]</span></p>
+\]</span></p></p>
+        <a href="/math/2015/11/08/symbols/" class="btn btn-primary">Read more about Symbols</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2015/07/31/probabilistic-primality-testing/">Probabilistic primality testing</a></h2>
-    <p><a href="https://cocalc.com/projects/49ff84e6-2108-4af7-8b75-1f17996aa5a0/files/PRIMALITY.sagews">Sage implementation</a>.
-</p>
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Fri, Jul 31, 2015</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Probabilistic primality testing</h1>
+        <p class="card-text"><p><a href="https://cocalc.com/projects/49ff84e6-2108-4af7-8b75-1f17996aa5a0/files/PRIMALITY.sagews">Sage implementation</a>.
+</p></p>
+        <a href="/math/2015/07/31/probabilistic-primality-testing/" class="btn btn-primary">Read more about Probabilistic primality testing</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2015/06/29/fibonacci/">Fibonacci numbers</a></h2>
-    <p>The Fibonacci numbers are defined as <span  class="math">\(f_0 = 0,\ f_1 = 1\)</span> and, for <span  class="math">\(i \ge
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Mon, Jun 29, 2015</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Fibonacci numbers</h1>
+        <p class="card-text"><p>The Fibonacci numbers are defined as <span  class="math">\(f_0 = 0,\ f_1 = 1\)</span> and, for <span  class="math">\(i \ge
 2,\ f_i = f_{i-1} + f_{i-2}\)</span>. Here is the beginning of the Fibonacci sequence:</p>
 
 <p><span  class="math">\[0, 1, 1, 2, 3, 5, 8, 13, 21, \ldots\]</span></p>
@@ -63,10 +106,24 @@ set. This definition of a polytope is called a <em>halfspace representation</em>
 <p>We generalize the definition above by changing the two initial values, for
 example with <span  class="math">\(f_0 = 4,\ f_1 = 6\)</span> we obtain</p>
 
-<p><span  class="math">\[4, 6, 10, 16, 26, 42, \ldots\]</span></p>
+<p><span  class="math">\[4, 6, 10, 16, 26, 42, \ldots\]</span></p></p>
+        <a href="/math/2015/06/29/fibonacci/" class="btn btn-primary">Read more about Fibonacci numbers</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2015/06/29/inverse-sum/">Inverse sum equations</a></h2>
-    <p>We are given <span  class="math">\(k > 0 \in \mathbb{R}\)</span> and <span  class="math">\(a_1, a_2, \ldots, a_n \ge 1 \in \mathbb{N}\)</span> such that</p>
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Mon, Jun 29, 2015</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Inverse sum equations</h1>
+        <p class="card-text"><p>We are given <span  class="math">\(k > 0 \in \mathbb{R}\)</span> and <span  class="math">\(a_1, a_2, \ldots, a_n \ge 1 \in \mathbb{N}\)</span> such that</p>
 
 <p><span  class="math">\[
 a_1 < a_2 < \cdots < a_n.
@@ -79,57 +136,109 @@ a_1 < a_2 < \cdots < a_n.
 \frac{1}{a_2} +
 \cdots +
 \frac{1}{a_n} = k.
-\]</span></p>
+\]</span></p></p>
+        <a href="/math/2015/06/29/inverse-sum/" class="btn btn-primary">Read more about Inverse sum equations</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2015/06/24/binomial-coefficient-tricks/">Binomial coefficient tricks</a></h2>
-    <p><span  class="math">\[
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Wed, Jun 24, 2015</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Binomial coefficient tricks</h1>
+        <p class="card-text"><p><span  class="math">\[
 \binom{n}{k} = \binom{n}{n-k}
 \]</span></p>
 
 <p>holds because keeping <span  class="math">\(k\)</span> elements from <span  class="math">\(n\)</span> elements is equivalent
-to discarding <span  class="math">\(n-k\)</span> elements from <span  class="math">\(n\)</span> elements.</p>
+to discarding <span  class="math">\(n-k\)</span> elements from <span  class="math">\(n\)</span> elements.</p></p>
+        <a href="/math/2015/06/24/binomial-coefficient-tricks/" class="btn btn-primary">Read more about Binomial coefficient tricks</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2015/06/23/complex-division/">Complex numbers division</a></h2>
-    <p><span  class="math">\(
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Tue, Jun 23, 2015</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Complex numbers division</h1>
+        <p class="card-text"><p><span  class="math">\(
 \frac{a+bi}{c+di} = \frac{a+bi}{c+di} \frac{c-di}{c-di} = \frac{ac+bd}{c^2+d^2}+\frac{bc-ad}{c^2+d^2}i
 \)</span>
-</p>
+</p></p>
+        <a href="/math/2015/06/23/complex-division/" class="btn btn-primary">Read more about Complex numbers division</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
-    <h2><a href="https://aureooms.github.io/math/2015/06/19/gaussian-elimination/">Gaussian elimination</a></h2>
-    <p><a href="https://cocalc.com/projects/1b2a688b-0ee8-41b1-be25-2f6a95c36c76/files/Gaussian%20elimination.sagews">Python implementation</a>.
-</p>
+  <div class="row">
+  <div class="col-md-12">
+    <div class="card text-center mb-3">
+      <div class="card-header text-muted">Fri, Jun 19, 2015</div>
+      
+      <div class="card-block">
+        <h1 class="card-title">Gaussian elimination</h1>
+        <p class="card-text"><p><a href="https://cocalc.com/projects/1b2a688b-0ee8-41b1-be25-2f6a95c36c76/files/Gaussian%20elimination.sagews">Python implementation</a>.
+</p></p>
+        <a href="/math/2015/06/19/gaussian-elimination/" class="btn btn-primary">Read more about Gaussian elimination</a>
+        <div class="pull-right">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   
+  </div>
 
   
-    
-    <ul class="pagination">
-        
-        <li>
-            <a href="/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-        </li>
-        
-        <li
-        >
-        <a href="/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-        </li>
-        
-        <li
-        ><a href="/">1</a></li>
-        
-        <li
-        class="active"><a href="/page/2/">2</a></li>
-        
-        <li
-        class="disabled">
-        <a href="" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-        </li>
-        
-        <li>
-            <a href="/page/2/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-        </li>
-        
-    </ul>
-    
+
+<nav aria-label="Page navigation">
+<ul class="pagination justify-content-center">
+
+<li class="page-item">
+<a class="page-link" href="/math/" aria-label="First"><span aria-hidden="true">First</span></a>
+</li>
+
+<li class="page-item">
+<a class="page-link" href="/math/" aria-label="Previous"><span aria-hidden="true">Previous</span></a>
+</li>
+
+<li class="page-item">
+<a class="page-link" href="/math/">1</a></li>
+
+<li class="page-item active">
+<a class="page-link" href="/math/page/2/">2</a></li>
+
+<li class="page-item disabled">
+<a class="page-link" href="" aria-label="Next"><span aria-hidden="true">Next</span></a>
+</li>
+
+<li class="page-item">
+<a class="page-link" href="/math/page/2/" aria-label="Last"><span aria-hidden="true">Last</span></a>
+</li>
+
+</ul>
+</nav>
+
+
 
 </body>
 </html>
