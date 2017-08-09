@@ -35,9 +35,7 @@ document.addEventListener("DOMContentLoaded", ( ) => {
   <article>
     <h1>Converging series</h1>
     <h4>Fri, Apr 21, 2017</h4>
-    <p><h2 id="theorem">Theorem</h2>
-
-<p>Let <span  class="math">\(-1 < x < 1\)</span>,</p>
+    <p><p>Let <span  class="math">\(-1 < x < 1\)</span>,</p>
 
 <p><span  class="math">\[
 1 + x + x^2 + x^3 + x^4 + \cdots = \frac{1}{1-x}.
@@ -53,6 +51,12 @@ document.addEventListener("DOMContentLoaded", ( ) => {
 \lim_{k \to \infty} (1 - x)(1 + x + x^2 + x^3 + x^4 + \cdots + x^k) &= \lim_{k \to \infty} 1 - x^{k+1}, \\
 (1 - x)(1 + x + x^2 + x^3 + x^4 + \cdots) &= 1.
 \end{aligned}
+\]</span></p>
+
+<p>A fun way to prove it for <span  class="math">\(x = \frac1b\)</span> with <span  class="math">\(b \in \mathbb{N}_0\)</span> is to note that for <span  class="math">\(a = b-1\)</span></p>
+
+<p><span  class="math">\[
+1.111\ldots_b = \frac{a.aaa\ldots_b}{a} = \frac{10_b}{a} = \frac{b}{a} = \frac{b}{b-1} = \frac{1}{1-x}.
 \]</span></p></p>
   </article>
   </div>

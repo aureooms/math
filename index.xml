@@ -94,9 +94,7 @@ A_N = \frac{b}{1+a} (N+1), N \ge a \in \mathbb{N}.
       <pubDate>Fri, 21 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://aureooms.github.io/math/2017/04/21/converging-series/</guid>
-      <description>&lt;h2 id=&#34;theorem&#34;&gt;Theorem&lt;/h2&gt;
-
-&lt;p&gt;Let &lt;span  class=&#34;math&#34;&gt;\(-1 &lt; x &lt; 1\)&lt;/span&gt;,&lt;/p&gt;
+      <description>&lt;p&gt;Let &lt;span  class=&#34;math&#34;&gt;\(-1 &lt; x &lt; 1\)&lt;/span&gt;,&lt;/p&gt;
 
 &lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
 1 + x + x^2 + x^3 + x^4 + \cdots = \frac{1}{1-x}.
