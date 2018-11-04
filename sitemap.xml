@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://aureooms.github.io/math/2018/10/17/drunkards-walk/</loc>
+    <lastmod>2018-10-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://aureooms.github.io/math/2017/07/23/sums-of-geometric-series/</loc>
     <lastmod>2017-07-23T00:00:00+00:00</lastmod>
   </url>
@@ -94,7 +99,7 @@
   
   <url>
     <loc>https://aureooms.github.io/math/</loc>
-    <lastmod>2017-07-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -105,7 +110,7 @@
   
   <url>
     <loc>https://aureooms.github.io/math/post/</loc>
-    <lastmod>2017-07-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

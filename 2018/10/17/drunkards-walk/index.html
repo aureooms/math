@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Drunkard&#39;s Walk</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+	
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", ( ) => {
+	document
+	.querySelectorAll( '.math' )
+	.forEach( element => renderMathInElement(element) ) ;
+});
+</script>
+
+</head>
+<body>
+
+
+  <nav class="breadcrumb">
+    <a class="breadcrumb-item" href="https://aureooms.github.io/math/">Aurélien&#39;s math blog</a>
+    <a class="breadcrumb-item active" href="/2018/10/17/drunkards-walk/">Post dc6531e3d0e776624cf543d19947cd22</a>
+  </nav>
+
+  <div class="container mt-5">
+  <div class="row">
+  <div class="col-md-12">
+  <article>
+    <h1>The Drunkard's Walk</h1>
+    <h4>Wed, Oct 17, 2018</h4>
+    <p><p>A drunkard is zigzagging home. At every steps forward (or backward) he is
+making, he also moves <span  class="math">\(1\)</span> step to the left with probability <span  class="math">\(p\)</span> and <span  class="math">\(1\)</span>
+step to the right otherwise. He starts <span  class="math">\(i\)</span> steps to the right of a river. What is
+the expected number of steps forward before he falls into the river?</p>
+
+<p></p>
+
+<p>We model the expected number of steps before the drunkard falls into the river
+by <span  class="math">\(A(i)\)</span> when the drunkard starts <span  class="math">\(i\)</span> steps to the right of the river.</p>
+
+<p>If the drunkard starts his walk after having fallen into the river,
+then he does not even need to move
+<span  class="math">\(
+A(0) = 0
+\)</span></p>
+
+<p>The statement of the problem allows us to express <span  class="math">\(A(i)\)</span> with respect to its
+neighbouring values.
+<span  class="math">\(
+A(i) = p A(i-1) + (1-p) A(i+1) + 1
+\)</span></p>
+
+<p>Another important point is that the expected number of steps before the fall is
+the same as the sum of the expected number of steps before moving one step
+towards the river by linearity of expectation. Hence,
+<span  class="math">\(
+A(i) = i A(1)
+\)</span></p>
+
+<p>Solving for <span  class="math">\(i=1\)</span>,
+<span  class="math">\(
+A(1) = p A(0) + (1-p) A(2) + 1
+\)</span></p>
+
+<p><span  class="math">\[
+A(1) = (2-2p) A(1) + 1
+\]</span></p>
+
+<p><span  class="math">\[
+A(1) (2p - 1) = 1
+\]</span></p>
+
+<p><span  class="math">\[
+A(1) = \frac{1}{2p-1}
+\]</span></p>
+
+<p>And finally
+<span  class="math">\(
+A(i) = \frac{i}{2p-1}
+\)</span></p>
+
+<p>The problem can also be stated with the drunkard moving forward with
+probability <span  class="math">\(p\)</span> and backwards otherwise. Then ask what is the expected time
+before the drunkard reaches home (provided forward means in the direction of
+his home).</p></p>
+  </article>
+  </div>
+  </div>
+  </div>
+
+</body>
+</html>
+

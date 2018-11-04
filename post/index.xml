@@ -5,10 +5,24 @@
     <link>https://aureooms.github.io/math/post/</link>
     <description>Recent content in Posts on Aurélien&#39;s math blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 23 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://aureooms.github.io/math/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Drunkard&#39;s Walk</title>
+      <link>https://aureooms.github.io/math/2018/10/17/drunkards-walk/</link>
+      <pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://aureooms.github.io/math/2018/10/17/drunkards-walk/</guid>
+      <description>&lt;p&gt;A drunkard is zigzagging home. At every steps forward (or backward) he is
+making, he also moves &lt;span  class=&#34;math&#34;&gt;\(1\)&lt;/span&gt; step to the left with probability &lt;span  class=&#34;math&#34;&gt;\(p\)&lt;/span&gt; and &lt;span  class=&#34;math&#34;&gt;\(1\)&lt;/span&gt;
+step to the right otherwise. He starts &lt;span  class=&#34;math&#34;&gt;\(i\)&lt;/span&gt; steps to the right of a river. What is
+the expected number of steps forward before he falls into the river?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Sums of geometric series</title>
