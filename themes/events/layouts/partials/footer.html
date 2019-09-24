@@ -1,7 +1,0 @@
-	{{ $mainjs := resources.Get "main.js" | minify | fingerprint }}
-	<script src="{{ $mainjs.Permalink }}"></script>
-	{{ partial "search.html" . }}
-	{{ partial "materialize-js.html" . }}
-	{{ partial "math.html" . }}
-</body>
-</html>
