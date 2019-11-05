@@ -12,7 +12,6 @@ location: Europe
 geolocation:
   latitude: 50
   longitude: 3
-status: CANCELLED
 ---
 
 The erroneous proof I hear most often is: Suppose $$P$$ is a
