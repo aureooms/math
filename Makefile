@@ -1,4 +1,4 @@
-.PHONY: all build assets static upload serv clean nuke
+.PHONY: all build assets static upload deploy serv clean nuke
 .SECONDARY:
 
 HUGO := hugo --gc
@@ -15,17 +15,22 @@ ASSETS := assets/vendor/materialize-src assets/vendor/material-icons.css
 #assets/katex.min.css assets/katex.min.js assets/katex-auto-render.min.js
 STATIC := static/vendor/lunr.min.js static/vendor/lodash.min.js
 
-all: clean build upload
+all: build
+
+deploy: clean build upload
 
 build: assets static
 	$(HUGO)
+
+serv: clean assets static
+	$(HUGO) server
 
 assets: $(ASSETS)
 
 static: $(STATIC)
 
 upload:
-	echo "Upload not implemented"
+	rsync -rhv --progress --delete public/ /var/www/math.aurelienooms.be
 
 assets/vendor/materialize-src: static/vendor/materialize.zip
 	mkdir -p $(dir $@)
@@ -58,9 +63,6 @@ static/vendor/lodash.min.js:
 #assets/katex-auto-render.min.js:
 	#mkdir -p $(dir $@)
 	#wget -O $@ $(URL_KATEX_AUTO_RENDER_JS)
-
-serv: clean assets static
-	$(HUGO) server
 
 clean:
 	rm -rf resources public
