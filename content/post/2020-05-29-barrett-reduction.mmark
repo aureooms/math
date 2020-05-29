@@ -1,0 +1,51 @@
+---
+title: "2020 05 29 Barrett Reduction"
+date: 2020-05-29T17:02:08+02:00
+draft: true
+---
+
+We want to compute `x mod n`. Let `q = floor(x/n)` then `x - qn = x mod n` and
+`0 <= x - qn < n`. This requires one multiplication and one subtraction once
+`q` is known. Using multiprecision floating point arithmetic, we could
+precompute `1/n` and compute `q` with a single multiplication. We just need to
+figure exactly how much precision is required. Let `r` be the radix used to
+represent integers, Barrett reduction approximates `1/n` with `m/r^k` for some
+`k` (`m` can be precomputed as `m = floor(r^k/n)`). Then dividing by `n`
+amounts to multiplying by `m` then dividing by `r^k` (a shift by `k` places
+using representation in base `r`). Provided we choose `k` appropriately, this
+will give the correct result modulo `n` with a result between `0` and `2n-1`
+(this happens because of the rounding down of `m/r^k` and can be fixed with a
+single subtraction).
+
+The error of our approximation of `1/n` is `e = 1/n - m/r^k`, so as long as `xe
+< 1`, hence `e < 1/x`, we are fine (since that error is rounded down to zero).
+This gives the bound required on `k` for the reduction to work: we have `m =
+floor(r^k/n)` and `e = 1/n - m/r^k < 1/x`, hence
+
+    1/n - m/r^k < 1/x
+    m/r^k > 1/n - 1/x
+    m/r^k > (x - n) / xn
+    r^k < m xn / (x - n)
+
+For instance if `n = r^l` with `l <= k` then `r^k/n` is an integer and `m =
+r^k/n` thus
+
+    1 < x / (x - n)
+
+Hence `n != 0`, `x > n`. This applies for all cases where `n` divides `r^k` and
+does not restrict `k` other than `k >= 0`. But the reduction is useless in that
+case.
+
+What if `n` does not divide `r^k`? Then `m = floor(r^k/n) > r^k/n - 1`. Thus we
+can guarantee that `r^k < mxn / (x - n)` if
+
+    r^k < r^k x / (x - n) - xn / (x - n)
+    1 < x / (x - n) - xn / (x - n) / r^k
+    xn / (x - n) / r^k < x / (x - n) - 1 = (x - (x - n)) / (x - n) = n / (x - n)
+    r^k > x
+    k > log x / log r
+
+Which means that `k` must be at least the number of words in `x`.
+Note that we divide by `x-n` so `x > n`.
+
+See https://en.wikipedia.org/wiki/Barrett_reduction
