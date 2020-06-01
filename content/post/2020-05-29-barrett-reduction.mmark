@@ -20,7 +20,7 @@ The error of our approximation of `1/n` is `e = 1/n - m/r^k`.
 Let `q' = floor(x m / r^k) <= q` and note that `x/n` might have a fractional
 value `f` anywhere between `.0` and `.999...`. As long as q - q' <= xe + f < 2
 we obtain the correct result modulo `n` with a value between `0` and `2n-1`.
-The actual equivalence class can be obtained with a most one subtraction.
+The actual congruence class can be obtained with a most one subtraction.
 
 Since `f` can be as high as `1`, we want `xe < 1`, and hence `e < 1/x`.
 This gives the bound required on `k` for the reduction to work: we have `m =
@@ -58,7 +58,7 @@ PPS: Barrett reduction not only computes the remainder but also the quotient.
 The error in the quotient is at most one as seen above. We can find the
 correct value by checking that the modulo is in the correct range with an
 additional multiplication, exactly as if we were computing the correct
-equivalence class for the modulo. I don't see how to save the last
+congruence class for the modulo. I don't see how to save the last
 multiplication. We know that the `x`'s such that `q - q' = 1` are the `x`'s such
 that `xe + f >= 1`. However, `f` is not monotone in `x`. Although `xe + f` is
 more and more likely to be above `1` as `x` increases, there is not clear-cut
