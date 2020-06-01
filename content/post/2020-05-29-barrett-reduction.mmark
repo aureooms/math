@@ -17,9 +17,9 @@ shift by `k` places using representation in base `r`). Provided we choose `k`
 appropriately, this will give the correct result modulo `n`.
 
 The error of our approximation of `1/n` is `e = 1/n - m/r^k`.
-Note that `x/n` might have a fractional value `f` anywhere between `.0` and
-`.999...`. Hence, as long as xe + f < 2 we obtain the correct result modulo `n`
-with a value between `0` and `2n-1`.
+Let `q' = floor(x m / r^k) <= q` and note that `x/n` might have a fractional
+value `f` anywhere between `.0` and `.999...`. As long as q - q' <= xe + f < 2
+we obtain the correct result modulo `n` with a value between `0` and `2n-1`.
 The actual equivalence class can be obtained with a most one subtraction.
 
 Since `f` can be as high as `1`, we want `xe < 1`, and hence `e < 1/x`.
