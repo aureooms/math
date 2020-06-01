@@ -50,5 +50,9 @@ can guarantee that `r^k < mxn / (x - n)` if
 Which means that `k` must be at least the number of words in `x`.
 Note that we divide by `x-n` so `x > n`.
 
+PS: Barrett reduction is more popularly known as reducing a number `0 <= x <
+n^2` modulo `n` with `r=2`. Then we have `2^k > n^2` which gives the usual
+approximation `floor(4^k'/n)/4^k'` of `1/n` with `k = 2k'`.
+
 See https://en.wikipedia.org/wiki/Barrett_reduction
 See https://www.nayuki.io/page/barrett-reduction-algorithm
