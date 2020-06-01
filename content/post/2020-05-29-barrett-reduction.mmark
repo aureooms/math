@@ -51,3 +51,4 @@ Which means that `k` must be at least the number of words in `x`.
 Note that we divide by `x-n` so `x > n`.
 
 See https://en.wikipedia.org/wiki/Barrett_reduction
+See https://www.nayuki.io/page/barrett-reduction-algorithm
