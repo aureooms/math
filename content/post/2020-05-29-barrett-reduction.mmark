@@ -14,12 +14,15 @@ Let `r` be the radix used to represent integers, Barrett reduction approximates
 `1/n` with `m/r^k` for some `k` (`m` can be precomputed as `m = floor(r^k/n)`).
 Dividing by `n` amounts then to multiplying by `m` then dividing by `r^k` (a
 shift by `k` places using representation in base `r`). Provided we choose `k`
-appropriately, this will give the correct result modulo `n` with a result
-between `0` and `2n-1` (this happens because of the rounding down of `m/r^k`
-and the actual equivalence class can be obtained with a most one subtraction).
+appropriately, this will give the correct result modulo `n`.
 
-The error of our approximation of `1/n` is `e = 1/n - m/r^k`, so as long as `xe
-< 1`, hence `e < 1/x`, we are fine (since that error is rounded down to zero).
+The error of our approximation of `1/n` is `e = 1/n - m/r^k`.
+Note that `x/n` might have a fractional value `f` anywhere between `.0` and
+`.999...`. Hence, as long as xe + f < 2 we obtain the correct result modulo `n`
+with a value between `0` and `2n-1`.
+The actual equivalence class can be obtained with a most one subtraction.
+
+Since `f` can be as high as `1`, we want `xe < 1`, and hence `e < 1/x`.
 This gives the bound required on `k` for the reduction to work: we have `m =
 floor(r^k/n)` and `e = 1/n - m/r^k < 1/x`, hence
 
