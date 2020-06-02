@@ -13,7 +13,7 @@ authors:
 Positional notation.
 
 An arbitrary precision integer on a computer is represented as a list of
-digits (limbs). They are just bigger. Todays computers can hold 64 bits per
+digits (limbs). They are just bigger. Today's computers can hold 64 bits per
 limb.
 
 Modular arithmetic consists in applying addition and multiplication to integers
@@ -25,19 +25,30 @@ the corresponding operation on integers then taking the result modulo $$n$$.
 
 However, taking the modulo is usually more expensive than multiplication: the
 schoolbook algorithm for division takes quadratic time and the divide and
-conquer solution solves the problem with roughly 4 input size multiplications
-and a lot of overhead.
+conquer solution [1] solves the problem with
+up to $$\log n$$ input size multiplications:
+one with the schoolbook method,
+two with Karatsuba multiplication,
+roughly 2.6 with Toom-Cook $$k=3$$,
+$$\\log n / 2$$ with $$n \\log n $$ multiplication,
+and
+$$\\log n$$ with linear-time multiplication (no algorithm is known to achieve
+this).
+
+To be fair, for a certain range of input sizes, this divide and conquer
+approach to division is faster than the methods we are presenting here, in
+particular for small input sizes that should be handled with the schoolbook
+multiplication method or Karatsuba's algorithm.
 
 Note that depending on the base being used to represent our numbers, some
-division and modulo operations can be done blazzingly fast: when representing
+division and modulo operations can be done amazingly fast: when representing
 numbers in base 10 for instance, that number modulo 10 is simply his last
 digit.
 
 We are interested in a technique called Montgomery trick. This technique shows
 that, as long as $$gcd(R,N) = 1$$ with $$R>N$$ it is possible to trade
-operations modulo $$N$$ for operations modulo $$R$$, with a lower overhead cost than
-D&C division.  Hence, if modulo $$R$$ can be done efficiently, so can modulo
-$$N$$.
+operations modulo $$N$$ for operations modulo $$R$$.
+Hence, if modulo $$R$$ can be done efficiently, so can modulo $$N$$.
 
 ### The Trick
 
@@ -83,7 +94,7 @@ one addition.
 
 To implement addition and multiplication easily we convert numbers $$A$$ and
 $$B$$ to $$AR mod N$$ and $$BR mod N$$ using the standard division algorithm.
-This inccurs an initial conversion cost that is negligible when lots of
+This incurs an initial conversion cost that is negligible when lots of
 arithmetic operations are performed (for instance, in modular exponentiation).
 
 Then $$A+B$$ corresponds to $$(A+B)R mod N = AR mod N + BR mod N$$ where the
@@ -91,4 +102,14 @@ last $$mod N$$ operations can be done with a single subtraction.
 
 And $$A*B$$ corresponds to $$(A*B)R mod N = (AR mod N)(BR mod N) R' mod N$$
 where the multiplication by $$R' mod N$$ is achieved through Montgomery's
-trick.
+trick. This uses three integer multiplications: one to compute
+$$(AR mod N)(BR mod N)$$, one to compute $$(T mod R) N'$$, and one to compute
+$$qN$$. Note that all operands are smaller than $$R$$. If
+$$R$$ is made out of $$k$$ digits, then these multiplications are all $$k
+\\times k$$ multiplications.
+
+Note that in the second multiplication we only care about the lower order bits,
+and in the third multiplication we only care about the higher order bits
+(not really but almost). This can be exploited to further reduce the overhead.
+
+[1]: https://pure.mpg.de/rest/items/item_1819444_4/component/file_2599480/content
