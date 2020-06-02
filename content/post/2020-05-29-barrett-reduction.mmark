@@ -85,6 +85,11 @@ PPPS: However, in the particular case where the division is exact, i.e. `x = 0
 mod n`, we have that `f` is 0. Hence, if we know that `n` divides `x` we can
 compute the quotient with a single multiplication by `m`.
 
+PPPPS: Since $$\\lfloor \\frac{r^l}{n} \\rfloor$$ with $$l <= k$$
+corresponds to a prefix of the digits of $$\\lfloor \\frac{r^k}{n}
+\\rfloor$$, we can precompute $$m$$ for a large $$k$$ but only use those digits
+that are necessary depending on the size of $$x$$.
+
 See https://en.wikipedia.org/wiki/Barrett_reduction
 See https://www.nayuki.io/page/barrett-reduction-algorithm
 See https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_1819444
