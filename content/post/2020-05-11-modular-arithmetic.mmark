@@ -108,8 +108,9 @@ $$qN$$. Note that all operands are smaller than $$R$$. If
 $$R$$ is made out of $$k$$ digits, then these multiplications are all $$k
 \\times k$$ multiplications.
 
-Note that in the second multiplication we only care about the lower order bits,
-and in the third multiplication we only care about the higher order bits
-(not really but almost). This can be exploited to further reduce the overhead.
+Note that in the second multiplication we only care about the lower order bits
+of the result, and in the third multiplication we only care about the higher
+order bits of the result. This can be exploited to further reduce the overhead
+of this method.
 
 [1]: https://pure.mpg.de/rest/items/item_1819444_4/component/file_2599480/content
