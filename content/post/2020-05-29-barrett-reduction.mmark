@@ -67,6 +67,14 @@ If $$n$$ consists of $$k'$$ digits, then reducing a $$k=2k'$$ digit number
 modulo $$n$$ costs one $$2k' \\times k'$$ multiplication and one $$k' \\times k'$$
 multiplication. This is slightly worse than Montgomery's reduction.
 
+Note that since $$q' = \\lfloor x m / r^k \\rfloor$$, we only care about the
+higher order digits of $$xm$$. Similarly, when computing $$q'n$$, we know by the
+error analysis that the higher order digits will be equal to those of $$x$$, so
+we only need to compute the lower order digits of $$q'n$$.
+
+However those gains tend to zero as more and more efficient multiplication
+subroutines are used for large $$n$$.
+
 PS: Barrett reduction is more popularly known as reducing a number `0 <= x <
 n^2` modulo `n` with `r=2`. Then we have `2^k > n^2` which gives the usual
 approximation `floor(4^k'/n)/4^k'` of `1/n` with `k = 2k'`.
