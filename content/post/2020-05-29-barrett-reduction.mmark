@@ -1,7 +1,13 @@
 ---
-title: "Barrett Reduction"
-date: 2020-05-29T17:02:08+02:00
 draft: true
+date: 2020-05-29T17:02:08+02:00
+title: Barrett Reduction
+tags:
+  - Number Theory
+  - Arithmetic
+  - Algebra
+authors:
+  - Aurélien Ooms
 ---
 
 We want to compute `x mod n`. Let `q = floor(x/n)` then `x - qn = x mod n` and
@@ -63,6 +69,10 @@ multiplication. We know that the `x`'s such that `q - q' = 1` are the `x`'s such
 that `xe + f >= 1`. However, `f` is not monotone in `x`. Although `xe + f` is
 more and more likely to be above `1` as `x` increases, there is not clear-cut
 threshold that characterizes when the quotient must be corrected.
+
+PPPS: However, in the particular case where the division is exact, i.e. `x = 0
+mod n`, we have that `f` is 0. Hence, if we know that `n` divides `x` we can
+compute the quotient with a single multiplication by `m`.
 
 See https://en.wikipedia.org/wiki/Barrett_reduction
 See https://www.nayuki.io/page/barrett-reduction-algorithm
