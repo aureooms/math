@@ -23,9 +23,11 @@ shift by `k` places using representation in base `r`). Provided we choose `k`
 appropriately, this will give the correct result modulo `n`.
 
 The error of our approximation of `1/n` is `e = 1/n - m/r^k`.
-Let `q' = floor(x m / r^k) <= q` and note that `x/n` might have a fractional
-value `f` anywhere between `.0` and `.999...`. As long as q - q' <= xe + f < 2
-we obtain the correct result modulo `n` with a value between `0` and `2n-1`.
+Let `q' = floor(x m / r^k) <= q` and compute `x' = x - q'n`.
+Observe that `x/n` might have a fractional value `f` anywhere between `.0` and
+`.999...`.
+As long as $$q - q' <= xe + f < 2$$
+$$x'$$ yields the correct result modulo `n` with a value between `0` and `2n-1`.
 The actual congruence class can be obtained with a most one subtraction.
 
 Since `f` can be as high as `1`, we want `xe < 1`, and hence `e < 1/x`.
@@ -55,6 +57,15 @@ can guarantee that `r^k < mxn / (x - n)` if
 
 Which means that `k` must be at least the number of words in `x`.
 Note that we divide by `x-n` so `x > n`.
+
+#### Time Complexity
+
+The reduction uses two multiplications:
+the first one multiplies $$x$$ with $$m$$,
+the second one multiplies $$q'$$ by $$n$$.
+If $$n$$ consists of $$k'$$ digits, then reducing a $$k=2k'$$ digit number
+modulo $$n$$ costs one $$2k' \\times k'$$ multiplication and one $$k' \\times k'$$
+multiplication. This is slightly worse than Montgomery's reduction.
 
 PS: Barrett reduction is more popularly known as reducing a number `0 <= x <
 n^2` modulo `n` with `r=2`. Then we have `2^k > n^2` which gives the usual
