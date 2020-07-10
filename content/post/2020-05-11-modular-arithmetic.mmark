@@ -30,7 +30,7 @@ up to $$\log n$$ input size multiplications:
 one with the schoolbook method,
 two with Karatsuba multiplication,
 roughly 2.6 with Toom-Cook $$k=3$$,
-$$\\log n / 2$$ with $$n \\log n $$ multiplication,
+$$\\log n / 2$$ with $$n \\log n $$-time multiplication,
 and
 $$\\log n$$ with linear-time multiplication (no algorithm is known to achieve
 this).
@@ -57,8 +57,9 @@ If $$gcd(R,N)=1$$ then there exists integers R' and N' such that $$RR' + NN' =
 of $$N$$ modulo $$R$$.
 
 Given an input $$T \\in [0, RN-1]$$,
-we can compute the pseudo-quotient $$q = T/N mod R$$ by $$q = TN' mod R$$. Then
-the pseudo-rest of this pseudo-division by $$N mod R$$ is $$r = T - qN = T -
+informally,
+we can compute the *pseudo-quotient* $$q = T/N mod R$$ by $$q = TN' mod R$$. Then
+the *pseudo-rest* of this *pseudo-division* by $$N mod R$$ is $$r = T - qN = T -
 TNN' = 0 mod R$$.
 
 ```
