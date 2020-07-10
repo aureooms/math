@@ -14,16 +14,16 @@ geolocation:
   longitude: 3
 ---
 
-The erroneous proof I hear most often is: Suppose $$P$$ is a
-finite set that contains all the primes, then $$p^* = 1 + \prod_{p \in P} p$$ is
-prime. Indeed, the flaw is that $$p^*$$ is not necessarily prime but rather
-must be a multiple of some prime not in $$P$$.
+The erroneous proof I hear most often is: Suppose \\(P\\) is a
+finite set that contains all the primes, then \\(p^\* = 1 + \prod_{p \in P} p\\) is
+prime. Indeed, the flaw is that \\(p^\*\\) is not necessarily prime but rather
+must be a multiple of some prime not in \\(P\\).
 
 <!--more-->
 The previous proof is so often misquoted that I prefer the following. It
 relies on the fact that a finite product of sums of infinite geometric series
 converges, whereas the sum of the reciprocals of the natural numbers (except
-zero) diverges (hint: $$\int$$).
+zero) diverges (hint: \\(\int\\)).
 
 $$
   \sum_{n = 1}^{\infty} \frac{1}{n}

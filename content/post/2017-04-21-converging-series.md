@@ -8,7 +8,7 @@ tags:
   - Identities
 ---
 
-Let $$-1 < x < 1$$,
+Let \\(-1 < x < 1\\),
 
 $$
 1 + x + x^2 + x^3 + x^4 + \cdots = \frac{1}{1-x}.
@@ -25,7 +25,7 @@ $$
 \end{aligned}
 $$
 
-A fun way to prove it for $$x = \frac1b$$ with $$b \in \mathbb{N}_0$$ is to note that for $$a = b-1$$
+A fun way to prove it for \\(x = \frac1b\\) with \\(b \in \mathbb{N}_0\\) is to note that for \\(a = b-1\\)
 
 $$
 1.111\ldots_b = \frac{a.aaa\ldots_b}{a} = \frac{10_b}{a} = \frac{b}{a} = \frac{b}{b-1} = \frac{1}{1-x}.

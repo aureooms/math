@@ -10,7 +10,7 @@ tags:
   - Systems of Inequalities
 ---
 
-We are given $$k > 0 \in \mathbb{R}$$ and $$a_1, a_2, \ldots, a_n \ge 1 \in \mathbb{N}$$ such that
+We are given \\(k > 0 \in \mathbb{R}\\) and \\(a_1, a_2, \ldots, a_n \ge 1 \in \mathbb{N}\\) such that
 
 $$
 a_1 < a_2 < \cdots < a_n.
@@ -47,7 +47,7 @@ $$
 
 Hence,
 
-$$a_1 < \frac{n}{k}$$
+\\(a_1 < \frac{n}{k}\\)
 
 and we only have a finite number of candidate solutions to test.
 

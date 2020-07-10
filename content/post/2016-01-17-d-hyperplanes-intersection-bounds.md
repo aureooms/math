@@ -9,44 +9,44 @@ tags:
   - Linear Algebra
 ---
 
-We bound the position of the $$0$$-cells of an arrangement of hyperplanes in
-$$\mathbb{R}^d$$. This allows, for example, to build an hypercube that
+We bound the position of the \\(0\\)-cells of an arrangement of hyperplanes in
+\\(\mathbb{R}^d\\). This allows, for example, to build an hypercube that
 intersects all cells of the arrangement. Such an hypercube must contain at
-least one point of each cell of the arrangement. When $$q > 0$$, in order to
-fix which point of a $$q$$-cell we want to include in the hypercube, it
-suffices to add the $$n$$ hyperplanes of equation $$x_i = 0$$ to the
+least one point of each cell of the arrangement. When \\(q > 0\\), in order to
+fix which point of a \\(q\\)-cell we want to include in the hypercube, it
+suffices to add the \\(n\\) hyperplanes of equation \\(x_i = 0\\) to the
 arrangement. With those additional hyperplanes, the arrangement is such that
-each $$q$$-cell of the arrangement with $$q > 0$$ contains a
-$$0$$-cell of the arrangement, hence, we only need the hypercube to
-intersect, for each $$0$$-cell $$\nu$$ of the arrangement, an hypersphere
-of center $$\nu$$ and arbitrarily small radius. The inequalities of the
+each \\(q\\)-cell of the arrangement with \\(q > 0\\) contains a
+\\(0\\)-cell of the arrangement, hence, we only need the hypercube to
+intersect, for each \\(0\\)-cell \\(\nu\\) of the arrangement, an hypersphere
+of center \\(\nu\\) and arbitrarily small radius. The inequalities of the
 polyhedral set defining our hypercube will thus only depend on the position of
-the $$0$$-cells of our arrangement.
+the \\(0\\)-cells of our arrangement.
 
 <!--more-->
-We thus bound the components of those vertices. Since the $$0$$-cells of our
-arrangement are intersections of $$n$$ intersecting and linearly independent
-hyperplanes, we focus on the solutions of systems of $$n$$ linear equations
-in $$\mathbb{R}^n$$.
+We thus bound the components of those vertices. Since the \\(0\\)-cells of our
+arrangement are intersections of \\(n\\) intersecting and linearly independent
+hyperplanes, we focus on the solutions of systems of \\(n\\) linear equations
+in \\(\mathbb{R}^n\\).
 Let us begin with a few examples to build some intuition.
 
 ## Examples
 
-### First example: $$a x + b = 0$$
+### First example: \\(a x + b = 0\\)
 
-If $$a \neq 0$$ then
+If \\(a \neq 0\\) then
 
 $$
 	a x + b = 0 \iff x = -\frac{b}{a}.
 $$
 
-### Second example: $$a x + b y + c = 0$$
+### Second example: \\(a x + b y + c = 0\\)
 
-If $$
+If \\(
 \begin{vmatrix}
 a & b \\
 d & e
-\end{vmatrix} \neq 0 $$
+\end{vmatrix} \neq 0 \\)
 then to solve
 
 $$
@@ -57,7 +57,7 @@ d x + e y + f &= 0
 $$
 
 we can use the following (implied) equations which are true for all
-$$\lambda,\mu \in \mathbb{R}$$
+\\(\lambda,\mu \in \mathbb{R}\\)
 
 $$
 \begin{aligned}
@@ -66,12 +66,12 @@ $$
 \end{aligned}
 $$
 
-We can find $$x$$ by making $$y$$ disappear. Since $$
+We can find \\(x\\) by making \\(y\\) disappear. Since \\(
 \begin{vmatrix}
 a & b \\
 d & e
-\end{vmatrix} \neq 0 $$ we cannot have $$b$$ and $$e$$ equal to zero
-simultaneously so either $$e \neq 0$$ and
+\end{vmatrix} \neq 0 \\) we cannot have \\(b\\) and \\(e\\) equal to zero
+simultaneously so either \\(e \neq 0\\) and
 
 $$
 \begin{aligned}
@@ -85,7 +85,7 @@ $$
 \end{aligned}
 $$
 
-or $$b \neq 0$$ and
+or \\(b \neq 0\\) and
 
 $$
 \begin{aligned}
@@ -116,12 +116,12 @@ d & e
 }.
 $$
 
-Similarily, we can find $$y$$ by making $$x$$ disappear. Since $$
+Similarily, we can find \\(y\\) by making \\(x\\) disappear. Since \\(
 \begin{vmatrix}
 a & b \\
 d & e
-\end{vmatrix} \neq 0 $$ we cannot have $$a$$ and $$d$$ equal to zero
-simultaneously so either $$d \neq 0$$ and
+\end{vmatrix} \neq 0 \\) we cannot have \\(a\\) and \\(d\\) equal to zero
+simultaneously so either \\(d \neq 0\\) and
 
 $$
 \begin{aligned}
@@ -135,7 +135,7 @@ $$
 \end{aligned}
 $$
 
-or $$a \neq 0$$ and
+or \\(a \neq 0\\) and
 
 $$
 \begin{aligned}
@@ -170,21 +170,21 @@ $$
 
 Let us do it again with a better notation.
 
-### First example: $$\alpha_{1,0} + \alpha_{1,1} x_1 = 0$$
+### First example: \\(\alpha_{1,0} + \alpha_{1,1} x_1 = 0\\)
 
-If $$\alpha_{1,1} \neq 0$$ then
+If \\(\alpha_{1,1} \neq 0\\) then
 
 $$
 	\alpha_{1,0} + \alpha_{1,1} x_1 = 0 \iff x_1 = -\frac{\alpha_{1,0}}{\alpha_{1,1}}.
 $$
 
-### Second example: $$\alpha_{1,0} + \alpha_{1,1} x_1 + \alpha_{1,2} x_2 = 0$$
+### Second example: \\(\alpha_{1,0} + \alpha_{1,1} x_1 + \alpha_{1,2} x_2 = 0\\)
 
-If $$
+If \\(
 \begin{vmatrix}
 \alpha_{1,1} & \alpha_{1,2} \\
 \alpha_{2,1} & \alpha_{2,2}
-\end{vmatrix} \neq 0 $$
+\end{vmatrix} \neq 0 \\)
 then to solve
 
 $$
@@ -195,7 +195,7 @@ $$
 $$
 
 we can use the following (implied) equations which are true for all
-$$y_1,y_2 \in \mathbb{R}$$
+\\(y_1,y_2 \in \mathbb{R}\\)
 
 $$
 \begin{aligned}
@@ -208,12 +208,12 @@ $$
 \end{aligned}
 $$
 
-We can find $$x_1$$ by making $$x_2$$ disappear. Since $$
+We can find \\(x_1\\) by making \\(x_2\\) disappear. Since \\(
 \begin{vmatrix}
 \alpha_{1,1} & \alpha_{1,2} \\
 \alpha_{2,1} & \alpha_{2,2}
-\end{vmatrix} \neq 0 $$ we cannot have $$\alpha_{1,2}$$ and $$\alpha_{2,2}$$ equal to zero
-simultaneously so either $$\alpha_{2,2} \neq 0$$ and
+\end{vmatrix} \neq 0 \\) we cannot have \\(\alpha_{1,2}\\) and \\(\alpha_{2,2}\\) equal to zero
+simultaneously so either \\(\alpha_{2,2} \neq 0\\) and
 
 $$
 \begin{aligned}
@@ -228,7 +228,7 @@ y_2 = -\frac{\alpha_{1,2}}{\alpha_{2,2}} \implies
 \end{aligned}
 $$
 
-or $$\alpha_{1,2} \neq 0$$ and
+or \\(\alpha_{1,2} \neq 0\\) and
 
 $$
 \begin{aligned}
@@ -261,12 +261,12 @@ x_1 = -\frac{\alpha_{1,0}\alpha_{2,2} - \alpha_{1,2}\alpha_{2,0}}
 }.
 $$
 
-Similarily, we can find $$x_2$$ by making $$x_1$$ disappear. Since $$
+Similarily, we can find \\(x_2\\) by making \\(x_1\\) disappear. Since \\(
 \begin{vmatrix}
 \alpha_{1,1} & \alpha_{1,2} \\
 \alpha_{2,1} & \alpha_{2,2}
-\end{vmatrix} \neq 0 $$ we cannot have $$\alpha_{1,1}$$ and $$\alpha_{2,1}$$ equal to zero
-simultaneously so either $$\alpha_{2,1} \neq 0$$ and
+\end{vmatrix} \neq 0 \\) we cannot have \\(\alpha_{1,1}\\) and \\(\alpha_{2,1}\\) equal to zero
+simultaneously so either \\(\alpha_{2,1} \neq 0\\) and
 
 $$
 \begin{aligned}
@@ -281,7 +281,7 @@ y_2 = -\frac{\alpha_{1,1}}{\alpha_{2,1}} \implies
 \end{aligned}
 $$
 
-or $$\alpha_{1,1} \neq 0$$ and
+or \\(\alpha_{1,1} \neq 0\\) and
 
 $$
 \begin{aligned}
@@ -318,7 +318,7 @@ $$
 
 ### Theorem
 
-For all $$n > 0 \in \mathbb{N}$$, if
+For all \\(n > 0 \in \mathbb{N}\\), if
 
 $$
 \begin{vmatrix}
@@ -329,8 +329,8 @@ $$
 \end{vmatrix} \neq 0,
 $$
 
-where $$\alpha_{i,j} \in \mathbb{R}$$ for all $$(i,j) \in [n] \times
-\{\,0,1,\ldots,n\,\}$$,
+where \\(\alpha_{i,j} \in \mathbb{R}\\) for all \\((i,j) \in [n] \times
+\{\,0,1,\ldots,n\,\}\\),
 then the system of linear equations
 
 $$
@@ -342,7 +342,7 @@ $$
 \end{array}\right.
 $$
 
-has a unique solution $$x=(x_1,x_2,\ldots,x_n)$$ such that for all $$i \in [n]$$
+has a unique solution \\(x=(x_1,x_2,\ldots,x_n)\\) such that for all \\(i \in [n]\\)
 
 $$
 x_i = (-1)^i
@@ -366,21 +366,21 @@ $$
 
 ### Proof
 
-By induction on $$n$$. We reduce the problem of finding $$x_i$$ to the
-problem of finding a solution to a system of $$n-1$$ linear equations with
-$$n-1$$ unknowns.
+By induction on \\(n\\). We reduce the problem of finding \\(x_i\\) to the
+problem of finding a solution to a system of \\(n-1\\) linear equations with
+\\(n-1\\) unknowns.
 
 #### Base case
 
-We already showed that it holds for $$n=1$$ and $$n=2$$ in the examples
+We already showed that it holds for \\(n=1\\) and \\(n=2\\) in the examples
 given previously.
 
 #### Induction
 
-Suppose that the theorem holds up to $$n-1$$ (this is the induction
-hypothesis), we show that it must also hold for $$n$$.
+Suppose that the theorem holds up to \\(n-1\\) (this is the induction
+hypothesis), we show that it must also hold for \\(n\\).
 
-Fix $$i \in [n]$$, the system of equations
+Fix \\(i \in [n]\\), the system of equations
 
 $$
 \left\lbrace\begin{array}{cccccccccccc}
@@ -391,7 +391,7 @@ $$
 \end{array}\right.
 $$
 
-implies for all $$y_1,y_2,\ldots,y_n \in \mathbb{R}$$ that
+implies for all \\(y_1,y_2,\ldots,y_n \in \mathbb{R}\\) that
 
 $$
 \begin{array}{crccccccccccclccc}
@@ -403,11 +403,11 @@ $$
 \end{array}
 $$
 
-Note that we can fix one of the $$y_j$$ to some arbitrary constant while the
+Note that we can fix one of the \\(y_j\\) to some arbitrary constant while the
 equation remains valid.
 
-In order to determine $$x_i$$ it suffices to make
-the $$x_k \neq x_i$$ disappear. Let us choose $$\ell \in [n]$$ such that
+In order to determine \\(x_i\\) it suffices to make
+the \\(x_k \neq x_i\\) disappear. Let us choose \\(\ell \in [n]\\) such that
 
 $$
 \begin{vmatrix}
@@ -421,7 +421,7 @@ $$
 \end{vmatrix} \neq 0.
 $$
 
-Such a $$\ell$$ always exists as otherwise
+Such a \\(\ell\\) always exists as otherwise
 
 $$
 \begin{vmatrix}
@@ -432,18 +432,18 @@ $$
 \end{vmatrix} = 0.
 $$
 
-Without loss of generality we could assume that $$\ell=1$$. However, for the sake
+Without loss of generality we could assume that \\(\ell=1\\). However, for the sake
 of explanation, we will introduce a new notation to handle all cases directly.
 
-We let $$\beta_{a,b} = \alpha_{a,b}$$ for all $$a \in \{\,2,\ldots,\ell-1,\ell+1,\ldots,n\,\}$$ and all
-$$b \in \{\,0,1,\ldots,n\,\}$$. We let $$\beta_{1,b} =
-\alpha_{\ell,b}$$ and $$\beta_{\ell,b} = \alpha_{1,b}$$ for all $$b \in \{\,0,1,\ldots,n\,\}$$.
+We let \\(\beta_{a,b} = \alpha_{a,b}\\) for all \\(a \in \{\,2,\ldots,\ell-1,\ell+1,\ldots,n\,\}\\) and all
+\\(b \in \{\,0,1,\ldots,n\,\}\\). We let \\(\beta_{1,b} =
+\alpha_{\ell,b}\\) and \\(\beta_{\ell,b} = \alpha_{1,b}\\) for all \\(b \in \{\,0,1,\ldots,n\,\}\\).
 For all
-$$a \in \{\,0,2,\ldots,\ell-1,\ell+1,\ldots,n\,\}$$ we let $$z_a =
-y_a$$. We let $$z_1 = y_\ell$$ and $$z_\ell = y_1$$.
+\\(a \in \{\,0,2,\ldots,\ell-1,\ell+1,\ldots,n\,\}\\) we let \\(z_a =
+y_a\\). We let \\(z_1 = y_\ell\\) and \\(z_\ell = y_1\\).
 
-If we fix $$z_1 = 1$$, our equation remains valid and we obtain the
-following system of $$n-1$$ linear equations in $$n-1$$ unknowns
+If we fix \\(z_1 = 1\\), our equation remains valid and we obtain the
+following system of \\(n-1\\) linear equations in \\(n-1\\) unknowns
 
 $$
 \left\lbrace\begin{array}{cccccccccccc}
@@ -457,7 +457,7 @@ $$
 \end{array}\right..
 $$
 
-By our choice of $$\ell$$ we have that
+By our choice of \\(\ell\\) we have that
 
 $$
 \begin{vmatrix}
@@ -486,8 +486,8 @@ $$
 $$
 
 Thus, by the induction hypothesis, our last system of equations
-has a unique solution $$z=(z_2,z_3,\ldots,z_n)$$ such that for all $$j
-\in [2,n]$$
+has a unique solution \\(z=(z_2,z_3,\ldots,z_n)\\) such that for all \\(j
+\in [2,n]\\)
 
 $$
 z_j = (-1)^{j+1}
@@ -515,7 +515,7 @@ z_j = (-1)^{j+1}
 }.
 $$
 
-Now that the $$x_k \neq x_i$$ disappeared, we have
+Now that the \\(x_k \neq x_i\\) disappeared, we have
 
 
 $$
@@ -536,7 +536,7 @@ x_i = -\frac{
 },
 $$
 
-that is, by replacing the $$z_j$$ by their respective values,
+that is, by replacing the \\(z_j\\) by their respective values,
 
 $$
 x_i = -\frac{
@@ -593,7 +593,7 @@ x_i = -\frac{
 },
 $$
 
-that is, by the fact that $$\mathop{det}(M) = \mathop{det}(M^T)$$,
+that is, by the fact that \\(\mathop{det}(M) = \mathop{det}(M^T)\\),
 
 $$
 x_i = (-1)^i
@@ -615,12 +615,12 @@ x_i = (-1)^i
 }.
 $$
 
-It remains to trade $$\beta$$ for $$\alpha$$ according to the bijection
-we defined earlier, then swap the first column with the $$\ell^{\text{th}}$$
+It remains to trade \\(\beta\\) for \\(\alpha\\) according to the bijection
+we defined earlier, then swap the first column with the \\(\ell^{\text{th}}\\)
 one if necessary.
 
-If $$\ell = 1$$, we have nothing to do. Otherwise swaping the columns
-multiplies both determinants by $$-1$$, hence the sign of
+If \\(\ell = 1\\), we have nothing to do. Otherwise swaping the columns
+multiplies both determinants by \\(-1\\), hence the sign of
 the ratio remains unchanged. We get
 
 $$

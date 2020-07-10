@@ -14,22 +14,22 @@ tags:
 Among the identities that are useful in the analysis of algorithms,
 this one shows how sums of geometric series converge when the ratio
 is smaller than one (in absolute value). It occurs in divide an conquer
-schemes. For example, it allows to show that hierarchical cuttings for $$n$$
-hyperplanes in $$d$$ dimensions only need space proportional to $$n^d$$.
+schemes. For example, it allows to show that hierarchical cuttings for \\(n\\)
+hyperplanes in \\(d\\) dimensions only need space proportional to \\(n^d\\).
 
-$$
+\\[
 \sum_{i=0}^{\infty} \binom{i+j}{j} x^i = \frac{1}{ {(1-x)}^{j+1} },
 \forall j \in \mathbb{N}, \forall x \in (-1,1).
-$$
+\\]
 
 <!--more-->
 That's nice. There are many ways to prove it, a cool one is to first
 [prove]({{< ref "2017-04-21-converging-series" >}}) that
 
-$$
+\\[
 \sum_{i=0}^{\infty} x^i = \frac{1}{ {(1-x)} },
 \forall x \in (-1,1),
-$$
+\\]
 
 and then to notice that
 
@@ -39,14 +39,15 @@ $$
 \forall j \in \mathbb{N}, \forall x \in (-1,1).
 $$
 
-because $$\binom{i+j}{j}$$ denotes the number of ways to partition the exponent
-of $$x^i$$ into a permutation of $$j+1$$ integers.
+because \\(\binom{i+j}{j}\\) denotes the number of ways to partition the exponent
+of \\(x^i\\) into a permutation of \\(j+1\\) integers.
 
 
 More generally, one has
 
-$$
+\\[
 \sum_{i=0}^{k} \binom{i+j}{j} x^i = \frac{1}{ {(1-x)}^{j+1} } -
 \sum_{i=0}^{j} \frac{\binom{k+i}{i} x^{k+1}}{ {(1-x)}^{j-i+1} },
-\forall j \in \mathbb{N}, \forall x \in \mathbb{R} \setminus \{\,1\,\}.
-$$
+\forall j \in \mathbb{N}, \forall x \in \mathbb{R} \setminus \\{\\,1\\,\\}.
+\\]
+

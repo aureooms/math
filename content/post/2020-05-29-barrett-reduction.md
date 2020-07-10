@@ -26,8 +26,8 @@ The error of our approximation of `1/n` is `e = 1/n - m/r^k`.
 Let `q' = floor(x m / r^k) <= q` and compute `x' = x - q'n`.
 Observe that `x/n` might have a fractional value `f` anywhere between `.0` and
 `.999...`.
-As long as $$q - q' <= xe + f < 2$$
-$$x'$$ yields the correct result modulo `n` with a value between `0` and `2n-1`.
+As long as \\(q - q' <= xe + f < 2\\)
+\\(x'\\) yields the correct result modulo `n` with a value between `0` and `2n-1`.
 The actual congruence class can be obtained with a most one subtraction.
 
 Since `f` can be as high as `1`, we want `xe < 1`, and hence `e < 1/x`.
@@ -61,19 +61,19 @@ Note that we divide by `x-n` so `x > n`.
 #### Time Complexity
 
 The reduction uses two multiplications:
-the first one multiplies $$x$$ with $$m$$,
-the second one multiplies $$q'$$ by $$n$$.
-If $$n$$ consists of $$k'$$ digits, then reducing a $$k=2k'$$ digit number
-modulo $$n$$ costs one $$2k' \\times k'$$ multiplication and one $$k' \\times k'$$
+the first one multiplies \\(x\\) with \\(m\\),
+the second one multiplies \\(q'\\) by \\(n\\).
+If \\(n\\) consists of \\(k'\\) digits, then reducing a \\(k=2k'\\) digit number
+modulo \\(n\\) costs one \\(2k' \\times k'\\) multiplication and one \\(k' \\times k'\\)
 multiplication. This is slightly worse than Montgomery's reduction.
 
-Note that since $$q' = \\lfloor x m / r^k \\rfloor$$, we only care about the
-higher order digits of $$xm$$. Similarly, when computing $$q'n$$, we know by the
-error analysis that the higher order digits will be equal to those of $$x$$, so
-we only need to compute the lower order digits of $$q'n$$.
+Note that since \\(q' = \\lfloor x m / r^k \\rfloor\\), we only care about the
+higher order digits of \\(xm\\). Similarly, when computing \\(q'n\\), we know by the
+error analysis that the higher order digits will be equal to those of \\(x\\), so
+we only need to compute the lower order digits of \\(q'n\\).
 
 However those gains tend to zero as more and more efficient multiplication
-subroutines are used for large $$n$$.
+subroutines are used for large \\(n\\).
 
 PS: Barrett reduction is more popularly known as reducing a number `0 <= x <
 n^2` modulo `n` with `r=2`. Then we have `2^k > n^2` which gives the usual
@@ -93,10 +93,10 @@ PPPS: However, in the particular case where the division is exact, i.e. `x = 0
 mod n`, we have that `f` is 0. Hence, if we know that `n` divides `x` we can
 compute the quotient with a single multiplication by `m`.
 
-PPPPS: Since $$\\lfloor \\frac{r^l}{n} \\rfloor$$ with $$l <= k$$
-corresponds to a prefix of the digits of $$\\lfloor \\frac{r^k}{n}
-\\rfloor$$, we can precompute $$m$$ for a large $$k$$ but only use those digits
-that are necessary depending on the size of $$x$$.
+PPPPS: Since \\(\\lfloor \\frac{r^l}{n} \\rfloor\\) with \\(l <= k\\)
+corresponds to a prefix of the digits of \\(\\lfloor \\frac{r^k}{n}
+\\rfloor\\), we can precompute \\(m\\) for a large \\(k\\) but only use those digits
+that are necessary depending on the size of \\(x\\).
 
 See https://en.wikipedia.org/wiki/Barrett_reduction
 See https://www.nayuki.io/page/barrett-reduction-algorithm
