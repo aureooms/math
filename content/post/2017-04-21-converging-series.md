@@ -19,9 +19,9 @@ $$
 
 $$
 \begin{aligned}
-(1 - x)(1 + x + x^2 + x^3 + x^4 + \cdots + x^k) &= 1 - x^{k+1}, \\
-\lim_{k \to \infty} (1 - x)(1 + x + x^2 + x^3 + x^4 + \cdots + x^k) &= \lim_{k \to \infty} 1 - x^{k+1}, \\
-(1 - x)(1 + x + x^2 + x^3 + x^4 + \cdots) &= 1.
+(1 - x)(1 + x + x^2 + x^3 + x^4 + \cdots + x^k) &= 1 - x^{k+1}, 
+\\\\ \lim_{k \to \infty} (1 - x)(1 + x + x^2 + x^3 + x^4 + \cdots + x^k) &= \lim_{k \to \infty} 1 - x^{k+1}, 
+\\\\ (1 - x)(1 + x + x^2 + x^3 + x^4 + \cdots) &= 1.
 \end{aligned}
 $$
 
@@ -30,3 +30,4 @@ A fun way to prove it for \\(x = \frac1b\\) with \\(b \in \mathbb{N}_0\\) is to 
 $$
 1.111\ldots_b = \frac{a.aaa\ldots_b}{a} = \frac{10_b}{a} = \frac{b}{a} = \frac{b}{b-1} = \frac{1}{1-x}.
 $$
+
