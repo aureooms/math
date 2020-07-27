@@ -8,11 +8,11 @@ Clone with submodules
 
 If you forgot to recurse on cloning
 
-	git update --init --recursive
+	git submodule update --init --recursive
 
 Update submodules.
 
-	git update --recursive
+	git submodule update --recursive
 
 Downloads assets and static files
 
