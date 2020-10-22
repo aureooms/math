@@ -3,7 +3,7 @@ date: 2016-04-27T00:00:00Z
 title: Equivalence of 3SUM problems
 url: /2016/04/27/equivalence-of-3sum-problems/
 thumbnail:
-  src: https://ipfs.c.ovfefe.cf/ipfs/QmeHrVkaqogCPYKw3Gu29PWgkYCBWc4YEio16iNVjzcUzg
+  src: https://ipfs.xn--mxac.cc/ipfs/QmeHrVkaqogCPYKw3Gu29PWgkYCBWc4YEio16iNVjzcUzg
 tags:
   - Algorithms
 ---

@@ -3,7 +3,7 @@ date: 2015-06-23T00:00:00Z
 title: Complex numbers division
 url: /2015/06/23/complex-division/
 thumbnail:
-  src: https://ipfs.c.ovfefe.cf/ipfs/Qmd7X75zoQ7fn7QDp6TYkQjRdjazvHDJa1mdgq2YiZY1qJ
+  src: https://ipfs.xn--mxac.cc/ipfs/Qmd7X75zoQ7fn7QDp6TYkQjRdjazvHDJa1mdgq2YiZY1qJ
 tags:
   - Numbers
 ---
