@@ -28,3 +28,13 @@ nav > div.container {
   }
 
 }
+
+ul:not(.browser-default) {
+
+  padding: revert;
+
+  & > li {
+    list-style-type: disc;
+  }
+
+}
