@@ -29,12 +29,16 @@ nav > div.container {
 
 }
 
-ul:not(.browser-default) {
+article {
 
-  padding: revert;
+  & ul:not(.browser-default) {
 
-  & > li {
-    list-style-type: disc;
+    padding: revert;
+
+    & > li {
+      list-style-type: disc;
+    }
+
   }
 
 }
